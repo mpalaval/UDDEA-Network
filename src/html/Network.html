@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Red | UDDEA Network</title>
+
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/network.css">
+</head>
+
+<body>
+    <!-- Cabecera compartida -->
+    <header class="cabecera">
+        <div class="contenedor cabecera-contenido">
+            <a href="Feed.html" class="marca">
+                <img
+                    src="../assets/images/Logo_monograma.png"
+                    alt=""
+                    width="27"
+                    height="27"
+                >
+                <span><strong>UDDEA</strong> Network</span>
+            </a>
+
+            <form class="buscador" role="search">
+                <label for="busqueda-general" class="solo-lectores">
+                    Buscar en UDDEA
+                </label>
+
+                <input
+                    type="search"
+                    id="busqueda-general"
+                    name="consulta"
+                    placeholder="Buscar profesionales, clubes..."
+                >
+
+                <button type="submit" aria-label="Buscar">
+                    <img
+                        src="../assets/images/Vector_Search.png"
+                        alt=""
+                        width="11"
+                        height="11"
+                    >
+                </button>
+            </form>
+
+            <nav class="navegacion" aria-label="Navegación principal">
+                <ul>
+                    <li>
+                        <a href="Feed.html">
+                            <img
+                                src="../assets/images/Icono_Feed.png"
+                                alt=""
+                                width="11"
+                                height="11"
+                            >
+                            <span class="solo-lectores">Inicio</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="Network.html" aria-current="page">
+                            <img
+                                src="../assets/images/Icono_Network.png"
+                                alt=""
+                                width="11"
+                                height="11"
+                            >
+                            <span class="solo-lectores">Red</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="Opportunities.html">
+                            <img
+                                src="../assets/images/Icono_Opportunities.png"
+                                alt=""
+                                width="11"
+                                height="11"
+                            >
+                            <span class="solo-lectores">Oportunidades</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="Explore.html">
+                            <img
+                                src="../assets/images/Icono_Explore.png"
+                                alt=""
+                                width="11"
+                                height="11"
+                            >
+                            <span class="solo-lectores">Explorar</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="Profile.html">
+                            <img
+                                src="../assets/images/Icono_Profile.png"
+                                alt=""
+                                width="11"
+                                height="11"
+                            >
+                            <span class="solo-lectores">Perfil</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor contenido-red">
+        <section class="introduccion-red" aria-labelledby="titulo-principal">
+            <div>
+                <h1 id="titulo-principal">
+                    El talento que buscas también juega aquí.
+                </h1>
+                <p class="texto-secundario">
+                    Encuentra profesionales por su experiencia,
+                    su especialidad y su forma de entender el fútbol.
+                </p>
+            </div>
+
+            <span class="indicador-comunidad">
+                Tu comunidad profesional de fútbol
+            </span>
+        </section>
+
+        <!-- Los filtros laterales pertenecen también a este formulario -->
+        <form id="formulario-profesionales" class="tarjeta buscador-profesionales">
+            <div class="fila-busqueda">
+                <div class="campo-formulario campo-busqueda">
+                    <label for="busqueda-profesionales" class="solo-lectores">
+                        Buscar profesionales
+                    </label>
+
+                    <input
+                        type="search"
+                        id="busqueda-profesionales"
+                        name="consulta"
+                        placeholder="Busca por nombre, cargo, club o especialidad"
+                    >
+                </div>
+
+                <button type="submit" class="boton-principal">
+                    Buscar profesionales
+                </button>
+
+                <button
+                    type="button"
+                    id="guardar-busqueda"
+                    class="boton-secundario"
+                >
+                    <img
+                        src="../assets/images/Vector_Bookmark.png"
+                        alt=""
+                        width="13"
+                        height="13"
+                    >
+                    Guardar búsqueda
+                </button>
+            </div>
+
+            <div class="resumen-busqueda">
+                <p id="resumen-filtros" class="texto-secundario">
+                    Sin filtros activos.
+                </p>
+
+                <button type="reset" class="boton-texto">
+                    Limpiar filtros
+                </button>
+            </div>
+        </form>
+
+        <div class="distribucion-red">
+
+            <!-- Columna izquierda: filtros -->
+            <aside class="columna-filtros" aria-label="Filtros de profesionales">
+                <section class="tarjeta filtros">
+                    <div class="cabecera-filtros">
+                        <h2>Filtros</h2>
+
+                        <button
+                            type="reset"
+                            form="formulario-profesionales"
+                            class="boton-texto"
+                        >
+                            Restablecer
+                        </button>
+                    </div>
+
+                    <fieldset class="grupo-roles">
+                        <legend>Rol profesional</legend>
+
+                        <label class="opcion-rol">
+                            <input
+                                type="checkbox"
+                                name="rol"
+                                value="analista"
+                                form="formulario-profesionales"
+                            >
+                            <span>Analista</span>
+                        </label>
+
+                        <label class="opcion-rol">
+                            <input
+                                type="checkbox"
+                                name="rol"
+                                value="scout"
+                                form="formulario-profesionales"
+                            >
+                            <span>Scout</span>
+                        </label>
+
+                        <label class="opcion-rol">
+                            <input
+                                type="checkbox"
+                                name="rol"
+                                value="entrenador"
+                                form="formulario-profesionales"
+                            >
+                            <span>Entrenador/a</span>
+                        </label>
+
+                        <label class="opcion-rol">
+                            <input
+                                type="checkbox"
+                                name="rol"
+                                value="director-deportivo"
+                                form="formulario-profesionales"
+                            >
+                            <span>Director/a deportivo/a</span>
+                        </label>
+
+                        <label class="opcion-rol">
+                            <input
+                                type="checkbox"
+                                name="rol"
+                                value="coordinador"
+                                form="formulario-profesionales"
+                            >
+                            <span>Coordinador/a</span>
+                        </label>
+                    </fieldset>
+
+                    <div class="campo-filtro">
+                        <label for="experiencia">Experiencia</label>
+                        <select
+                            id="experiencia"
+                            name="experiencia"
+                            form="formulario-profesionales"
+                        >
+                            <option value="">Cualquier experiencia</option>
+                            <option value="0-2">Menos de 3 años</option>
+                            <option value="3-5">De 3 a 5 años</option>
+                            <option value="6">Más de 5 años</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-filtro">
+                        <label for="club">Club actual</label>
+                        <input
+                            type="search"
+                            id="club"
+                            name="club"
+                            placeholder="Buscar club o institución"
+                            form="formulario-profesionales"
+                        >
+                    </div>
+
+                    <div class="campo-filtro">
+                        <label for="ubicacion">Ubicación</label>
+                        <select
+                            id="ubicacion"
+                            name="ubicacion"
+                            form="formulario-profesionales"
+                        >
+                            <option value="">Cualquier ubicación</option>
+                            <option value="espana">España</option>
+                            <option value="portugal">Portugal</option>
+                            <option value="francia">Francia</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-filtro">
+                        <label for="categoria">Categoría</label>
+                        <select
+                            id="categoria"
+                            name="categoria"
+                            form="formulario-profesionales"
+                        >
+                            <option value="">Todas las categorías</option>
+                            <option value="base">Fútbol base</option>
+                            <option value="juvenil">Juvenil</option>
+                            <option value="senior">Sénior</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-filtro">
+                        <label for="certificacion">Certificaciones</label>
+                        <select
+                            id="certificacion"
+                            name="certificacion"
+                            form="formulario-profesionales"
+                        >
+                            <option value="">Cualquier certificación</option>
+                            <option value="uefa-b">UEFA B</option>
+                            <option value="uefa-a">UEFA A</option>
+                            <option value="uefa-pro">UEFA Pro</option>
+                        </select>
+                    </div>
+
+                    <div class="campo-filtro">
+                        <label for="idioma">Idiomas</label>
+                        <select
+                            id="idioma"
+                            name="idioma"
+                            form="formulario-profesionales"
+                        >
+                            <option value="">Cualquier idioma</option>
+                            <option value="espanol">Español</option>
+                            <option value="ingles">Inglés</option>
+                            <option value="frances">Francés</option>
+                        </select>
+                    </div>
+
+                    <button
+                        type="submit"
+                        form="formulario-profesionales"
+                        class="boton-principal aplicar-filtros"
+                    >
+                        Aplicar filtros
+                    </button>
+                </section>
+
+                <p class="ayuda-filtros texto-secundario">
+                    Combina roles y especialidades para encontrar
+                    el perfil que necesita tu equipo.
+                </p>
+            </aside>
+
+            <!-- Columna central: resultados -->
+            <section class="columna-resultados" aria-labelledby="titulo-resultados">
+                <header class="cabecera-resultados">
+                    <div>
+                        <h2 id="titulo-resultados">4 profesionales</h2>
+                        <p class="texto-secundario">
+                            Descubre perfiles de la comunidad.
+                        </p>
+                    </div>
+
+                    <div class="campo-filtro orden-resultados">
+                        <label for="orden" class="solo-lectores">
+                            Ordenar profesionales
+                        </label>
+                        <select
+                            id="orden"
+                            name="orden"
+                            form="formulario-profesionales"
+                        >
+                            <option value="relevancia">Más relevantes</option>
+                            <option value="experiencia">Mayor experiencia</option>
+                            <option value="nombre">Nombre</option>
+                        </select>
+                    </div>
+                </header>
+
+                <p
+                    id="mensaje-red"
+                    class="mensaje-formulario"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+
+                <div id="lista-profesionales" class="lista-profesionales">
+
+                    <article class="tarjeta profesional" data-id="elena">
+                        <header class="cabecera-profesional">
+                            <div class="avatar">
+                                <img
+                                    src="../assets/images/Avatar_Genérico_6.png"
+                                    alt=""
+                                    width="40"
+                                    height="40"
+                                >
+                            </div>
+
+                            <div class="identidad-profesional">
+                                <h3>Elena Ruiz</h3>
+                                <p>Responsable de análisis · Real Valladolid CF</p>
+                                <p class="texto-secundario">Valladolid, España</p>
+                            </div>
+
+                            <button
+                                type="button"
+                                class="boton-guardar"
+                                data-accion="guardar"
+                                aria-label="Guardar perfil de Elena Ruiz"
+                                aria-pressed="false"
+                            >
+                                <img
+                                    src="../assets/images/Vector_Bookmark.png"
+                                    alt=""
+                                    width="15"
+                                    height="15"
+                                >
+                            </button>
+                        </header>
+
+                        <div class="contenido-profesional">
+                            <p class="datos-profesional">
+                                8 años de experiencia · Cantera · Juvenil
+                            </p>
+                            <p>
+                                Análisis táctico aplicado al fútbol formativo.
+                                Transformo datos y vídeo en decisiones
+                                para el desarrollo del jugador.
+                            </p>
+
+                            <ul class="especialidades lista-sin-estilo"
+                                aria-label="Especialidades de Elena Ruiz">
+                                <li class="etiqueta">Análisis táctico</li>
+                                <li class="etiqueta">Hudl Sportscode</li>
+                                <li class="etiqueta">Desarrollo del talento</li>
+                            </ul>
+                        </div>
+
+                        <footer class="pie-profesional">
+                            <p class="contactos-comunes texto-secundario">
+                                <img
+                                    src="../assets/images/Icono_Network.png"
+                                    alt=""
+                                    width="13"
+                                    height="13"
+                                >
+                                5 contactos en común
+                            </p>
+
+                            <div class="acciones-profesional">
+                                <button
+                                    type="button"
+                                    class="boton-texto"
+                                    data-accion="ver-perfil"
+                                    aria-label="Ver perfil de Elena Ruiz"
+                                >
+                                    Ver perfil
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="boton-secundario"
+                                    data-accion="conectar"
+                                    aria-label="Conectar con Elena Ruiz"
+                                    aria-pressed="false"
+                                >
+                                    <img
+                                        src="../assets/images/Vector_Plus.png"
+                                        alt=""
+                                        width="12"
+                                        height="12"
+                                    >
+                                    Conectar
+                                </button>
+                            </div>
+                        </footer>
+                    </article>
+
+                    <article class="tarjeta profesional" data-id="lucia">
+                        <header class="cabecera-profesional">
+                            <div class="avatar">
+                                <img
+                                    src="../assets/images/Avatar_Genérico_2.png"
+                                    alt=""
+                                    width="40"
+                                    height="40"
+                                >
+                            </div>
+
+                            <div class="identidad-profesional">
+                                <h3>Lucía Fernández</h3>
+                                <p>Scout de fútbol formativo · Levante UD</p>
+                                <p class="texto-secundario">Valencia, España</p>
+                            </div>
+
+                            <button
+                                type="button"
+                                class="boton-guardar"
+                                data-accion="guardar"
+                                aria-label="Guardar perfil de Lucía Fernández"
+                                aria-pressed="false"
+                            >
+                                <img
+                                    src="../assets/images/Vector_Bookmark.png"
+                                    alt=""
+                                    width="15"
+                                    height="15"
+                                >
+                            </button>
+                        </header>
+
+                        <div class="contenido-profesional">
+                            <p class="datos-profesional">
+                                6 años de experiencia · Cantera · Sub-19
+                            </p>
+                            <p>
+                                Detección y seguimiento del talento en etapas
+                                de formación. Experiencia en captación
+                                y evaluación del potencial.
+                            </p>
+
+                            <ul class="especialidades lista-sin-estilo"
+                                aria-label="Especialidades de Lucía Fernández">
+                                <li class="etiqueta">Scouting</li>
+                                <li class="etiqueta">Wyscout</li>
+                                <li class="etiqueta">Evaluación de talento</li>
+                            </ul>
+                        </div>
+
+                        <footer class="pie-profesional">
+                            <p class="contactos-comunes texto-secundario">
+                                <img
+                                    src="../assets/images/Icono_Network.png"
+                                    alt=""
+                                    width="13"
+                                    height="13"
+                                >
+                                8 contactos en común
+                            </p>
+
+                            <div class="acciones-profesional">
+                                <button
+                                    type="button"
+                                    class="boton-texto"
+                                    data-accion="ver-perfil"
+                                    aria-label="Ver perfil de Lucía Fernández"
+                                >
+                                    Ver perfil
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="boton-secundario"
+                                    data-accion="conectar"
+                                    aria-label="Conectar con Lucía Fernández"
+                                    aria-pressed="false"
+                                >
+                                    <img
+                                        src="../assets/images/Vector_Plus.png"
+                                        alt=""
+                                        width="12"
+                                        height="12"
+                                    >
+                                    Conectar
+                                </button>
+                            </div>
+                        </footer>
+                    </article>
+
+                    <article class="tarjeta profesional" data-id="diego">
+                        <header class="cabecera-profesional">
+                            <div class="avatar">
+                                <img
+                                    src="../assets/images/Avatar_Genérico_3.png"
+                                    alt=""
+                                    width="40"
+                                    height="40"
+                                >
+                            </div>
+
+                            <div class="identidad-profesional">
+                                <h3>Diego Alonso</h3>
+                                <p>Analista de rendimiento · CD Leganés</p>
+                                <p class="texto-secundario">Madrid, España</p>
+                            </div>
+
+                            <button
+                                type="button"
+                                class="boton-guardar"
+                                data-accion="guardar"
+                                aria-label="Guardar perfil de Diego Alonso"
+                                aria-pressed="false"
+                            >
+                                <img
+                                    src="../assets/images/Vector_Bookmark.png"
+                                    alt=""
+                                    width="15"
+                                    height="15"
+                                >
+                            </button>
+                        </header>
+
+                        <div class="contenido-profesional">
+                            <p class="datos-profesional">
+                                5 años de experiencia · Cantera · Juvenil
+                            </p>
+                            <p>
+                                Especialista en fútbol formativo: análisis
+                                de rivales, informes individuales y apoyo
+                                al cuerpo técnico en la transición al sénior.
+                            </p>
+
+                            <ul class="especialidades lista-sin-estilo"
+                                aria-label="Especialidades de Diego Alonso">
+                                <li class="etiqueta">Análisis de rivales</li>
+                                <li class="etiqueta">Vídeo</li>
+                                <li class="etiqueta">Power BI</li>
+                            </ul>
+                        </div>
+
+                        <footer class="pie-profesional">
+                            <p class="contactos-comunes texto-secundario">
+                                <img
+                                    src="../assets/images/Icono_Network.png"
+                                    alt=""
+                                    width="13"
+                                    height="13"
+                                >
+                                4 contactos en común
+                            </p>
+
+                            <div class="acciones-profesional">
+                                <button
+                                    type="button"
+                                    class="boton-texto"
+                                    data-accion="ver-perfil"
+                                    aria-label="Ver perfil de Diego Alonso"
+                                >
+                                    Ver perfil
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="boton-secundario"
+                                    data-accion="conectar"
+                                    aria-label="Conectar con Diego Alonso"
+                                    aria-pressed="false"
+                                >
+                                    <img
+                                        src="../assets/images/Vector_Plus.png"
+                                        alt=""
+                                        width="12"
+                                        height="12"
+                                    >
+                                    Conectar
+                                </button>
+                            </div>
+                        </footer>
+                    </article>
+
+                    <article class="tarjeta profesional" data-id="sara">
+                        <header class="cabecera-profesional">
+                            <div class="avatar">
+                                <img
+                                    src="../assets/images/Avatar_Genérico_4.png"
+                                    alt=""
+                                    width="40"
+                                    height="40"
+                                >
+                            </div>
+
+                            <div class="identidad-profesional">
+                                <h3>Sara Benítez</h3>
+                                <p>Scout · Captación de talento · Real Betis Balompié</p>
+                                <p class="texto-secundario">Sevilla, España</p>
+                            </div>
+
+                            <button
+                                type="button"
+                                class="boton-guardar"
+                                data-accion="guardar"
+                                aria-label="Guardar perfil de Sara Benítez"
+                                aria-pressed="false"
+                            >
+                                <img
+                                    src="../assets/images/Vector_Bookmark.png"
+                                    alt=""
+                                    width="15"
+                                    height="15"
+                                >
+                            </button>
+                        </header>
+
+                        <div class="contenido-profesional">
+                            <p class="datos-profesional">
+                                7 años de experiencia · Fútbol formativo
+                            </p>
+                            <p>
+                                Scouting y captación en fútbol formativo
+                                femenino. Una mirada integral al potencial
+                                técnico, táctico y competitivo de cada jugadora.
+                            </p>
+
+                            <ul class="especialidades lista-sin-estilo"
+                                aria-label="Especialidades de Sara Benítez">
+                                <li class="etiqueta">Fútbol femenino</li>
+                                <li class="etiqueta">Captación</li>
+                                <li class="etiqueta">Informes de scouting</li>
+                            </ul>
+                        </div>
+
+                        <footer class="pie-profesional">
+                            <p class="contactos-comunes texto-secundario">
+                                <img
+                                    src="../assets/images/Icono_Network.png"
+                                    alt=""
+                                    width="13"
+                                    height="13"
+                                >
+                                3 contactos en común
+                            </p>
+
+                            <div class="acciones-profesional">
+                                <button
+                                    type="button"
+                                    class="boton-texto"
+                                    data-accion="ver-perfil"
+                                    aria-label="Ver perfil de Sara Benítez"
+                                >
+                                    Ver perfil
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="boton-secundario"
+                                    data-accion="conectar"
+                                    aria-label="Conectar con Sara Benítez"
+                                    aria-pressed="false"
+                                >
+                                    <img
+                                        src="../assets/images/Vector_Plus.png"
+                                        alt=""
+                                        width="12"
+                                        height="12"
+                                    >
+                                    Conectar
+                                </button>
+                            </div>
+                        </footer>
+                    </article>
+                </div>
+
+                <p class="resumen-resultados texto-secundario">
+                    Mostrando 4 de 4 profesionales de demostración.
+                </p>
+            </section>
+
+            <!-- Columna derecha: sugerencias -->
+            <aside class="columna-sugerencias" aria-label="Sugerencias de búsqueda">
+                <section class="tarjeta busquedas-sugeridas">
+                    <h2>Búsquedas sugeridas</h2>
+                    <p class="texto-secundario">
+                        Otras formas de encontrar tu próximo equipo.
+                    </p>
+
+                    <ul class="lista-sugerencias lista-sin-estilo">
+                        <li>
+                            <button type="button" class="busqueda-sugerida">
+                                <img
+                                    src="../assets/images/Vector_Search.png"
+                                    alt=""
+                                    width="14"
+                                    height="14"
+                                >
+                                <span>
+                                    <span>Scouts de fútbol femenino</span>
+                                    <small>Captación · España</small>
+                                </span>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button type="button" class="busqueda-sugerida">
+                                <img
+                                    src="../assets/images/Vector_Search.png"
+                                    alt=""
+                                    width="14"
+                                    height="14"
+                                >
+                                <span>
+                                    <span>Analistas de alto rendimiento</span>
+                                    <small>Primer equipo · Análisis de datos</small>
+                                </span>
+                            </button>
+                        </li>
+
+                        <li>
+                            <button type="button" class="busqueda-sugerida">
+                                <img
+                                    src="../assets/images/Vector_Search.png"
+                                    alt=""
+                                    width="14"
+                                    height="14"
+                                >
+                                <span>
+                                    <span>Entrenadores UEFA Pro</span>
+                                    <small>Licencia UEFA Pro · España</small>
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+
+                    <a href="Explore.html" class="enlace-texto">
+                        Explorar el sector
+                        <img
+                            src="../assets/images/Vector_Arrow_Right.png"
+                            alt=""
+                            width="12"
+                            height="12"
+                        >
+                    </a>
+                </section>
+
+                <section class="tarjeta filtros-populares">
+                    <h2>Filtros populares en fútbol</h2>
+                    <p class="texto-secundario">
+                        Afina tu búsqueda con criterios del sector.
+                    </p>
+
+                    <ul class="lista-filtros-populares lista-sin-estilo">
+                        <li>
+                            <div>
+                                <span>Fútbol formativo</span>
+                                <small>Categoría</small>
+                            </div>
+                            <button
+                                type="button"
+                                class="boton-secundario"
+                                aria-label="Añadir filtro Fútbol formativo"
+                            >
+                                <img
+                                    src="../assets/images/Vector_Plus.png"
+                                    alt=""
+                                    width="12"
+                                    height="12"
+                                >
+                            </button>
+                        </li>
+
+                        <li>
+                            <div>
+                                <span>UEFA Pro</span>
+                                <small>Certificación</small>
+                            </div>
+                            <button
+                                type="button"
+                                class="boton-secundario"
+                                aria-label="Añadir filtro UEFA Pro"
+                            >
+                                <img
+                                    src="../assets/images/Vector_Plus.png"
+                                    alt=""
+                                    width="12"
+                                    height="12"
+                                >
+                            </button>
+                        </li>
+
+                        <li>
+                            <div>
+                                <span>Más de 5 años</span>
+                                <small>Experiencia</small>
+                            </div>
+                            <button
+                                type="button"
+                                class="boton-secundario"
+                                aria-label="Añadir filtro Más de 5 años"
+                            >
+                                <img
+                                    src="../assets/images/Vector_Plus.png"
+                                    alt=""
+                                    width="12"
+                                    height="12"
+                                >
+                            </button>
+                        </li>
+
+                        <li>
+                            <div>
+                                <span>Inglés</span>
+                                <small>Idioma</small>
+                            </div>
+                            <button
+                                type="button"
+                                class="boton-secundario"
+                                aria-label="Añadir filtro Inglés"
+                            >
+                                <img
+                                    src="../assets/images/Vector_Plus.png"
+                                    alt=""
+                                    width="12"
+                                    height="12"
+                                >
+                            </button>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="tarjeta tarjeta-destacada alerta-busqueda">
+                    <img
+                        src="../assets/images/Vector_Bookmark.png"
+                        alt=""
+                        width="20"
+                        height="20"
+                    >
+
+                    <h2>El próximo talento, sin empezar de cero.</h2>
+                    <p>
+                        Guarda esta búsqueda y recibe una alerta
+                        cuando nuevos profesionales encajen
+                        con tus criterios.
+                    </p>
+
+                    <button type="button" class="boton-secundario">
+                        Guardar y crear alerta
+                    </button>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="contenedor pie-pagina">
+        <p class="lema">
+            Más conocimiento. Más conexiones. Más fútbol.
+        </p>
+
+        <nav class="navegacion-pie" aria-label="Información de UDDEA">
+            <ul>
+                <li>
+                    <button type="button" class="boton-texto">
+                        Acerca de UDDEA
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="boton-texto">
+                        Privacidad
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="boton-texto">
+                        Ayuda
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <p class="copyright">UDDEA Network © 2026</p>
+    </footer>
+</body>
+</html>

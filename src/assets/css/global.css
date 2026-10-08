@@ -1,0 +1,724 @@
+/* ==================================================
+   1. VARIABLES DE DISEÑO
+   ================================================== */
+
+:root {
+    /* Colores */
+    --color-fondo: #f5f7f6;
+    --color-superficie: #ffffff;
+    --color-texto: #29352f;
+    --color-secundario: #77857d;
+    --color-verde: #426b59;
+    --color-verde-oscuro: #233f33;
+    --color-verde-claro: #edf4ef;
+    --color-borde: #e6ece8;
+
+    /* Tipografía */
+    --fuente-principal: Arial, Helvetica, sans-serif;
+    --tamano-texto: 13px;
+
+    /* Medidas compartidas */
+    --ancho-contenido: 1200px;
+    --alto-cabecera: 74px;
+
+    /* Bordes */
+    --radio-pequeno: 5px;
+    --radio-campo: 6px;
+    --radio-tarjeta: 10px;
+}
+
+
+/* ==================================================
+   2. BASE
+   ================================================== */
+
+/* El ancho incluye el padding y el borde */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-principal);
+    font-size: var(--tamano-texto);
+    line-height: 1.6;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure {
+    margin: 0;
+}
+
+/* Conservamos las viñetas de las listas de contenido.
+   Las listas de navegación se limpian en su componente. */
+
+
+/* ==================================================
+   3. CONTENEDOR Y UTILIDADES
+   ================================================== */
+
+.contenedor {
+    width: calc(100% - 32px);
+    max-width: var(--ancho-contenido);
+    margin-inline: auto;
+}
+
+.texto-secundario {
+    color: var(--color-secundario);
+    font-size: 11px;
+}
+
+.antetitulo {
+    color: var(--color-verde);
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Oculta visualmente un texto sin ocultarlo
+   a los lectores de pantalla */
+.solo-lectores {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+
+/* ==================================================
+   4. CABECERA Y NAVEGACIÓN
+   ================================================== */
+
+.cabecera {
+    border-bottom: 1px solid var(--color-borde);
+    background-color: var(--color-superficie);
+}
+
+.cabecera-contenido {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    min-height: var(--alto-cabecera);
+}
+
+/* Logo */
+
+.marca {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 0;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.marca > img {
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
+}
+
+.marca strong {
+    font-weight: 700;
+}
+
+/* Buscador de la cabecera */
+
+.cabecera .buscador {
+    display: flex;
+    align-items: center;
+    flex: 0 1 285px;
+    gap: 8px;
+
+    min-width: 120px;
+    height: 40px;
+    margin: 0;
+    padding: 7px 10px;
+
+    border: 1px solid transparent;
+    border-radius: var(--radio-campo);
+    background-color: var(--color-fondo);
+}
+
+.cabecera .buscador input {
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--color-texto);
+    font-size: 11px;
+}
+
+.cabecera .buscador input::placeholder {
+    color: var(--color-secundario);
+}
+
+.cabecera .buscador button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    padding: 0 0 0 8px;
+    border: 0;
+    border-left: 1px solid var(--color-borde);
+
+    background: transparent;
+    color: var(--color-verde);
+}
+
+.cabecera .buscador button img {
+    width: 11px;
+    height: 11px;
+    object-fit: contain;
+}
+
+.cabecera .buscador:focus-within {
+    border-color: var(--color-verde);
+}
+
+/* Navegación mediante iconos */
+
+.cabecera .navegacion {
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+.cabecera .navegacion ul {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cabecera .navegacion a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    min-height: var(--alto-cabecera);
+
+    color: var(--color-secundario);
+}
+
+.cabecera .navegacion a img {
+    width: 11px;
+    height: 11px;
+    object-fit: contain;
+}
+
+.cabecera .navegacion a:hover {
+    background-color: var(--color-verde-claro);
+}
+
+/* Marca la página actual */
+.cabecera .navegacion a[aria-current="page"]::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+
+    width: 10px;
+    height: 2px;
+
+    transform: translateX(-50%);
+    background-color: var(--color-verde);
+}
+
+/* Foco visible al navegar con el teclado */
+.cabecera a:focus-visible,
+.cabecera button:focus-visible,
+.cabecera input:focus-visible {
+    outline: 2px solid var(--color-verde);
+    outline-offset: 3px;
+}
+
+/* Adaptación de la cabecera */
+
+@media (max-width: 1000px) {
+    .cabecera-contenido {
+        gap: 20px;
+    }
+
+    .cabecera .buscador {
+        flex-basis: 230px;
+    }
+
+    .cabecera .navegacion ul {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 700px) {
+    .cabecera-contenido {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding-top: 14px;
+    }
+
+    .marca {
+        font-size: 14px;
+    }
+
+    .cabecera .buscador {
+        flex: 1 1 160px;
+    }
+
+    .cabecera .navegacion {
+        flex: 0 0 100%;
+        margin-left: 0;
+    }
+
+    .cabecera .navegacion ul {
+        justify-content: space-around;
+        gap: 0;
+    }
+
+    .cabecera .navegacion a {
+        width: 44px;
+        min-height: 44px;
+    }
+
+    /* Home tiene únicamente el logo */
+    .cabecera-contenido > .marca:only-child {
+        margin-bottom: 14px;
+    }
+}
+
+
+/* ==================================================
+   5. BOTONES
+   ================================================== */
+
+.boton-principal,
+.boton-secundario {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    min-height: 36px;
+    padding: 8px 16px;
+
+    border: 1px solid transparent;
+    border-radius: var(--radio-pequeno);
+
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* Acción principal */
+
+.boton-principal {
+    background-color: var(--color-verde);
+    color: white;
+}
+
+.boton-principal:hover {
+    background-color: var(--color-verde-oscuro);
+}
+
+/* Acción secundaria */
+
+.boton-secundario {
+    border-color: var(--color-borde);
+    background-color: var(--color-superficie);
+    color: var(--color-verde);
+}
+
+.boton-secundario:hover {
+    border-color: #bdcfc2;
+    background-color: var(--color-verde-claro);
+}
+
+/* Botones y enlaces sin fondo */
+
+.boton-texto,
+.enlace-texto {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 0;
+    border: 0;
+    background: transparent;
+
+    color: var(--color-verde);
+    font-size: 11px;
+    text-align: left;
+}
+
+.boton-texto:hover,
+.enlace-texto:hover {
+    text-decoration: underline;
+}
+
+/* Iconos dentro de botones */
+
+.boton-principal img,
+.boton-secundario img,
+.boton-texto img,
+.enlace-texto img {
+    flex-shrink: 0;
+    object-fit: contain;
+}
+
+/* Botón para guardar */
+
+.boton-guardar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 30px;
+    height: 30px;
+    padding: 7px;
+
+    border: 0;
+    border-radius: var(--radio-pequeno);
+    background: transparent;
+}
+
+.boton-guardar img {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+}
+
+.boton-guardar:hover,
+.boton-guardar[aria-pressed="true"] {
+    background-color: var(--color-verde-claro);
+}
+
+/* Estados comunes */
+
+.boton-principal:focus-visible,
+.boton-secundario:focus-visible,
+.boton-texto:focus-visible,
+.boton-guardar:focus-visible,
+.enlace-texto:focus-visible {
+    outline: 2px solid var(--color-verde);
+    outline-offset: 3px;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+/* ==================================================
+   6. FORMULARIOS
+   ================================================== */
+
+.campo-formulario {
+    margin-bottom: 16px;
+}
+
+.campo-formulario label,
+.campo-filtro label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--color-texto);
+    font-size: 12px;
+}
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea,
+.campo-filtro input,
+.campo-filtro select {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 42px;
+    padding: 10px 12px;
+
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-campo);
+
+    background-color: var(--color-superficie);
+    color: var(--color-texto);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.campo-formulario input::placeholder,
+.campo-formulario textarea::placeholder,
+.campo-filtro input::placeholder {
+    color: var(--color-secundario);
+    opacity: 1;
+}
+
+.campo-formulario textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus,
+.campo-filtro input:focus,
+.campo-filtro select:focus {
+    border-color: var(--color-verde);
+    box-shadow: 0 0 0 3px rgba(66, 107, 89, 0.1);
+}
+
+/* Los checkbox y radio conservan su tamaño natural */
+.campo-formulario input[type="checkbox"],
+.campo-formulario input[type="radio"] {
+    display: inline-block;
+    width: auto;
+    min-height: auto;
+    padding: 0;
+    accent-color: var(--color-verde);
+}
+
+.campo-formulario input:disabled,
+.campo-formulario select:disabled,
+.campo-formulario textarea:disabled,
+.campo-filtro input:disabled,
+.campo-filtro select:disabled {
+    cursor: not-allowed;
+    background-color: var(--color-fondo);
+    color: var(--color-secundario);
+}
+
+/* Mensajes: el texto y el estado se gestionarán con JavaScript */
+.mensaje-formulario {
+    margin-top: 12px;
+    font-size: 12px;
+}
+
+.mensaje-formulario:empty {
+    display: none;
+}
+
+.mensaje-formulario--error {
+    color: #a12e2e;
+}
+
+.mensaje-formulario--exito {
+    color: var(--color-verde-oscuro);
+}
+
+.campo-formulario [aria-invalid="true"],
+.campo-filtro [aria-invalid="true"] {
+    border-color: #a12e2e;
+}
+
+
+/* ==================================================
+   7. TARJETAS, AVATARES Y ETIQUETAS
+   ================================================== */
+
+/* Cada página decide el padding y la distribución de sus tarjetas */
+.tarjeta {
+    min-width: 0;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-tarjeta);
+    background-color: var(--color-superficie);
+}
+
+.tarjeta-destacada {
+    background-color: var(--color-verde-claro);
+}
+
+/* Avatar con imagen o iniciales */
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+
+    border-radius: 50%;
+    background-color: #dfe9e2;
+    color: var(--color-verde-oscuro);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar--pequeno {
+    width: 32px;
+    height: 32px;
+    font-size: 10px;
+}
+
+.avatar--grande {
+    width: 64px;
+    height: 64px;
+    font-size: 20px;
+}
+
+/* Etiquetas de categoría o especialidad */
+.etiqueta {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: var(--radio-pequeno);
+    background-color: var(--color-verde-claro);
+    color: var(--color-verde);
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+/* Utilidad para listas que no necesitan viñetas */
+.lista-sin-estilo {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* ==================================================
+   8. PIE DE PÁGINA
+   ================================================== */
+
+/* Ambos nombres funcionan con los HTML que ya tenemos */
+.pie-pagina,
+.pie-inicio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+
+    margin-top: 32px;
+    padding-top: 18px;
+    padding-bottom: 28px;
+
+    border-top: 1px solid var(--color-borde);
+    color: var(--color-secundario);
+    font-size: 10px;
+}
+
+.lema {
+    margin-right: auto;
+}
+
+.navegacion-pie ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navegacion-pie a,
+.navegacion-pie .boton-texto {
+    color: var(--color-secundario);
+    font-size: 10px;
+}
+
+.navegacion-pie a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    white-space: nowrap;
+}
+
+
+/* ==================================================
+   9. ACCESIBILIDAD
+   ================================================== */
+
+/* Foco visible al desplazarse con Tab */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--color-verde);
+    outline-offset: 3px;
+}
+
+/* Respeta los elementos ocultos desde HTML o JavaScript */
+[hidden] {
+    display: none !important;
+}
+
+
+/* ==================================================
+   10. ADAPTACIONES RESPONSIVE COMPARTIDAS
+   ================================================== */
+
+/*
+   Las reglas responsive de la cabecera ya están en el punto 4.
+   Aquí completamos las del pie.
+   Las columnas de cada vista permanecen en su CSS específico.
+*/
+
+@media (max-width: 700px) {
+    .pie-pagina,
+    .pie-inicio {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .lema {
+        margin-right: 0;
+    }
+
+    .navegacion-pie ul {
+        gap: 12px;
+    }
+
+    .copyright {
+        white-space: normal;
+    }
+}

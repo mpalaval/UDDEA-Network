@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explorar | UDDEA Network</title>
+
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/explore.css">
+</head>
+
+<body>
+    <header class="cabecera">
+        <div class="contenedor cabecera-contenido">
+            <a href="Home.html" class="marca">
+                
+                <!--Aquí va el logo del monograma-->
+                <img
+                    src="../assets/images/Logo_monograma.png"
+                    alt=""
+                    width="18"
+                    height="18"
+                >
+
+                <span><strong>UDDEA</strong> Network</span>
+            </a>
+
+            <form class="buscador" role="search">
+                
+                <input
+                    type="search"
+                    id="busqueda"
+                    name="busqueda"
+                    placeholder="Buscar profesionales, clubes..."
+                >
+                <button type="submit">
+                    <img
+                        src="../assets/images/Vector_Search.png"
+                        alt=""
+                        width="10"
+                        height="10"
+                    >
+                </button>
+            </form>
+
+            <nav class="navegacion" aria-label="Navegación principal">
+                <ul>
+                    <li>
+                        <a href="Feed.html">
+                            <img
+                                src="../assets/images/Icono_Feed.png"
+                                alt=""
+                                width="10"
+                                height="10"
+                            >
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Network.html">
+                            <img
+                                src="../assets/images/Icono_Network.png"
+                                alt=""
+                                width="10"
+                                height="10"
+                            >
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Opportunities.html">
+                            <img
+                                src="../assets/images/Icono_Opportunities.png"
+                                alt=""
+                                width="10"
+                                height="10"
+                            >
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Explore.html" aria-current="page">
+                            <img
+                                src="../assets/images/Icono_Explore.png"
+                                alt=""
+                                width="10"
+                                height="10"
+                            >
+                            <span class="solo-lectores">Explorar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Profile.html">
+                            <img
+                                src="../assets/images/Icono_Profile.png"
+                                alt=""
+                                width="10"
+                                height="10"
+                            >
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <section class="introduccion" aria-labelledby="titulo-principal">
+            <div>
+                <h1 id="titulo-principal">
+                    Descubre el fútbol desde dentro.
+                </h1>
+                <p>
+                    Entidades, conocimiento y conexiones
+                    para impulsar tu camino profesional.
+                </p>
+            </div>
+
+            <button type="button" class="boton-texto mis-guardados">
+                <img
+                    src="../assets/images/Vector_Bookmark.png"
+                    alt=""
+                    width="14"
+                    height="14"
+                >
+                <span>Mis guardados</span>
+            </button>
+        </section>
+
+        <form id="formulario-explorar" class="buscador-explorar" role="search">
+            <img
+                src="../assets/images/Vector_Search.png"
+                alt=""
+                width="18"
+                height="18"
+            >
+
+            <input
+                type="search"
+                id="busqueda-explorar"
+                name="consulta"
+                aria-label="Buscar clubes, competiciones, formación o recursos"
+                placeholder="Busca clubes, competiciones, formación o recursos del sector..."
+            >
+
+            <select name="tipo" aria-label="Tipo de contenido">
+                <option value="">Todo el ecosistema</option>
+                <option value="clubes">Clubes</option>
+                <option value="competiciones">Competiciones</option>
+                <option value="organizaciones">Organizaciones</option>
+                <option value="formacion">Formación</option>
+                <option value="recursos">Recursos</option>
+                <option value="tendencias">Tendencias del sector</option>
+            </select>
+
+            <button type="submit" class="boton-principal">
+                Explorar
+            </button>
+        </form>
+
+        <!-- Categorías -->
+        <nav class="categorias-explorar" aria-label="Categorías">
+            <ul class="lista-categorias">
+                <li>
+                    <a href="#clubes" class="tarjeta categoria">
+                        <div class="iconos-categoria">
+                            <img
+                                src="../assets/images/Vector_Shield.png"
+                                alt=""
+                                width="22"
+                                height="22"
+                            >
+                            <img
+                                src="../assets/images/Vector_Arrow_Top_Right.png"
+                                alt=""
+                                width="12"
+                                height="12"
+                            >
+                        </div>
+                        <h2>Clubes</h2>
+                        <p>Talento y proyectos</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#competiciones" class="tarjeta categoria">
+                        <div class="iconos-categoria">
+                            <img
+                                src="../assets/images/Vector_Trophy.png"
+                                alt=""
+                                width="22"
+                                height="22"
+                            >
+                            <img
+                                src="../assets/images/Vector_Arrow_Top_Right.png"
+                                alt=""
+                                width="12"
+                                height="12"
+                            >
+                        </div>
+                        <h2>Competiciones</h2>
+                        <p>El contexto del juego</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#organizaciones" class="tarjeta categoria">
+                        <div class="iconos-categoria">
+                            <img
+                                src="../assets/images/Vector_Building.png"
+                                alt=""
+                                width="22"
+                                height="22"
+                            >
+                            <img
+                                src="../assets/images/Vector_Arrow_Top_Right.png"
+                                alt=""
+                                width="12"
+                                height="12"
+                            >
+                        </div>
+                        <h2>Organizaciones</h2>
+                        <p>Conexiones que suman</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#formacion" class="tarjeta categoria">
+                        <div class="iconos-categoria">
+                            <img
+                                src="../assets/images/Vector_Student.png"
+                                alt=""
+                                width="22"
+                                height="22"
+                            >
+                            <img
+                                src="../assets/images/Vector_Arrow_Top_Right.png"
+                                alt=""
+                                width="12"
+                                height="12"
+                            >
+                        </div>
+                        <h2>Formación</h2>
+                        <p>Tu siguiente paso</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#recursos" class="tarjeta categoria">
+                        <div class="iconos-categoria">
+                            <img
+                                src="../assets/images/Vector_File.png"
+                                alt=""
+                                width="22"
+                                height="22"
+                            >
+                            <img
+                                src="../assets/images/Vector_Arrow_Top_Right.png"
+                                alt=""
+                                width="12"
+                                height="12"
+                            >
+                        </div>
+                        <h2>Recursos</h2>
+                        <p>Conocimiento práctico</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#tendencias" class="tarjeta categoria">
+                        <div class="iconos-categoria">
+                            <img
+                                src="../assets/images/Vector_Graphic_Chart.png"
+                                alt=""
+                                width="22"
+                                height="22"
+                            >
+                            <img
+                                src="../assets/images/Vector_Arrow_Top_Right.png"
+                                alt=""
+                                width="12"
+                                height="12"
+                            >
+                        </div>
+                        <h2>Tendencias del sector</h2>
+                        <p>Lo que mueve el fútbol</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="distribucion-explorar">
+            <div class="columna-principal">
+                <div class="barra-contenido">
+                    <div
+                        class="filtros-contenido"
+                        role="group"
+                        aria-label="Filtrar contenido"
+                    >
+                        <button type="button" aria-pressed="true">
+                            Para ti
+                        </button>
+                        <button type="button" aria-pressed="false">
+                            Novedades
+                        </button>
+                        <button type="button" aria-pressed="false">
+                            Siguiendo
+                        </button>
+                    </div>
+
+                    <button type="button" class="boton-texto">
+                        <img
+                            src="../assets/images/Vector_Sliders_Horizontal.png"
+                            alt=""
+                            width="15"
+                            height="15"
+                        >
+                        <span>Ajustar intereses</span>
+                    </button>
+                </div>
+
+                <!-- El CSS colocará la imagen detrás del texto -->
+                <article class="contenido-destacado">
+                    <img
+                        class="imagen-destacada"
+                        src="../assets/images/Fotografía_Entrenamiento.png"
+                        alt=""
+                    >
+
+                    <div class="texto-destacado">
+                        <p class="antetitulo">
+                            En foco · Cuaderno de análisis / 07
+                        </p>
+
+                        <h2>Leer el juego antes del resultado.</h2>
+
+                        <p>
+                            Claves para entender la presión alta
+                            en etapas de formación.
+                            Del dato al contexto del juego.
+                        </p>
+
+                        <div class="acciones-destacado">
+                            <button type="button" class="boton-informe">
+                                <img
+                                    src="../assets/images/Vector_Arrow_Right.png"
+                                    alt=""
+                                    width="14"
+                                    height="14"
+                                >
+                                <span>Explorar el informe</span>
+                            </button>
+                            <span class="texto-secundario">PDF · 12 p.</span>
+                        </div>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="boton-guardar"
+                        aria-label="Guardar informe"
+                        aria-pressed="false"
+                    >
+                        <img
+                            src="../assets/images/Vector_Bookmark.png"
+                            alt=""
+                            width="16"
+                            height="16"
+                        >
+                    </button>
+                </article>
+
+                <!-- Entidades -->
+                <section class="entidades" aria-labelledby="titulo-entidades">
+                    <div class="cabecera-seccion">
+                        <div>
+                            <h2 id="titulo-entidades">
+                                Entidades que mueven el juego
+                            </h2>
+                            <p class="texto-secundario">
+                                Conoce sus proyectos, sigue su actividad
+                                y encuentra tu próximo entorno.
+                            </p>
+                        </div>
+
+                        <button type="button" class="boton-texto">
+                            <span>Ver directorio</span>
+                            <img
+                                src="../assets/images/Vector_Arrow_Right.png"
+                                alt=""
+                                width="13"
+                                height="13"
+                            >
+                        </button>
+                    </div>
+
+                    <div class="lista-entidades">
+                        <article class="tarjeta entidad" id="clubes">
+                            <div class="cabecera-tarjeta">
+                                <span class="etiqueta">Clubes</span>
+
+                                <button
+                                    type="button"
+                                    class="boton-guardar"
+                                    aria-label="Guardar Real Valladolid CF"
+                                    aria-pressed="false"
+                                >
+                                    <img
+                                        src="../assets/images/Vector_Bookmark.png"
+                                        alt=""
+                                        width="14"
+                                        height="14"
+                                    >
+                                </button>
+                            </div>
+
+                            <header class="identidad-entidad">
+                                <span class="icono-entidad" aria-hidden="true">
+                                    RV
+                                </span>
+                                <div>
+                                    <h3>Real Valladolid CF</h3>
+                                    <p class="texto-secundario">
+                                        Valladolid, España · Club profesional
+                                    </p>
+                                </div>
+                            </header>
+
+                            <p>
+                                Metodología, análisis y desarrollo del talento
+                                desde la cantera al primer equipo.
+                            </p>
+                            <p class="especialidad-entidad">
+                                Análisis de rendimiento · Cantera
+                            </p>
+
+                            <footer class="acciones-entidad">
+                                <button
+                                    type="button"
+                                    class="boton-secundario"
+                                    aria-pressed="false"
+                                >
+                                    <img
+                                        src="../assets/images/Vector_Plus.png"
+                                        alt=""
+                                        width="12"
+                                        height="12"
+                                    >
+                                    <span>Seguir</span>
+                                </button>
+
+                                <button type="button" class="boton-texto">
+                                    <span>Ver entidad</span>
+                                    <img
+                                        src="../assets/images/Vector_Arrow_Top_Right.png"
+                                        alt=""
+                                        width="12"
+                                        height="12"
+                                    >
+                                </button>
+                            </footer>
+                        </article>
+
+                        <article class="tarjeta entidad" id="competiciones">
+                            <div class="cabecera-tarjeta">
+                                <span class="etiqueta">Competiciones</span>
+
+                                <button
+                                    type="button"
+                                    class="boton-guardar"
+                                    aria-label="Guardar Primera Federación"
+                                    aria-pressed="false"
+                                >
+                                    <img
+                                        src="../assets/images/Vector_Bookmark.png"
+                                        alt=""
+                                        width="14"
+                                        height="14"
+                                    >
+                                </button>
+                            </div>
+
+                            <header class="identidad-entidad">
+                                <span class="icono-entidad" aria-hidden="true">
+                                    1F
+                                </span>
+                                <div>
+                                    <h3>Primera Federación</h3>
+                                    <p class="texto-secundario">
+                                        España · Competición nacional
+                                    </p>
+                                </div>
+                            </header>
+
+                            <p>
+                                Descubre el entorno competitivo y los
+                                proyectos que conectan el fútbol sénior.
+                            </p>
+                            <p class="especialidad-entidad">
+                                Fútbol sénior · Contexto competitivo
+                            </p>
+
+                            <footer class="acciones-entidad">
+                                <button
+                                    type="button"
+                                    class="boton-secundario"
+                                    aria-pressed="false"
+                                >
+                                    <img
+                                        src="../assets/images/Vector_Plus.png"
+                                        alt=""
+                                        width="12"
+                                        height="12"
+                                    >
+                                    <span>Seguir</span>
+                                </button>
+
+                                <button type="button" class="boton-texto">
+                                    <span>Ver entidad</span>
+                                    <img
+                                        src="../assets/images/Vector_Arrow_Top_Right.png"
+                                        alt=""
+                                        width="12"
+                                        height="12"
+                                    >
+                                </button>
+                            </footer>
+                        </article>
+
+                        <article class="tarjeta entidad" id="organizaciones">
+                            <div class="cabecera-tarjeta">
+                                <span class="etiqueta">Organizaciones</span>
+
+                                <button
+                                    type="button"
+                                    class="boton-guardar"
+                                    aria-label="Guardar Universidad Europea"
+                                    aria-pressed="false"
+                                >
+                                    <img
+                                        src="../assets/images/Vector_Bookmark.png"
+                                        alt=""
+                                        width="14"
+                                        height="14"
+                                    >
+                                </button>
+                            </div>
+
+                            <header class="identidad-entidad">
+                                <span class="icono-entidad" aria-hidden="true">
+                                    UE
+                                </span>
+                                <div>
+                                    <h3>Universidad Europea</h3>
+                                    <p class="texto-secundario">
+                                        Madrid, España · Universidad
+                                    </p>
+                                </div>
+                            </header>
+
+                            <p>
+                                Un punto de encuentro entre formación,
+                                investigación y práctica profesional.
+                            </p>
+                            <p class="especialidad-entidad">
+                                Formación · Comunidad universitaria
+                            </p>
+
+                            <footer class="acciones-entidad">
+                                <button
+                                    type="button"
+                                    class="boton-secundario"
+                                    aria-pressed="false"
+                                >
+                                    <img
+                                        src="../assets/images/Vector_Plus.png"
+                                        alt=""
+                                        width="12"
+                                        height="12"
+                                    >
+                                    <span>Seguir</span>
+                                </button>
+
+                                <button type="button" class="boton-texto">
+                                    <span>Ver entidad</span>
+                                    <img
+                                        src="../assets/images/Vector_Arrow_Top_Right.png"
+                                        alt=""
+                                        width="12"
+                                        height="12"
+                                    >
+                                </button>
+                            </footer>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Formación y recursos -->
+                <section
+                    class="conocimiento"
+                    aria-labelledby="titulo-conocimiento"
+                >
+                    <div class="cabecera-seccion">
+                        <div>
+                            <h2 id="titulo-conocimiento">
+                                Conocimiento para dar el siguiente paso
+                            </h2>
+                            <p class="texto-secundario">
+                                Aprende, contrasta ideas y lleva
+                                nuevas herramientas al campo.
+                            </p>
+                        </div>
+
+                        <button type="button" class="boton-texto">
+                            <span>Ver selección</span>
+                            <img
+                                src="../assets/images/Vector_Arrow_Right.png"
+                                alt=""
+                                width="14"
+                                height="14"
+                            >
+                        </button>
+                    </div>
+
+                    <div class="lista-conocimiento">
+                        <article
+                            class="tarjeta contenido-formativo"
+                            id="formacion"
+                        >
+                            <div class="portada-formacion">
+                                <img
+                                    src="../assets/images/Análisis_Arteta.png"
+                                    alt="Dos entrenadores observan una sesión de entrenamiento."
+                                    loading="lazy"
+                                >
+                                <span class="etiqueta">Formación</span>
+                            </div>
+
+                            <div class="contenido-tarjeta">
+                                <p class="antetitulo">
+                                    Análisis y metodología
+                                </p>
+                                <h3>
+                                    Del vídeo a la decisión:
+                                    análisis aplicado al fútbol
+                                </h3>
+                                <p>
+                                    Una ruta de aprendizaje para transformar
+                                    la observación en decisiones
+                                    de entrenamiento.
+                                </p>
+                                <p class="texto-secundario">
+                                    Itinerario online · Para analistas
+                                    y entrenadores
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="tarjeta recurso" id="recursos">
+                            <div class="portada-recurso">
+                                <div
+                                    class="miniatura-documento"
+                                    aria-hidden="true"
+                                >
+                                    <img
+                                        src="../assets/images/Vector_Clipboard.png"
+                                        alt=""
+                                        width="24"
+                                        height="24"
+                                    >
+                                    <span class="linea-documento"></span>
+                                    <span class="linea-documento"></span>
+                                    <span class="linea-documento"></span>
+                                    <small>SCOUTING / 01</small>
+                                </div>
+
+                                <div>
+                                    <p class="antetitulo">
+                                        Biblioteca profesional
+                                    </p>
+                                    <h3>
+                                        Observar mejor.<br>
+                                        Decidir con criterio.
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div class="contenido-tarjeta">
+                                <p class="antetitulo">Recursos · Scouting</p>
+                                <h3>
+                                    Guía para estructurar
+                                    tu informe de scouting
+                                </h3>
+                                <p>
+                                    Criterios de observación, contexto
+                                    competitivo y una plantilla para
+                                    ordenar tus conclusiones.
+                                </p>
+                                <p class="texto-secundario">
+                                    Guía práctica · Plantilla editable
+                                    · Lectura de 8 min
+                                </p>
+
+                                <button
+                                    type="button"
+                                    class="boton-texto enlace-recurso"
+                                >
+                                    <span>Explorar recurso</span>
+                                    <img
+                                        src="../assets/images/Vector_Arrow_Right.png"
+                                        alt=""
+                                        width="16"
+                                        height="16"
+                                    >
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Columna derecha -->
+            <aside
+                class="columna-lateral"
+                aria-label="Tendencias, comunidad y agenda"
+            >
+                <section class="tarjeta tendencias" id="tendencias">
+                    <div class="cabecera-tarjeta">
+                        <h2>Tendencias del sector</h2>
+                        <img
+                            src="../assets/images/Vector_Graphic_Chart.png"
+                            alt=""
+                            width="20"
+                            height="20"
+                        >
+                    </div>
+
+                    <p class="texto-secundario">
+                        Ideas y conversaciones que marcan
+                        la agenda profesional.
+                    </p>
+
+                    <ul class="lista-tendencias">
+                        <li>
+                            <article class="tendencia">
+                                <p class="categoria-tendencia">
+                                    Tecnología y captación
+                                </p>
+                                <h3>
+                                    <button type="button" class="boton-texto">
+                                        <span>Scouting basado en datos</span>
+                                        <img
+                                            src="../assets/images/Vector_Arrow_Top_Right.png"
+                                            alt=""
+                                            width="12"
+                                            height="12"
+                                        >
+                                    </button>
+                                </h3>
+                                <p>
+                                    Cómo integrar métricas y observación
+                                    sin perder el contexto.
+                                </p>
+                            </article>
+                        </li>
+
+                        <li>
+                            <article class="tendencia">
+                                <p class="categoria-tendencia">
+                                    Desarrollo del talento
+                                </p>
+                                <h3>
+                                    <button type="button" class="boton-texto">
+                                        <span>El salto del juvenil al sénior</span>
+                                        <img
+                                            src="../assets/images/Vector_Arrow_Top_Right.png"
+                                            alt=""
+                                            width="12"
+                                            height="12"
+                                        >
+                                    </button>
+                                </h3>
+                                <p>
+                                    Metodología y acompañamiento
+                                    en una etapa decisiva.
+                                </p>
+                            </article>
+                        </li>
+
+                        <li>
+                            <article class="tendencia">
+                                <p class="categoria-tendencia">
+                                    Gestión y oportunidades
+                                </p>
+                                <h3>
+                                    <button type="button" class="boton-texto">
+                                        <span>El crecimiento del fútbol femenino</span>
+                                        <img
+                                            src="../assets/images/Vector_Arrow_Top_Right.png"
+                                            alt=""
+                                            width="12"
+                                            height="12"
+                                        >
+                                    </button>
+                                </h3>
+                                <p>
+                                    Nuevas estructuras, perfiles
+                                    y caminos profesionales.
+                                </p>
+                            </article>
+                        </li>
+                    </ul>
+
+                    <button type="button" class="boton-texto">
+                        <span>Explorar todas las tendencias</span>
+                        <img
+                            src="../assets/images/Vector_Arrow_Right.png"
+                            alt=""
+                            width="13"
+                            height="13"
+                        >
+                    </button>
+                </section>
+
+                <section class="tarjeta comunidad">
+                    <p class="antetitulo">Conocimiento que conecta</p>
+
+                    <div class="titulo-comunidad">
+                        <img
+                            src="../assets/images/Vector_Comment.png"
+                            alt=""
+                            width="24"
+                            height="24"
+                        >
+                        <h2>Análisis y metodología</h2>
+                    </div>
+
+                    <p>
+                        Comparte herramientas y perspectivas
+                        con analistas, scouts y entrenadores.
+                    </p>
+
+                    <p class="texto-secundario">
+                        Comunidad especializada en fútbol
+                    </p>
+
+                    <button type="button" class="boton-secundario">
+                        Descubrir comunidad
+                    </button>
+                </section>
+
+                <section class="tarjeta tarjeta-destacada agenda">
+                    <h2 class="antetitulo">En la agenda</h2>
+
+                    <div class="resumen-evento">
+                        <time class="fecha-evento" datetime="2026-10-15">
+                            <span>OCT</span>
+                            <strong>15</strong>
+                        </time>
+
+                        <div>
+                            <h3>Datos que transforman el juego</h3>
+                            <p class="texto-secundario">
+                                Mesa redonda · En línea · 18:00
+                            </p>
+                        </div>
+                    </div>
+
+                    <button type="button" class="boton-texto">
+                        <span>Ver evento</span>
+                        <img
+                            src="../assets/images/Vector_Arrow_Right.png"
+                            alt=""
+                            width="13"
+                            height="13"
+                        >
+                    </button>
+                </section>
+
+                <section class="tarjeta llamada-oportunidades">
+                    <h2>Tu experiencia tiene un destino.</h2>
+                    <p>
+                        Explora oportunidades alineadas con tu especialidad
+                        y el entorno que te interesa.
+                    </p>
+
+                    <a href="Opportunities.html" class="enlace-texto">
+                        <span>Ver oportunidades</span>
+                        <img
+                            src="../assets/images/Vector_Arrow_Right.png"
+                            alt=""
+                            width="13"
+                            height="13"
+                        >
+                    </a>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="contenedor pie-pagina">
+        <p class="lema">
+            Más conocimiento. Más conexiones. Más fútbol.
+        </p>
+
+        <nav class="navegacion-pie" aria-label="Información de UDDEA">
+            <ul>
+                <li>
+                    <button type="button" class="boton-texto">
+                        Acerca de UDDEA
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="boton-texto">
+                        Privacidad
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="boton-texto">
+                        Ayuda
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <p class="copyright">UDDEA Network © 2026</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bienvenida y acceso | UDDEA Network</title>
+
+    <!--Llamo a los estilos de CSS-->
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
+</head>
+
+<body>
+    <header class="cabecera">
+        <div class="contenedor cabecera-contenido">
+            <a href="Home.html" class="marca">
+                
+                <!--Aquí va el logo del monograma-->
+                <img
+                    src="../assets/images/Logo_monograma.png"
+                    alt=""
+                    width="18"
+                    height="18"
+                >
+
+                <span><strong>UDDEA</strong> Network</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="contenedor contenido-inicio">
+
+        <!-- Columna izquierda: presentación y fotografía -->
+        <section
+            class="presentacion"
+            aria-labelledby="titulo-principal"
+        >
+            <p class="antetitulo">
+                Tu comunidad profesional de fútbol
+            </p>
+
+            <h1 id="titulo-principal">
+                El fútbol se construye en equipo.
+            </h1>
+
+            <p class="descripcion-presentacion">
+                Conecta con scouts, analistas y entrenadores.
+                Comparte conocimiento y descubre oportunidades
+                para impulsar tu camino profesional.
+            </p>
+
+            <figure class="imagen-presentacion">
+                <!-- Guarda la fotografía en esta ruta -->
+                <img
+                    src="../assets/images/Análisis_Arteta.png"
+                    alt="Dos entrenadores observan una sesión de entrenamiento en un campo de fútbol."
+                >
+
+                <figcaption class="texto-imagen">
+                    <p class="antetitulo">
+                        Scouting · Análisis · Entrenamiento
+                    </p>
+                    <h2>El juego, con perspectiva.</h2>
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- Columna derecha: acceso -->
+        <section
+            class="tarjeta tarjeta-acceso"
+            aria-labelledby="titulo-acceso"
+        >
+            <header class="cabecera-acceso">
+                <h2 id="titulo-acceso">Iniciar sesión</h2>
+                <p class="texto-secundario">
+                    Tu próximo paso en el fútbol empieza aquí.
+                </p>
+            </header>
+
+            <form id="formulario-acceso" class="formulario-acceso">
+                <div class="campo-formulario">
+                    <label for="correo">Correo electrónico</label>
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="nombre@ejemplo.com"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="contrasena">Contraseña</label>
+                    <input
+                        type="password"
+                        id="contrasena"
+                        name="contrasena"
+                        placeholder="Introduce tu contraseña"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <div class="recuperar-contrasena">
+                    <button type="button" class="boton-texto">
+                        ¿Has olvidado tu contraseña?
+                    </button>
+                </div>
+
+                <!-- Se activará cuando añadamos la lógica de acceso -->
+                <button
+                    type="button"
+                    id="boton-iniciar-sesion"
+                    class="boton-principal"
+                    onclick="window.location.href='Feed.html'"
+                >
+                    Iniciar sesión
+                </button>
+            </form>
+
+            <div class="invitacion-registro">
+                <p>¿Aún no formas parte de UDDEA?</p>
+                <p class="texto-secundario">
+                    Crea tu cuenta y conecta con el sector.
+                </p>
+
+                <button
+                    type="button"
+                    id="boton-registro"
+                    class="boton-secundario"
+                >
+                    Registrarse
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="contenedor pie-inicio">
+        <p class="lema">
+            Más conocimiento. Más conexiones. Más fútbol.
+        </p>
+
+        <nav class="navegacion-pie" aria-label="Información de UDDEA">
+            <ul>
+                <li>
+                    <button type="button" class="boton-texto">
+                        Acerca de UDDEA
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="boton-texto">
+                        Privacidad
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="boton-texto">
+                        Ayuda
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <p class="copyright">UDDEA Network © 2026</p>
+    </footer>
+</body>
+</html>

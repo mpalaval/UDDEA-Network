@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Feed | U-Lab Network</title>
+
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/feed.css">
+</head>
+
+<body>
+    <!-- Cabecera: logo, buscador y navegación -->
+    <header class="cabecera">
+        <div class="contenedor cabecera-contenido">
+            <a href="Home.html" class="marca">
+                
+                <!--Aquí va el logo del monograma-->
+                <img
+                    src="../assets/images/Logo_monograma.png"
+                    alt=""
+                    width="18"
+                    height="18"
+                >
+
+                <span><strong>UDDEA</strong> Network</span>
+            </a>
+
+            <form class="buscador" role="search">
+                <input
+                    type="search"
+                    id="busqueda"
+                    name="busqueda"
+                    placeholder="Buscar profesionales, clubes..."
+                >
+                <button type="submit">
+                    <img
+                        src="../assets/images/Vector_Search.png"
+                        alt=""
+                        width="10"
+                        height="10"
+                    >
+                </button>
+            </form>
+
+            <nav class="navegacion" aria-label="Navegación principal">
+                <ul>
+                    <li>
+                        <a href="Feed.html" aria-current="page">
+                            <img
+                                src="../assets/images/Icono_Feed.png"
+                                alt=""
+                                width="10"
+                                height="10"
+                            >
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Network.html">
+                            <img
+                                src="../assets/images/Icono_Network.png"
+                                alt=""
+                                width="10"
+                                height="10"
+                            >
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Opportunities.html">
+                            <img
+                                src="../assets/images/Icono_Opportunities.png"
+                                alt=""
+                                width="10"
+                                height="10"
+                            >
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Explore.html">
+                            <img
+                                src="../assets/images/Icono_Explore.png"
+                                alt=""
+                                width="10"
+                                height="10"
+                            >
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Profile.html">
+                            <img
+                                src="../assets/images/Icono_Profile.png"
+                                alt=""
+                                width="10"
+                                height="10"
+                            >
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <section class="introduccion" aria-labelledby="titulo-principal">
+            <h1 id="titulo-principal">El fútbol se construye en equipo.</h1>
+            <p>
+                Conecta con el talento, las ideas y las oportunidades
+                que mueven el juego.
+            </p>
+        </section>
+
+        <!-- Este contenedor tendrá tres columnas mediante CSS Grid -->
+        <div class="distribucion-feed">
+
+            <!-- Columna izquierda -->
+            <aside class="columna-izquierda" aria-label="Tu espacio personal">
+
+                <section class="tarjeta tarjeta-perfil" id="perfil">
+                    <div class="portada-perfil">
+                        <span>U-Lab / Profesional</span>
+                    </div>
+
+                    <div class="contenido-perfil">
+                        <div class="avatar" aria-hidden="true">
+                            <img
+                                src="../assets/images/Avatar_Genérico.png"
+                                alt="Avatar Genérico"
+                                width="40"
+                                height="40"
+                            >
+                        </div>
+
+                        <h2>Alejandro Martín</h2>
+                        <p class="profesion">Analista de rendimiento</p>
+                        <p class="texto-secundario">Madrid, España</p>
+
+                        <p>
+                            Datos, metodología y desarrollo del talento.
+                            El juego, con perspectiva.
+                        </p>
+
+                        <dl class="estadisticas-perfil">
+                            <div>
+                                <dt>Visualizaciones del perfil</dt>
+                                <dd>128</dd>
+                            </div>
+                            <div>
+                                <dt>Contactos profesionales</dt>
+                                <dd>24</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </section>
+            </aside>
+
+            <!-- Columna central -->
+            <section class="columna-central" aria-label="Feed de la comunidad">
+
+                <section class="tarjeta crear-publicacion">
+                    <h2>Comparte con tu comunidad</h2>
+
+                    <form id="formulario-publicacion">
+                        <label for="texto-publicacion">
+                            ¿Qué quieres compartir con el mundo del fútbol?
+                        </label>
+
+                        <textarea
+                            id="texto-publicacion"
+                            name="publicacion"
+                            rows="3"
+                            maxlength="600"
+                            placeholder="Comparte una idea, experiencia o aprendizaje..."
+                            required
+                        ></textarea>
+
+                        <div class="acciones-publicacion">
+                            <button type="submit">
+                                <img
+                                    src="../assets/images/Vector_Plus.png"
+                                    width="10"
+                                    height="10"
+                                >
+                                Publicar
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="publicaciones" id="publicaciones">
+                    <div class="cabecera-seccion">
+                        <h2>Publicaciones de la comunidad</h2>
+                        <span class="texto-secundario">Más recientes</span>
+                    </div>
+
+                    <!-- Cada publicación es un artículo independiente -->
+                    <article class="tarjeta publicacion">
+                        <header class="autor-publicacion">
+                            <div class="avatar" aria-hidden="true">
+                                <img
+                                    src="../assets/images/Avatar_Genérico_6.png"
+                                    alt=""
+                                    width="10"
+                                    height="10"
+                                >
+                            </div>
+
+                            <div>
+                                <h3>Elena Ruiz</h3>
+                                <p>Analista de fútbol formativo</p>
+                                <p class="texto-secundario">Hace 2 horas</p>
+                            </div>
+                        </header>
+
+                        <div class="contenido-publicacion">
+                            <p>
+                                El dato explica una parte.
+                                El contexto, la diferencia.
+                            </p>
+                            <p>
+                                Esta semana hemos trabajado cómo analizar
+                                la presión alta en fútbol formativo:
+                                menos métricas aisladas y más preguntas
+                                sobre lo que ocurre en el campo.
+                            </p>
+
+                            <p class="etiquetas">
+                                #AnálisisTáctico #FútbolFormativo
+                            </p>
+
+                            <div class="destacado-publicacion">
+                                <p>Cuaderno de análisis</p>
+                                <h4>Leer el juego antes del resultado.</h4>
+                                <p>Claves para entender la presión alta.</p>
+                            </div>
+                        </div>
+
+                        <footer class="pie-publicacion">
+                            <p class="texto-secundario">8 Me gusta</p>
+
+                            <div class="acciones-publicacion">
+                                <button type="button">
+                                    <img
+                                        src="../assets/images/Vector_Thumbs_Up.png"
+                                        width="10"
+                                        height="10"
+                                    >
+                                    Me gusta
+                                </button>
+                                <button type="button">
+                                    <img
+                                        src="../assets/images/Vector_Comment.png"
+                                        width="10"
+                                        height="10"
+                                    >
+                                    Comentar
+                                </button>
+                                <button type="button">
+                                    <img
+                                        src="../assets/images/Vector_Share.png"
+                                        width="10"
+                                        height="10"
+                                    >
+                                    Compartir
+                                </button>
+                            </div>
+                        </footer>
+                    </article>
+
+                    <article class="tarjeta publicacion">
+                        <header class="autor-publicacion">
+                            <div class="avatar" aria-hidden="true">
+                                <img
+                                src="../assets/images/Avatar_Genérico_5.png"
+                                alt=""
+                                width="10"
+                                height="10"
+                            >
+                            </div>
+
+                            <div>
+                                <h3>Marcos Serrano</h3>
+                                <p>Entrenador de cantera</p>
+                                <p class="texto-secundario">Hace 4 horas</p>
+                            </div>
+                        </header>
+
+                        <div class="contenido-publicacion">
+                            <p>
+                                Detectar talento también es saber acompañarlo.
+                            </p>
+                            <p>
+                                ¿Qué indicadores utilizáis para valorar
+                                la evolución de un jugador más allá
+                                de sus estadísticas?
+                            </p>
+                            <p class="etiquetas">#Cantera #DesarrolloDelTalento</p>
+                        </div>
+
+                        <footer class="pie-publicacion">
+                            <p class="texto-secundario">12 Me gusta</p>
+
+                            <div class="acciones-publicacion">
+                                <button type="button">
+                                    <img
+                                        src="../assets/images/Vector_Thumbs_Up.png"
+                                        width="10"
+                                        height="10"
+                                    >
+                                    Me gusta
+                                </button>
+                                <button type="button">
+                                    <img
+                                        src="../assets/images/Vector_Comment.png"
+                                        width="10"
+                                        height="10"
+                                    >
+                                    Comentar
+                                </button>
+                                <button type="button">
+                                    <img
+                                        src="../assets/images/Vector_Share.png"
+                                        width="10"
+                                        height="10"
+                                    >
+                                    Compartir
+                                </button>
+                            </div>
+                        </footer>
+                    </article>
+                </section>
+
+            </section>
+
+            <!-- Columna derecha -->
+            <aside class="columna-derecha" aria-label="Oportunidades y contactos">
+
+                <section class="tarjeta oportunidades" id="oportunidades">
+                    <h2>Oportunidades destacadas</h2>
+                    <p class="texto-secundario">
+                        Tu experiencia tiene un próximo destino.
+                    </p>
+
+                    <ul class="lista-oportunidades">
+                        <li>
+                            <article class="oportunidad">
+                                <h3>Analista de rendimiento</h3>
+                                <p>Club Deportivo Norte · Cantera</p>
+                                <p class="texto-secundario">
+                                    Madrid · Presencial
+                                </p>
+                                <span class="etiqueta">Jornada completa</span>
+                            </article>
+                        </li>
+
+                        <li>
+                            <article class="oportunidad">
+                                <h3>Scout de fútbol formativo</h3>
+                                <p>Academia Horizonte</p>
+                                <p class="texto-secundario">
+                                    Valencia · Híbrido
+                                </p>
+                                <span class="etiqueta">Proyecto</span>
+                            </article>
+                        </li>
+
+                        <li>
+                            <article class="oportunidad">
+                                <h3>Prácticas en análisis de datos</h3>
+                                <p>Fundación Fútbol Abierto</p>
+                                <p class="texto-secundario">
+                                    Sevilla · Presencial
+                                </p>
+                                <span class="etiqueta">Prácticas</span>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="tarjeta contactos" id="contactos">
+                    <h2>Amplía tu red</h2>
+                    <p class="texto-secundario">
+                        Profesionales con los que crecer.
+                    </p>
+
+                    <ul class="lista-contactos">
+                        <li class="contacto">
+                            <div class="avatar" aria-hidden="true">
+                                <img
+                                    src="../assets/images/Avatar_Genérico_2.png"
+                                    width="44"
+                                    height="44"
+                                >
+                            </div>
+
+                            <div class="informacion-contacto">
+                                <h3>Lucía Fernández</h3>
+                                <p>Scout de fútbol base</p>
+                                <button type="button">
+                                    <img
+                                        src="../assets/images/Vector_Globe_Network.png"
+                                    >
+                                    Conectar
+                                </button>
+                            </div>
+                        </li>
+
+                        <li class="contacto">
+                            <div class="avatar" aria-hidden="true">
+                                <img
+                                    src="../assets/images/Avatar_Genérico_3.png"
+                                    width="44"
+                                    height="44"
+                                >
+                            </div>
+
+                            <div class="informacion-contacto">
+                                <h3>Javier Molina</h3>
+                                <p>Entrenador UEFA Pro</p>
+                                <button type="button">
+                                    <img
+                                        src="../assets/images/Vector_Globe_Network.png"
+                                    >
+                                    Conectar
+                                </button>
+                            </div>
+                        </li>
+
+                        <li class="contacto">
+                            <div class="avatar" aria-hidden="true">
+                                <img
+                                    src="../assets/images/Avatar_Genérico_4.png"
+                                    width="44"
+                                    height="44"
+                                >
+                            </div>
+
+                            <div class="informacion-contacto">
+                                <h3>Paula Navarro</h3>
+                                <p>Directora deportiva</p>
+                                <button type="button">
+                                    <img
+                                        src="../assets/images/Vector_Globe_Network.png"
+                                    >
+                                    Conectar
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+            </aside>
+
+        </div>
+    </main>
+
+    <footer class="pie-pagina contenedor">
+        <p>U-Lab Network · Proyecto universitario</p>
+        <p>Los perfiles, ofertas y eventos son ficticios.</p>
+    </footer>
+</body>
+</html>

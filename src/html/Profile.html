@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi perfil | UDDEA Network</title>
+
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/profile.css">
+</head>
+
+<body>
+    <!-- Cabecera compartida -->
+    <header class="cabecera">
+        <div class="contenedor cabecera-contenido">
+            <a href="Feed.html" class="marca">
+                <img
+                    src="../assets/images/Logo_monograma.png"
+                    alt=""
+                    width="27"
+                    height="27"
+                >
+                <span><strong>UDDEA</strong> Network</span>
+            </a>
+
+            <form class="buscador" role="search">
+                <label for="busqueda-general" class="solo-lectores">
+                    Buscar en UDDEA
+                </label>
+
+                <input
+                    type="search"
+                    id="busqueda-general"
+                    name="consulta"
+                    placeholder="Buscar profesionales, clubes..."
+                >
+
+                <button type="submit" aria-label="Buscar">
+                    <img
+                        src="../assets/images/Vector_Search.png"
+                        alt=""
+                        width="11"
+                        height="11"
+                    >
+                </button>
+            </form>
+
+            <nav class="navegacion" aria-label="Navegación principal">
+                <ul>
+                    <li>
+                        <a href="Feed.html">
+                            <img
+                                src="../assets/images/Icono_Feed.png"
+                                alt=""
+                                width="11"
+                                height="11"
+                            >
+                            <span class="solo-lectores">Inicio</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="Network.html">
+                            <img
+                                src="../assets/images/Icono_Network.png"
+                                alt=""
+                                width="11"
+                                height="11"
+                            >
+                            <span class="solo-lectores">Red</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="Opportunities.html">
+                            <img
+                                src="../assets/images/Icono_Opportunities.png"
+                                alt=""
+                                width="11"
+                                height="11"
+                            >
+                            <span class="solo-lectores">Oportunidades</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="Explore.html">
+                            <img
+                                src="../assets/images/Icono_Explore.png"
+                                alt=""
+                                width="11"
+                                height="11"
+                            >
+                            <span class="solo-lectores">Explorar</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="Profile.html" aria-current="page">
+                            <img
+                                src="../assets/images/Icono_Profile.png"
+                                alt=""
+                                width="11"
+                                height="11"
+                            >
+                            <span class="solo-lectores">Perfil</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor contenido-perfil">
+        <nav class="ruta-navegacion" aria-label="Ruta de navegación">
+            <ol class="lista-sin-estilo">
+                <li><a href="Feed.html">Inicio</a></li>
+                <li aria-current="page">Mi perfil</li>
+            </ol>
+        </nav>
+
+        <!-- Presentación a todo el ancho -->
+        <section
+            class="tarjeta presentacion-perfil"
+            aria-labelledby="nombre-profesional"
+        >
+            <div class="portada-perfil">
+                <div class="texto-portada">
+                    <p class="antetitulo">Análisis, criterio y contexto</p>
+                    <h2>
+                        El dato explica una parte.<br>
+                        El contexto, la diferencia.
+                    </h2>
+                </div>
+
+                <!-- Campo decorativo que dibujaremos con CSS -->
+                <div class="campo-futbol" aria-hidden="true"></div>
+            </div>
+
+            <div class="contenido-presentacion">
+                <div class="resumen-profesional">
+                    <div class="avatar avatar--grande avatar-perfil">
+                        <img
+                            src="../assets/images/Avatar_Genérico.png"
+                            alt=""
+                            width="64"
+                            height="64"
+                        >
+                    </div>
+
+                    <div class="identidad-profesional">
+                        <h1 id="nombre-profesional">Alejandro Martín</h1>
+
+                        <p class="cargo-profesional">
+                            Analista de rendimiento · Universidad Europea
+                        </p>
+
+                        <p class="ubicacion-profesional texto-secundario">
+                            <img
+                                src="../assets/images/Vector_Map_Pin.png"
+                                alt=""
+                                width="13"
+                                height="13"
+                            >
+                            Madrid, España
+                        </p>
+
+                        <ul
+                            class="especialidades-perfil lista-sin-estilo"
+                            aria-label="Especialidades"
+                        >
+                            <li class="etiqueta">Análisis táctico</li>
+                            <li class="etiqueta">Fútbol formativo</li>
+                            <li class="etiqueta">Datos deportivos</li>
+                        </ul>
+                    </div>
+
+                    <div class="acciones-perfil">
+                        <button
+                            type="button"
+                            id="editar-perfil"
+                            class="boton-principal"
+                        >
+                            Editar perfil
+                        </button>
+
+                        <button
+                            type="button"
+                            id="compartir-perfil"
+                            class="boton-secundario"
+                        >
+                            <img
+                                src="../assets/images/Vector_Share.png"
+                                alt=""
+                                width="13"
+                                height="13"
+                            >
+                            Compartir perfil
+                        </button>
+                    </div>
+                </div>
+
+                <div class="pie-presentacion">
+                    <dl class="estadisticas-perfil">
+                        <div>
+                            <dt>Contactos profesionales</dt>
+                            <dd>24</dd>
+                        </div>
+
+                        <div>
+                            <dt>Visualizaciones del perfil</dt>
+                            <dd>128</dd>
+                        </div>
+                    </dl>
+
+                    <span class="etiqueta disponibilidad">
+                        Disponible para colaborar
+                    </span>
+                </div>
+
+                <p
+                    id="mensaje-perfil"
+                    class="mensaje-formulario"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+            </div>
+        </section>
+
+        <div class="distribucion-perfil">
+
+            <!-- Columna principal -->
+            <div class="columna-principal">
+
+                <section
+                    class="tarjeta sobre-mi"
+                    aria-labelledby="titulo-sobre-mi"
+                >
+                    <h2 id="titulo-sobre-mi">Sobre mí</h2>
+
+                    <p>
+                        Soy estudiante de Ingeniería Informática y analista
+                        de rendimiento en formación. Me interesa conectar
+                        la tecnología, los datos y el conocimiento del juego
+                        para apoyar el desarrollo del talento.
+                    </p>
+
+                    <p>
+                        Participo en proyectos universitarios relacionados
+                        con el fútbol, la observación de partidos y la
+                        elaboración de informes. Busco aprender junto
+                        a entrenadores, analistas y profesionales del sector.
+                    </p>
+
+                    <p class="disponibilidad-texto">
+                        Abierto a prácticas, proyectos de análisis
+                        y colaboraciones en fútbol formativo.
+                    </p>
+                </section>
+
+                <section
+                    class="tarjeta experiencia"
+                    aria-labelledby="titulo-experiencia"
+                >
+                    <div class="cabecera-seccion">
+                        <h2 id="titulo-experiencia">
+                            Experiencia profesional
+                        </h2>
+
+                        <button
+                            type="button"
+                            class="boton-texto"
+                            data-accion="anadir-experiencia"
+                        >
+                            <img
+                                src="../assets/images/Vector_Plus.png"
+                                alt=""
+                                width="12"
+                                height="12"
+                            >
+                            Añadir
+                        </button>
+                    </div>
+
+                    <ol class="lista-experiencia lista-sin-estilo">
+                        <li>
+                            <article class="entrada-trayectoria">
+                                <div class="icono-entidad" aria-hidden="true">
+                                    UE
+                                </div>
+
+                                <div class="contenido-trayectoria">
+                                    <div class="cabecera-trayectoria">
+                                        <h3>Analista de rendimiento en formación</h3>
+                                        <span class="etiqueta">Actual</span>
+                                    </div>
+
+                                    <p>Equipo universitario · Universidad Europea</p>
+
+                                    <p class="texto-secundario">
+                                        <time datetime="2025-09">Septiembre de 2025</time>
+                                        – Actualidad
+                                    </p>
+
+                                    <p class="texto-secundario">
+                                        Madrid, España · Presencial
+                                    </p>
+
+                                    <p>
+                                        Observación de partidos, selección
+                                        de secuencias de vídeo y elaboración
+                                        de informes sencillos para apoyar
+                                        la preparación del equipo.
+                                    </p>
+
+                                    <ul class="etiquetas-trayectoria lista-sin-estilo">
+                                        <li class="etiqueta">Videoanálisis</li>
+                                        <li class="etiqueta">Análisis táctico</li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </li>
+
+                        <li>
+                            <article class="entrada-trayectoria">
+                                <div class="icono-entidad" aria-hidden="true">
+                                    UL
+                                </div>
+
+                                <div class="contenido-trayectoria">
+                                    <h3>Colaborador en proyecto de datos deportivos</h3>
+
+                                    <p>U-Lab · Proyecto académico</p>
+
+                                    <p class="texto-secundario">
+                                        <time datetime="2025-02">Febrero de 2025</time>
+                                        –
+                                        <time datetime="2025-06">Junio de 2025</time>
+                                    </p>
+
+                                    <p class="texto-secundario">
+                                        Madrid, España · Híbrido
+                                    </p>
+
+                                    <p>
+                                        Organización de datos de partidos,
+                                        comparación de indicadores
+                                        y presentación de conclusiones
+                                        junto a compañeros de informática
+                                        y gestión deportiva.
+                                    </p>
+
+                                    <ul class="etiquetas-trayectoria lista-sin-estilo">
+                                        <li class="etiqueta">Datos deportivos</li>
+                                        <li class="etiqueta">Trabajo en equipo</li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </li>
+                    </ol>
+                </section>
+
+                <section
+                    class="tarjeta certificaciones"
+                    aria-labelledby="titulo-certificaciones"
+                >
+                    <div class="cabecera-seccion">
+                        <h2 id="titulo-certificaciones">Certificaciones</h2>
+
+                        <button
+                            type="button"
+                            class="boton-texto"
+                            data-accion="anadir-certificacion"
+                        >
+                            <img
+                                src="../assets/images/Vector_Plus.png"
+                                alt=""
+                                width="12"
+                                height="12"
+                            >
+                            Añadir
+                        </button>
+                    </div>
+
+                    <div class="lista-certificaciones">
+                        <article class="certificacion">
+                            <img
+                                src="../assets/images/Vector_File.png"
+                                alt=""
+                                width="22"
+                                height="22"
+                            >
+
+                            <h3>Introducción al análisis táctico</h3>
+                            <p>Programa formativo universitario</p>
+                            <p class="texto-secundario">
+                                Expedida en <time datetime="2025">2025</time>
+                            </p>
+
+                            <button
+                                type="button"
+                                class="boton-texto"
+                                data-accion="ver-credencial"
+                            >
+                                Ver credencial
+                            </button>
+                        </article>
+
+                        <article class="certificacion">
+                            <img
+                                src="../assets/images/Vector_Graphic_Chart.png"
+                                alt=""
+                                width="22"
+                                height="22"
+                            >
+
+                            <h3>Fundamentos de datos deportivos</h3>
+                            <p>Taller académico U-Lab</p>
+                            <p class="texto-secundario">
+                                Expedida en <time datetime="2026">2026</time>
+                            </p>
+
+                            <button
+                                type="button"
+                                class="boton-texto"
+                                data-accion="ver-credencial"
+                            >
+                                Ver credencial
+                            </button>
+                        </article>
+
+                        <article class="certificacion">
+                            <img
+                                src="../assets/images/Vector_Clipboard.png"
+                                alt=""
+                                width="22"
+                                height="22"
+                            >
+
+                            <h3>Elaboración de informes de scouting</h3>
+                            <p>Seminario de fútbol formativo</p>
+                            <p class="texto-secundario">
+                                Expedida en <time datetime="2026">2026</time>
+                            </p>
+
+                            <button
+                                type="button"
+                                class="boton-texto"
+                                data-accion="ver-credencial"
+                            >
+                                Ver credencial
+                            </button>
+                        </article>
+                    </div>
+                </section>
+
+                <section
+                    class="tarjeta habilidades"
+                    aria-labelledby="titulo-habilidades"
+                >
+                    <div class="cabecera-seccion">
+                        <h2 id="titulo-habilidades">Habilidades</h2>
+
+                        <button
+                            type="button"
+                            class="boton-texto"
+                            data-accion="editar-habilidades"
+                        >
+                            Editar
+                        </button>
+                    </div>
+
+                    <ul class="lista-habilidades lista-sin-estilo">
+                        <li><span>Análisis táctico</span></li>
+                        <li><span>Videoanálisis</span></li>
+                        <li><span>Interpretación de datos</span></li>
+                        <li><span>Elaboración de informes</span></li>
+                        <li><span>Trabajo en equipo</span></li>
+                        <li><span>Comunicación de resultados</span></li>
+                    </ul>
+
+                    <p class="texto-secundario">
+                        Herramientas: Excel, HTML, CSS y JavaScript.
+                    </p>
+                </section>
+
+                <section
+                    class="tarjeta formacion"
+                    aria-labelledby="titulo-formacion"
+                >
+                    <div class="cabecera-seccion">
+                        <h2 id="titulo-formacion">Formación</h2>
+
+                        <button
+                            type="button"
+                            class="boton-texto"
+                            data-accion="anadir-formacion"
+                        >
+                            <img
+                                src="../assets/images/Vector_Plus.png"
+                                alt=""
+                                width="12"
+                                height="12"
+                            >
+                            Añadir
+                        </button>
+                    </div>
+
+                    <ul class="lista-formacion lista-sin-estilo">
+                        <li>
+                            <article class="entrada-trayectoria">
+                                <div class="icono-entidad" aria-hidden="true">
+                                    UE
+                                </div>
+
+                                <div class="contenido-trayectoria">
+                                    <h3>Universidad Europea</h3>
+                                    <p>Grado en Ingeniería Informática</p>
+                                    <p class="texto-secundario">
+                                        <time datetime="2025">2025</time>
+                                        – Actualidad
+                                    </p>
+                                    <p>
+                                        Interés en desarrollo web,
+                                        análisis de datos y aplicaciones
+                                        de la tecnología al deporte.
+                                    </p>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+
+                <section
+                    class="tarjeta publicaciones-recientes"
+                    aria-labelledby="titulo-publicaciones"
+                >
+                    <div class="cabecera-seccion">
+                        <h2 id="titulo-publicaciones">
+                            Publicaciones recientes
+                        </h2>
+
+                        <a href="Feed.html" class="enlace-texto">
+                            Ir al feed
+                            <img
+                                src="../assets/images/Vector_Arrow_Right.png"
+                                alt=""
+                                width="12"
+                                height="12"
+                            >
+                        </a>
+                    </div>
+
+                    <div class="lista-publicaciones-perfil">
+                        <article class="publicacion-perfil">
+                            <header class="autor-publicacion">
+                                <div class="avatar avatar--pequeno">
+                                    <img
+                                        src="../assets/images/Avatar_Genérico.png"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                    >
+                                </div>
+
+                                <div>
+                                    <h3>Alejandro Martín</h3>
+                                    <p class="texto-secundario">Hace 2 días</p>
+                                </div>
+                            </header>
+
+                            <p>
+                                Esta semana hemos trabajado cómo observar
+                                la presión alta y convertir nuestras
+                                conclusiones en un informe útil para el equipo.
+                            </p>
+
+                            <figure class="imagen-publicacion">
+                                <img
+                                    src="../assets/images/Fotografía_Entrenamiento.png"
+                                    alt="Jugadores participan en un entrenamiento de fútbol."
+                                    loading="lazy"
+                                >
+                                <figcaption>
+                                    Aprender a mirar antes de medir.
+                                </figcaption>
+                            </figure>
+
+                            <p class="etiquetas-publicacion">
+                                #AnálisisTáctico #Aprendizaje
+                            </p>
+
+                            <footer class="pie-publicacion-perfil">
+                                <p class="texto-secundario">
+                                    8 Me gusta · 2 comentarios
+                                </p>
+                            </footer>
+                        </article>
+
+                        <article class="publicacion-perfil">
+                            <header class="autor-publicacion">
+                                <div class="avatar avatar--pequeno">
+                                    <img
+                                        src="../assets/images/Avatar_Genérico.png"
+                                        alt=""
+                                        width="32"
+                                        height="32"
+                                    >
+                                </div>
+
+                                <div>
+                                    <h3>Alejandro Martín</h3>
+                                    <p class="texto-secundario">Hace 5 días</p>
+                                </div>
+                            </header>
+
+                            <p>
+                                Un buen informe no es el que contiene
+                                más datos, sino el que ayuda a entender
+                                mejor lo que sucede en el campo.
+                            </p>
+
+                            <div class="destacado-publicacion-perfil">
+                                <img
+                                    src="../assets/images/Vector_Clipboard.png"
+                                    alt=""
+                                    width="24"
+                                    height="24"
+                                >
+                                <h4>Observar, interpretar y comunicar.</h4>
+                                <p>
+                                    Tres pasos para convertir información
+                                    en conocimiento útil.
+                                </p>
+                            </div>
+
+                            <p class="etiquetas-publicacion">
+                                #DatosDeportivos #Metodología
+                            </p>
+
+                            <footer class="pie-publicacion-perfil">
+                                <p class="texto-secundario">
+                                    12 Me gusta · 3 comentarios
+                                </p>
+                            </footer>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Columna lateral -->
+            <aside
+                class="columna-lateral"
+                aria-label="Información complementaria del perfil"
+            >
+                <section class="tarjeta tarjeta-destacada estado-perfil">
+                    <img
+                        src="../assets/images/Vector_Shield.png"
+                        alt=""
+                        width="22"
+                        height="22"
+                    >
+
+                    <h2>Una trayectoria con respaldo</h2>
+
+                    <p>
+                        Tu experiencia, formación y certificaciones
+                        ayudan a presentar tu perfil profesional.
+                    </p>
+
+                    <p class="texto-secundario">
+                        Perfil de demostración. La verificación
+                        de identidad y credenciales no está disponible.
+                    </p>
+                </section>
+
+                <section class="tarjeta comunidad-perfil">
+                    <h2>Tu red profesional</h2>
+
+                    <div class="avatares-comunidad" aria-hidden="true">
+                        <div class="avatar avatar--pequeno">
+                            <img
+                                src="../assets/images/Avatar_Genérico_2.png"
+                                alt=""
+                                width="32"
+                                height="32"
+                            >
+                        </div>
+
+                        <div class="avatar avatar--pequeno">
+                            <img
+                                src="../assets/images/Avatar_Genérico_3.png"
+                                alt=""
+                                width="32"
+                                height="32"
+                            >
+                        </div>
+
+                        <div class="avatar avatar--pequeno">
+                            <img
+                                src="../assets/images/Avatar_Genérico_4.png"
+                                alt=""
+                                width="32"
+                                height="32"
+                            >
+                        </div>
+                    </div>
+
+                    <p>
+                        Conecta con profesionales que comparten
+                        tu interés por el análisis y el desarrollo del talento.
+                    </p>
+
+                    <a href="Network.html" class="enlace-texto">
+                        Explorar mi red
+                        <img
+                            src="../assets/images/Vector_Arrow_Right.png"
+                            alt=""
+                            width="12"
+                            height="12"
+                        >
+                    </a>
+                </section>
+
+                <section class="tarjeta recomendaciones">
+                    <h2>Recomendaciones</h2>
+
+                    <figure class="recomendacion">
+                        <blockquote>
+                            <p>
+                                Alejandro destaca por su curiosidad
+                                y por su capacidad para organizar
+                                la información y trabajar en equipo.
+                                Siempre busca entender el contexto
+                                antes de sacar conclusiones.
+                            </p>
+                        </blockquote>
+
+                        <figcaption class="autor-recomendacion">
+                            <div class="avatar avatar--pequeno">
+                                <img
+                                    src="../assets/images/Avatar_Genérico_3.png"
+                                    alt=""
+                                    width="32"
+                                    height="32"
+                                >
+                            </div>
+
+                            <div>
+                                <p><strong>Javier Molina</strong></p>
+                                <p class="texto-secundario">
+                                    Entrenador UEFA Pro
+                                </p>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </section>
+
+                <section class="tarjeta actividad-reciente">
+                    <h2>Actividad reciente</h2>
+
+                    <ul class="lista-actividad lista-sin-estilo">
+                        <li>
+                            <img
+                                src="../assets/images/Vector_File.png"
+                                alt=""
+                                width="16"
+                                height="16"
+                            >
+
+                            <div>
+                                <p>
+                                    Compartiste una reflexión sobre
+                                    el análisis de la presión alta.
+                                </p>
+                                <span class="texto-secundario">
+                                    Hace 2 días
+                                </span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img
+                                src="../assets/images/Vector_Comment.png"
+                                alt=""
+                                width="16"
+                                height="16"
+                            >
+
+                            <div>
+                                <p>
+                                    Participaste en una conversación
+                                    sobre fútbol formativo.
+                                </p>
+                                <span class="texto-secundario">
+                                    Hace 3 días
+                                </span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img
+                                src="../assets/images/Vector_Clipboard.png"
+                                alt=""
+                                width="16"
+                                height="16"
+                            >
+
+                            <div>
+                                <p>
+                                    Publicaste una idea sobre
+                                    la elaboración de informes.
+                                </p>
+                                <span class="texto-secundario">
+                                    Hace 5 días
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="tarjeta contactos-sugeridos">
+                    <h2>Amplía tu red</h2>
+
+                    <p class="texto-secundario">
+                        Más profesionales con los que crecer.
+                    </p>
+
+                    <ul class="lista-contactos lista-sin-estilo">
+                        <li class="contacto">
+                            <div class="avatar">
+                                <img
+                                    src="../assets/images/Avatar_Genérico_2.png"
+                                    alt=""
+                                    width="40"
+                                    height="40"
+                                >
+                            </div>
+
+                            <div class="informacion-contacto">
+                                <h3>Lucía Fernández</h3>
+                                <p class="texto-secundario">
+                                    Scout de fútbol formativo
+                                </p>
+
+                                <button
+                                    type="button"
+                                    class="boton-secundario"
+                                    data-contacto="lucia"
+                                    aria-label="Conectar con Lucía Fernández"
+                                    aria-pressed="false"
+                                >
+                                    <img
+                                        src="../assets/images/Vector_Plus.png"
+                                        alt=""
+                                        width="12"
+                                        height="12"
+                                    >
+                                    Conectar
+                                </button>
+                            </div>
+                        </li>
+
+                        <li class="contacto">
+                            <div class="avatar">
+                                <img
+                                    src="../assets/images/Avatar_Genérico_6.png"
+                                    alt=""
+                                    width="40"
+                                    height="40"
+                                >
+                            </div>
+
+                            <div class="informacion-contacto">
+                                <h3>Elena Ruiz</h3>
+                                <p class="texto-secundario">
+                                    Responsable de análisis
+                                </p>
+
+                                <button
+                                    type="button"
+                                    class="boton-secundario"
+                                    data-contacto="elena"
+                                    aria-label="Conectar con Elena Ruiz"
+                                    aria-pressed="false"
+                                >
+                                    <img
+                                        src="../assets/images/Vector_Plus.png"
+                                        alt=""
+                                        width="12"
+                                        height="12"
+                                    >
+                                    Conectar
+                                </button>
+                            </div>
+                        </li>
+
+                        <li class="contacto">
+                            <div class="avatar">
+                                <img
+                                    src="../assets/images/Avatar_Genérico_4.png"
+                                    alt=""
+                                    width="40"
+                                    height="40"
+                                >
+                            </div>
+
+                            <div class="informacion-contacto">
+                                <h3>Paula Navarro</h3>
+                                <p class="texto-secundario">
+                                    Directora deportiva
+                                </p>
+
+                                <button
+                                    type="button"
+                                    class="boton-secundario"
+                                    data-contacto="paula"
+                                    aria-label="Conectar con Paula Navarro"
+                                    aria-pressed="false"
+                                >
+                                    <img
+                                        src="../assets/images/Vector_Plus.png"
+                                        alt=""
+                                        width="12"
+                                        height="12"
+                                    >
+                                    Conectar
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="Network.html" class="enlace-texto">
+                        Descubrir más profesionales
+                        <img
+                            src="../assets/images/Vector_Arrow_Right.png"
+                            alt=""
+                            width="12"
+                            height="12"
+                        >
+                    </a>
+                </section>
+            </aside>
+        </div>
+
+        <p class="aviso-demostracion texto-secundario">
+            Perfil ficticio para el prototipo universitario.
+            La trayectoria, certificaciones, recomendaciones y actividad
+            son datos de ejemplo.
+        </p>
+    </main>
+
+    <footer class="contenedor pie-pagina">
+        <p class="lema">
+            Más conocimiento. Más conexiones. Más fútbol.
+        </p>
+
+        <nav class="navegacion-pie" aria-label="Información de UDDEA">
+            <ul>
+                <li>
+                    <button type="button" class="boton-texto">
+                        Acerca de UDDEA
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="boton-texto">
+                        Privacidad
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="boton-texto">
+                        Ayuda
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <p class="copyright">UDDEA Network © 2026</p>
+    </footer>
+</body>
+</html>
