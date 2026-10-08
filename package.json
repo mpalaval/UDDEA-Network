@@ -1,0 +1,12 @@
+{
+  "name": "uddea-network",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Prototipo académico UDDEA Network",
+  "scripts": {
+    "start": "node --env-file=.env server/server.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

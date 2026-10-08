@@ -1,0 +1,70 @@
+{
+  "team": [
+    {
+      "id": "14101",
+      "nameShowTeam": "América",
+      "nameShow": "Club América",
+      "fullName": "Club de Fútbol América",
+      "short_name": "AME",
+      "countryCode": "MX",
+      "shield": "https://t.resfu.com/img_data/equipos/182.png?size=60x&lossy=1",
+      "shield_big": "https://t.resfu.com/img_data/equipos/182.png?size=200x&lossy=1",
+      "shield_png": "https://t.resfu.com/img_data/equipos/182.png?size=200x&lossy=1"
+    },
+    {
+      "id": "14102",
+      "nameShowTeam": "Chivas Guadalajara",
+      "nameShow": "Guadalajara",
+      "fullName": "Club Deportivo Guadalajara",
+      "short_name": "GDL",
+      "countryCode": "MX",
+      "shield": "https://t.resfu.com/img_data/equipos/1255.png?size=60x&lossy=1",
+      "shield_big": "https://t.resfu.com/img_data/equipos/1255.png?size=200x&lossy=1",
+      "shield_png": "https://t.resfu.com/img_data/equipos/1255.png?size=200x&lossy=1"
+    },
+    {
+      "id": "14103",
+      "nameShowTeam": "Cruz Azul",
+      "nameShow": "Cruz Azul",
+      "fullName": "Cruz Azul Fútbol Club",
+      "short_name": "CAZ",
+      "countryCode": "MX",
+      "shield": "https://t.resfu.com/img_data/equipos/838.png?size=60x&lossy=1",
+      "shield_big": "https://t.resfu.com/img_data/equipos/838.png?size=200x&lossy=1",
+      "shield_png": "https://t.resfu.com/img_data/equipos/838.png?size=200x&lossy=1"
+    },
+    {
+      "id": "14104",
+      "nameShowTeam": "Tigres UANL",
+      "nameShow": "Tigres",
+      "fullName": "Club Tigres de la UANL",
+      "short_name": "TIG",
+      "countryCode": "MX",
+      "shield": "https://t.resfu.com/img_data/equipos/2550.png?size=60x&lossy=1",
+      "shield_big": "https://t.resfu.com/img_data/equipos/2550.png?size=200x&lossy=1",
+      "shield_png": "https://t.resfu.com/img_data/equipos/2550.png?size=200x&lossy=1"
+    },
+    {
+      "id": "14105",
+      "nameShowTeam": "CF Monterrey",
+      "nameShow": "Monterrey",
+      "fullName": "Club de Fútbol Monterrey",
+      "short_name": "MTY",
+      "countryCode": "MX",
+      "shield": "https://t.resfu.com/img_data/equipos/1756.png?size=60x&lossy=1",
+      "shield_big": "https://t.resfu.com/img_data/equipos/1756.png?size=200x&lossy=1",
+      "shield_png": "https://t.resfu.com/img_data/equipos/1756.png?size=200x&lossy=1"
+    },
+    {
+      "id": "14106",
+      "nameShowTeam": "Pumas UNAM",
+      "nameShow": "Pumas",
+      "fullName": "Club Universidad Nacional",
+      "short_name": "PUM",
+      "countryCode": "MX",
+      "shield": "https://t.resfu.com/img_data/equipos/2034.png?size=60x&lossy=1",
+      "shield_big": "https://t.resfu.com/img_data/equipos/2034.png?size=200x&lossy=1",
+      "shield_png": "https://t.resfu.com/img_data/equipos/2034.png?size=200x&lossy=1"
+    }
+  ]
+}

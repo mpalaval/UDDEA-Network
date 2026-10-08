@@ -1,0 +1,59 @@
+{
+  "team": [
+    {
+      "id": "67501",
+      "nameShowTeam": "Boca Juniors",
+      "nameShow": "Boca Juniors",
+      "fullName": "Club Atlético Boca Juniors",
+      "short_name": "BOC",
+      "countryCode": "AR",
+      "shield": "https://t.resfu.com/img_data/equipos/508.png?size=60x&lossy=1",
+      "shield_big": "https://t.resfu.com/img_data/equipos/508.png?size=200x&lossy=1",
+      "shield_png": "https://t.resfu.com/img_data/equipos/508.png?size=200x&lossy=1"
+    },
+    {
+      "id": "67502",
+      "nameShowTeam": "River Plate",
+      "nameShow": "River Plate",
+      "fullName": "Club Atlético River Plate",
+      "short_name": "RIV",
+      "countryCode": "AR",
+      "shield": "https://t.resfu.com/img_data/equipos/2105.png?size=60x&lossy=1",
+      "shield_big": "https://t.resfu.com/img_data/equipos/2105.png?size=200x&lossy=1",
+      "shield_png": "https://t.resfu.com/img_data/equipos/2105.png?size=200x&lossy=1"
+    },
+    {
+      "id": "67503",
+      "nameShowTeam": "Racing Club",
+      "nameShow": "Racing Club",
+      "fullName": "Racing Club de Avellaneda",
+      "short_name": "RAC",
+      "countryCode": "AR",
+      "shield": "https://t.resfu.com/img_data/equipos/2053.png?size=60x&lossy=1",
+      "shield_big": "https://t.resfu.com/img_data/equipos/2053.png?size=200x&lossy=1",
+      "shield_png": "https://t.resfu.com/img_data/equipos/2053.png?size=200x&lossy=1"
+    },
+    {
+      "id": "67504",
+      "nameShowTeam": "Independiente",
+      "nameShow": "Independiente",
+      "fullName": "Club Atlético Independiente",
+      "short_name": "IND",
+      "countryCode": "AR",
+      "shield": "https://t.resfu.com/img_data/equipos/1367.png?size=60x&lossy=1",
+      "shield_big": "https://t.resfu.com/img_data/equipos/1367.png?size=200x&lossy=1",
+      "shield_png": "https://t.resfu.com/img_data/equipos/1367.png?size=200x&lossy=1"
+    },
+    {
+      "id": "67505",
+      "nameShowTeam": "San Lorenzo",
+      "nameShow": "San Lorenzo",
+      "fullName": "Club Atlético San Lorenzo de Almagro",
+      "short_name": "SLO",
+      "countryCode": "AR",
+      "shield": "https://t.resfu.com/img_data/equipos/2250.png?size=60x&lossy=1",
+      "shield_big": "https://t.resfu.com/img_data/equipos/2250.png?size=200x&lossy=1",
+      "shield_png": "https://t.resfu.com/img_data/equipos/2250.png?size=200x&lossy=1"
+    }
+  ]
+}
