@@ -1,0 +1,49 @@
+[
+  {
+    "id": "pub-01",
+    "autorId": "elena",
+    "autorNombre": "Elena Ruiz",
+    "autorCargo": "Responsable de análisis · Real Valladolid CF",
+    "autorAvatar": "../assets/images/Avatar_Genérico_6.png",
+    "tiempo": "Hace 2 horas",
+    "contenido": "Acabamos de publicar nuestro último informe sobre la evolución del bloque medio-bajo en categoría Cadete. Os dejo las claves del análisis de la última jornada. ¡Abierto a debate!",
+    "media": {
+      "tipo": "imagen",
+      "url": "../assets/images/Analitica_Dashboard.png",
+      "alt": "Dashboard de análisis táctico"
+    },
+    "likes": 24,
+    "comentarios": 5,
+    "compartidos": 2
+  },
+  {
+    "id": "pub-02",
+    "autorId": "diego",
+    "autorNombre": "Diego Alonso",
+    "autorCargo": "Analista de rendimiento · CD Leganés",
+    "autorAvatar": "../assets/images/Avatar_Genérico_3.png",
+    "tiempo": "Hace 5 horas",
+    "contenido": "Buscamos analista táctico en prácticas para incorporarse a la estructura del fútbol base en Madrid. Interesados podéis revisar la oferta publicada en la sección de oportunidades.",
+    "media": null,
+    "likes": 12,
+    "comentarios": 3,
+    "compartidos": 8
+  },
+  {
+    "id": "pub-03",
+    "autorId": "mateo",
+    "autorNombre": "Mateo Rossi",
+    "autorCargo": "Preparador Físico · Alto Rendimiento",
+    "autorAvatar": "../assets/images/Avatar_Genérico_5.png",
+    "tiempo": "Hace 1 día",
+    "contenido": "Importancia del monitoreo GPS en la cuantificación de la carga externa durante semanas con doble partido. Os comparto la gráfica de métricas de aceleración/desceleración.",
+    "media": {
+      "tipo": "imagen",
+      "url": "../assets/images/Grafico_Estadisticas.png",
+      "alt": "Gráfica de rendimiento físico"
+    },
+    "likes": 45,
+    "comentarios": 11,
+    "compartidos": 14
+  }
+]

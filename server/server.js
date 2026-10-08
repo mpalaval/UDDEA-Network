@@ -162,6 +162,15 @@ const server = http.createServer(async (request, response) => {
                 return sendJSON(response, 500, { error: 'No se pudo leer la lista de profesionales.'});
             }
         }
+        if (url.pathname === '/api/publicaciones') {
+            const filePath = path.resolve(__dirname, 'data/publicaciones.json');
+            try {
+                const data = await fs.readFile(filePath, 'utf-8');
+                return sendJSON(response, 200, JSON.parse(data));
+            } catch {
+                return sendJSON(response, 500, { error: 'No se pudo leer la lista de publicaciones.' });
+            }
+        }
         if (url.pathname.startsWith('/api/')) {
             return sendJSON(response, 404, { error: 'Ruta de API no encontrada.' });
         }
