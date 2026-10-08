@@ -1,0 +1,656 @@
+/* RUTA DE NAVEGACIÓN */
+
+.ruta-navegacion {
+    padding-block: 20px;
+    color: var(--color-secundario);
+    font-size: 11px;
+}
+
+.ruta-navegacion ol {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.ruta-navegacion li + li::before {
+    content: "/";
+    margin-right: 9px;
+}
+
+.ruta-navegacion a:hover {
+    color: var(--color-verde);
+}
+
+/* PORTADA Y PRESENTACIÓN */
+
+.presentacion-perfil {
+    overflow: hidden;
+}
+
+.portada-perfil {
+    position: relative;
+    overflow: hidden;
+    min-height: 155px;
+    padding: 28px;
+    background-color: var(--color-verde-oscuro);
+    color: white;
+}
+
+.texto-portada {
+    position: relative;
+    z-index: 1;
+    max-width: 500px;
+}
+
+.texto-portada .antetitulo {
+    color: #c8d7cc;
+}
+
+.texto-portada h2 {
+    margin-top: 10px;
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+/* Campo decorativo */
+
+.campo-futbol {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    bottom: 14px;
+    width: 38%;
+    border: 1px solid rgba(216, 233, 220, 0.3);
+    background: linear-gradient(
+        to right,
+        transparent calc(50% - 0.5px),
+        rgba(216, 233, 220, 0.3) calc(50% - 0.5px),
+        rgba(216, 233, 220, 0.3) calc(50% + 0.5px),
+        transparent calc(50% + 0.5px)
+    );
+}
+
+.campo-futbol::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75px;
+    height: 75px;
+    border: 1px solid rgba(216, 233, 220, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.campo-futbol::after {
+    content: "";
+    position: absolute;
+    top: 25%;
+    right: -1px;
+    width: 16%;
+    height: 50%;
+    border: 1px solid rgba(216, 233, 220, 0.3);
+}
+
+.contenido-presentacion {
+    padding: 24px 28px;
+}
+
+.resumen-profesional {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.avatar-perfil {
+    width: 78px;
+    height: 78px;
+    border: 3px solid white;
+}
+
+.identidad-profesional {
+    min-width: 0;
+    flex: 1;
+}
+
+.identidad-profesional h1 {
+    font-size: 25px;
+    line-height: 1.25;
+}
+
+.cargo-profesional {
+    margin-top: 7px;
+    font-size: 12px;
+}
+
+.ubicacion-profesional {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 6px;
+}
+
+.especialidades-perfil {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.acciones-perfil {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+    max-width: 250px;
+}
+
+.pie-presentacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 22px;
+    padding-top: 17px;
+    border-top: 1px solid var(--color-borde);
+}
+
+.estadisticas-perfil {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 0;
+}
+
+.estadisticas-perfil > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.estadisticas-perfil dt {
+    color: var(--color-secundario);
+    font-size: 10px;
+}
+
+.estadisticas-perfil dd {
+    order: -1;
+    margin: 0;
+    color: var(--color-verde);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* COLUMNAS */
+
+.distribucion-perfil {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 290px;
+    align-items: start;
+    gap: 22px;
+    margin-top: 22px;
+}
+
+.columna-principal,
+.columna-lateral {
+    display: grid;
+    min-width: 0;
+    gap: 18px;
+}
+
+.columna-principal > .tarjeta,
+.columna-lateral > .tarjeta {
+    padding: 22px;
+}
+
+.distribucion-perfil h2 {
+    font-size: 15px;
+}
+
+.cabecera-seccion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 17px;
+}
+
+.cabecera-seccion .boton-texto,
+.cabecera-seccion .enlace-texto {
+    flex-shrink: 0;
+    font-size: 10px;
+}
+
+/* SOBRE MÍ */
+
+.sobre-mi > p {
+    margin-top: 13px;
+    font-size: 12px;
+}
+
+.sobre-mi .disponibilidad-texto {
+    color: var(--color-verde);
+    font-size: 11px;
+}
+
+/* EXPERIENCIA Y FORMACIÓN */
+
+.lista-experiencia > li,
+.lista-formacion > li {
+    padding-block: 18px;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.lista-experiencia > li:first-child,
+.lista-formacion > li:first-child {
+    padding-top: 0;
+}
+
+.lista-experiencia > li:last-child,
+.lista-formacion > li:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.entrada-trayectoria {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+}
+
+.icono-entidad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 38px;
+    height: 40px;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-pequeno);
+    background-color: #f7faf8;
+    color: var(--color-verde);
+    font-size: 11px;
+}
+
+.contenido-trayectoria {
+    min-width: 0;
+    flex: 1;
+}
+
+.cabecera-trayectoria {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.contenido-trayectoria h3 {
+    font-size: 13px;
+}
+
+.contenido-trayectoria p {
+    margin-top: 6px;
+    font-size: 12px;
+}
+
+.contenido-trayectoria .texto-secundario {
+    margin-top: 3px;
+    font-size: 10px;
+}
+
+.etiquetas-trayectoria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+/* CERTIFICACIONES */
+
+.lista-certificaciones {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.certificacion {
+    padding: 14px;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-pequeno);
+}
+
+.certificacion > img {
+    margin-bottom: 12px;
+    object-fit: contain;
+}
+
+.certificacion h3 {
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.certificacion p {
+    margin-top: 7px;
+    font-size: 10px;
+}
+
+.certificacion .boton-texto {
+    margin-top: 12px;
+    font-size: 10px;
+}
+
+/* HABILIDADES */
+
+.lista-habilidades {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.lista-habilidades li {
+    padding: 10px 12px;
+    border-radius: var(--radio-pequeno);
+    background-color: #f7faf8;
+    font-size: 12px;
+}
+
+.habilidades > .texto-secundario {
+    margin-top: 14px;
+    font-size: 10px;
+}
+
+/* PUBLICACIONES */
+
+.lista-publicaciones-perfil {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.publicacion-perfil {
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-pequeno);
+}
+
+.autor-publicacion {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 13px;
+}
+
+.autor-publicacion h3 {
+    font-size: 11px;
+}
+
+.autor-publicacion p {
+    font-size: 9px;
+}
+
+.publicacion-perfil > p {
+    margin-top: 12px;
+    font-size: 11px;
+}
+
+.imagen-publicacion {
+    overflow: hidden;
+    margin-top: 14px;
+    border-radius: var(--radio-pequeno);
+    background-color: var(--color-verde-oscuro);
+}
+
+.imagen-publicacion img {
+    width: 100%;
+    aspect-ratio: 1.8 / 1;
+    object-fit: cover;
+}
+
+.imagen-publicacion figcaption {
+    padding: 12px;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.destacado-publicacion-perfil {
+    margin-top: 14px;
+    padding: 16px;
+    border-radius: var(--radio-pequeno);
+    background-color: var(--color-verde-claro);
+}
+
+.destacado-publicacion-perfil h4 {
+    margin-top: 10px;
+    color: var(--color-verde-oscuro);
+    font-size: 14px;
+}
+
+.destacado-publicacion-perfil p {
+    margin-top: 8px;
+    font-size: 11px;
+}
+
+.publicacion-perfil > .etiquetas-publicacion {
+    color: var(--color-verde);
+    font-size: 9px;
+    overflow-wrap: anywhere;
+}
+
+.pie-publicacion-perfil {
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid var(--color-borde);
+}
+
+.pie-publicacion-perfil p {
+    font-size: 9px;
+}
+
+/* TARJETAS LATERALES */
+
+.columna-lateral h2 {
+    font-size: 14px;
+}
+
+.columna-lateral > .tarjeta > p {
+    margin-top: 11px;
+    font-size: 11px;
+}
+
+.estado-perfil > img {
+    margin-bottom: 12px;
+}
+
+.avatares-comunidad {
+    display: flex;
+    margin-top: 13px;
+    padding-left: 4px;
+}
+
+.avatares-comunidad .avatar {
+    margin-left: -4px;
+    border: 2px solid white;
+}
+
+.comunidad-perfil > .enlace-texto,
+.contactos-sugeridos > .enlace-texto {
+    margin-top: 15px;
+}
+
+/* RECOMENDACIÓN */
+
+.recomendacion {
+    margin-top: 12px;
+}
+
+.recomendacion blockquote {
+    margin: 0;
+    color: var(--color-secundario);
+    font-size: 11px;
+}
+
+.autor-recomendacion {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 15px;
+}
+
+.autor-recomendacion p {
+    font-size: 10px;
+}
+
+/* ACTIVIDAD */
+
+.lista-actividad {
+    margin-top: 10px;
+}
+
+.lista-actividad li {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    padding-block: 12px;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.lista-actividad li:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.lista-actividad img {
+    flex-shrink: 0;
+    margin-top: 3px;
+    object-fit: contain;
+}
+
+.lista-actividad p {
+    font-size: 11px;
+}
+
+.lista-actividad .texto-secundario {
+    font-size: 9px;
+}
+
+/* CONTACTOS */
+
+.lista-contactos {
+    margin-top: 8px;
+}
+
+.contacto {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding-block: 14px;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.contacto:last-child {
+    border-bottom: 0;
+}
+
+.informacion-contacto {
+    min-width: 0;
+}
+
+.informacion-contacto h3 {
+    font-size: 12px;
+}
+
+.informacion-contacto p {
+    margin-top: 3px;
+    font-size: 10px;
+}
+
+.informacion-contacto .boton-secundario {
+    min-height: 29px;
+    margin-top: 8px;
+    padding: 5px 9px;
+    font-size: 10px;
+}
+
+.aviso-demostracion {
+    margin-top: 22px;
+    font-size: 10px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+    .distribucion-perfil {
+        grid-template-columns: minmax(0, 1fr) 250px;
+    }
+
+    .acciones-perfil {
+        max-width: 170px;
+    }
+
+    .lista-certificaciones,
+    .lista-publicaciones-perfil {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 750px) {
+    .resumen-profesional {
+        flex-wrap: wrap;
+    }
+
+    .acciones-perfil {
+        justify-content: flex-start;
+        max-width: none;
+        width: 100%;
+    }
+
+    .distribucion-perfil {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .columna-lateral {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+    }
+
+    .campo-futbol {
+        opacity: 0.4;
+    }
+}
+
+@media (max-width: 500px) {
+    .portada-perfil,
+    .contenido-presentacion {
+        padding: 20px;
+    }
+
+    .texto-portada h2 {
+        font-size: 21px;
+    }
+
+    .identidad-profesional h1 {
+        font-size: 23px;
+    }
+
+    .avatar-perfil {
+        width: 60px;
+        height: 60px;
+    }
+
+    .columna-principal > .tarjeta,
+    .columna-lateral > .tarjeta {
+        padding: 17px;
+    }
+
+    .columna-lateral,
+    .lista-habilidades {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .cabecera-trayectoria {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
