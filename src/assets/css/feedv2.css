@@ -1,0 +1,367 @@
+/* =========================================================
+   UDDEA NETWORK - FEED PAGE (v2)
+   ========================================================= */
+
+/* CONTENEDOR PRINCIPAL TRES COLUMNAS */
+.feed-container {
+  display: grid;
+  grid-template-columns: 280px 1fr 320px;
+  gap: 1.5rem;
+  max-width: 1300px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* ESTILOS COMUNES DE TARJETAS (CARDS) */
+.feed-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+/* =========================================================
+   COLUMNA IZQUIERDA: PERFIL, ESTADO Y FILTROS
+   ========================================================= */
+.user-summary {
+  text-align: center;
+}
+
+.user-avatar-large {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--color-bg-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.8rem;
+  font-weight: bold;
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  border: 2px solid var(--color-secondary);
+}
+
+.user-summary h3 {
+  font-size: 1.1rem;
+  color: var(--color-text-main);
+  margin-bottom: 0.2rem;
+}
+
+.user-summary p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.btn-profile-link {
+  display: inline-block;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: var(--color-bg-light);
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast);
+}
+
+.btn-profile-link:hover {
+  background-color: var(--color-border);
+}
+
+/* SELECTOR DE ESTADO DE USUARIO */
+.status-selector {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.status-selector label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+}
+
+.status-select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  color: var(--color-text-main);
+  background-color: var(--color-white);
+  margin-bottom: 0.8rem;
+}
+
+/* MENÚ DE FILTROS DEL FEED */
+.feed-filters h4 {
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  margin-bottom: 0.8rem;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  background: none;
+  border: none;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-main);
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--transition-fast);
+  margin-bottom: 0.4rem;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: var(--color-bg-light);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* =========================================================
+   COLUMNA CENTRAL: PUBLICACIONES Y ANUNCIOS PATROCINADOS
+   ========================================================= */
+/* CREAR PUBLICACIÓN */
+.create-post textarea {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.8rem;
+  resize: none;
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  margin-bottom: 0.8rem;
+}
+
+.create-post textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.create-post-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-post {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.btn-post:hover {
+  background-color: var(--color-secondary);
+}
+
+/* TARJETA DE PUBLICACIÓN */
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.post-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.post-author h5 {
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+}
+
+.post-author span {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.post-badge {
+  margin-left: auto;
+  background-color: var(--color-bg-light);
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.post-content {
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.post-actions {
+  display: flex;
+  gap: 1rem;
+  border-top: 1px solid var(--color-border);
+  padding-top: 0.8rem;
+}
+
+.btn-action {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.btn-action:hover {
+  color: var(--color-primary);
+}
+
+/* BANNER DE ANUNCIO PATROCINADO (EXCLUSIVO FÚTBOL) */
+.ad-banner {
+  background-color: var(--color-bg-light);
+  border: 1px dashed var(--color-secondary);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ad-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.3rem;
+}
+
+.ad-content h5 {
+  color: var(--color-primary);
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.ad-content p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.btn-ad {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   COLUMNA DERECHA: PREVIEW DE 'EXPLORAR' & NOTICIAS
+   ========================================================= */
+.explore-preview h4 {
+  color: var(--color-primary);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.explore-preview h4 a {
+  font-size: 0.8rem;
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+.news-item {
+  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.news-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.news-category {
+  font-size: 0.75rem;
+  color: var(--color-secondary);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.news-item h5 {
+  font-size: 0.9rem;
+  color: var(--color-text-main);
+  margin: 0.2rem 0;
+}
+
+.news-item p {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* HEROES DE LA JORNADA */
+.hero-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.hero-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: var(--color-bg-alt);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+/* RESPONSIVE LAYOUT */
+@media (max-width: 1024px) {
+  .feed-container {
+    grid-template-columns: 240px 1fr;
+  }
+  .right-column {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .feed-container {
+    grid-template-columns: 1fr;
+  }
+}

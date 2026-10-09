@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UDDEA Network - Explorar Noticias y Actualidad</title>
+        
+        <link rel="stylesheet" href="../assets/css/globalv2.css">
+        <link rel="stylesheet" href="../assets/css/explorev2.css">
+    </head>
+
+    <body>
+
+        <!-- NAVBAR COMPARTIDA -->
+        <nav class="navbar">
+            <a href="Homev2.html" class="navbar-logo">
+            <img src="../assets/images/UDDEA_Icono.png" alt="UDDEA Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../html/Feedv2.html">Feed</a></li>
+                <li><a href="../html/Opportunitiesv2.html">Oportunidades</a></li>
+                <li><a href="../html/Explorev2.html">Explorar</a></li>
+                <li><a href="../html/Profilev2.html">Mi Perfil</a></li>
+            </ul>
+            <button class="nav-auth-btn" onclick="location.href='Profile.html'">Mi Cuenta</button>
+        </nav>
+
+        <!-- BARRA HORIZONTAL PREVIEW DE USUARIO -->
+        <div class="user-preview-bar">
+            <div>
+            <span class="status-dot"></span> Modo Exploración | Periodismo Afiliado y Medios Regionales
+            </div>
+            <div>Perfil Autor Certificado: <strong>Habilitado</strong></div>
+        </div>
+
+        <main class="explore-container">
+            
+            <div class="explore-header">
+            <h2>Explorar Actualidad Deportiva y Publicaciones</h2>
+            <p>Noticias de medios afiliados, análisis tácticos regionales y reconocimientos de la jornada.</p>
+            </div>
+
+            <!-- SECCIÓN 1: NOTICIAS Y PUBLICACIONES AFILIADAS -->
+            <section class="explore-section">
+            <div class="section-title-bar">
+                <h3>Noticias y Artículos Certificados</h3>
+                <button class="btn-publish-article" onclick="alert('Redirigiendo al editor de artículos para autores certificados.')"> Redactar Artículo</button>
+            </div>
+
+            <div class="horizontal-scroll-container">
+                
+                <!-- ARTÍCULO 1 -->
+                <article class="news-card-horizontal">
+                <div class="news-card-body">
+                    <div class="news-card-meta">
+                    <span>Medio Afiliado</span>
+                    <span>RFFM Madrid</span>
+                    </div>
+                    <h4 class="news-card-title">Avances en la digitalización del scouting regional en Madrid</h4>
+                    <p class="news-card-excerpt">Análisis sobre el impacto de la captura automatizada de datos en las categorías juveniles de la comunidad.</p>
+                </div>
+                <div class="news-card-footer">
+                    <span>Por: Redacción UDDEA</span>
+                    <span>Hace 3 horas</span>
+                </div>
+                </article>
+
+                <!-- ARTÍCULO 2 (SUBIDO POR USUARIO CERTIFICADO) -->
+                <article class="news-card-horizontal">
+                <div class="news-card-body">
+                    <div class="news-card-meta">
+                    <span>Autor Certificado</span>
+                    <span>Táctico & Datos</span>
+                    </div>
+                    <h4 class="news-card-title">Estructuras en bloque medio: Caso práctico de la jornada 12</h4>
+                    <p class="news-card-excerpt">Estudio detallado del comportamiento defensivo en transiciones rápidas en 2ª RFEF.</p>
+                </div>
+                <div class="news-card-footer">
+                    <span>Por: J. M. Soria (Analista)</span>
+                    <span>Ayer</span>
+                </div>
+                </article>
+
+                <!-- ARTÍCULO 3 -->
+                <article class="news-card-horizontal">
+                <div class="news-card-body">
+                    <div class="news-card-meta">
+                    <span>Nacional</span>
+                    <span>Gestión</span>
+                    </div>
+                    <h4 class="news-card-title">Nuevos criterios de homologación de licencias de Dirección Deportiva</h4>
+                    <p class="news-card-excerpt">La federación actualiza los requerimientos de acreditación para la próxima temporada.</p>
+                </div>
+                <div class="news-card-footer">
+                    <span>Por: UDDEA Legal</span>
+                    <span>Hace 2 días</span>
+                </div>
+                </article>
+
+            </div>
+            </section>
+
+            <!-- SECCIÓN 2: RESULTADOS DE LA JORNADA -->
+            <section class="explore-section">
+            <div class="section-title-bar">
+                <h3>Resultados Determinantes de la Jornada</h3>
+            </div>
+
+            <div class="horizontal-scroll-container">
+                
+                <div class="match-card">
+                <div class="match-league">3ª RFEF - Grupo 7</div>
+                <div class="match-teams">
+                    <span>Getafe B</span>
+                    <span class="match-score">2 - 1</span>
+                    <span>Rayo B</span>
+                </div>
+                <div class="match-status">Finalizado</div>
+                </div>
+
+                <div class="match-card">
+                <div class="match-league">División de Honor Juvenil</div>
+                <div class="match-teams">
+                    <span>Real Madrid</span>
+                    <span class="match-score">3 - 0</span>
+                    <span>Leganés</span>
+                </div>
+                <div class="match-status">Finalizado</div>
+                </div>
+
+                <div class="match-card">
+                <div class="match-league">3ª RFEF - Grupo 7</div>
+                <div class="match-teams">
+                    <span>Aravaca</span>
+                    <span class="match-score">0 - 0</span>
+                    <span>Las Rozas</span>
+                </div>
+                <div class="match-status">Finalizado</div>
+                </div>
+
+            </div>
+            </section>
+
+            <!-- SECCIÓN 3: HÉROES DE LA JORNADA -->
+            <section class="explore-section">
+            <div class="section-title-bar">
+                <h3>Héroes de la Jornada</h3>
+            </div>
+
+            <div class="horizontal-scroll-container">
+                
+                <div class="hero-card">
+                <div class="hero-avatar-large">AM</div>
+                <div class="hero-name">Álvaro Morales</div>
+                <div class="hero-role">Director Deportivo</div>
+                <span class="hero-badge">Mejor Gestión Semanal</span>
+                </div>
+
+                <div class="hero-card">
+                <div class="hero-avatar-large">SG</div>
+                <div class="hero-name">Sofia Gómez</div>
+                <div class="hero-role">Analista Táctica</div>
+                <span class="hero-badge">Informe Táctico Top</span>
+                </div>
+
+                <div class="hero-card">
+                <div class="hero-avatar-large">DR</div>
+                <div class="hero-name">Diego Ramos</div>
+                <div class="hero-role">Scout Cantera</div>
+                <span class="hero-badge">Detección de Talento</span>
+                </div>
+
+            </div>
+            </section>
+
+            <!-- MÓDULO INTERACTIVO: ASISTENTE VIRTUAL DE RUTA Y CERTIFICACIONES -->
+            <section class="assistant-banner">
+            <div class="assistant-info">
+                <h3>Asistente de Ruta Profesional y Certificaciones</h3>
+                <p>¿No estás seguro de qué formación o certificación necesitas para dar el siguiente salto en tu carrera? Nuestro asistente analiza tu perfil e historial para sugerirte el camino óptimo.</p>
+            </div>
+            <button class="btn-assistant" onclick="alert('Iniciando test interactivo de ruta profesional...')">Iniciar Asistente</button>
+            </section>
+
+        </main>
+
+        <!-- FOOTER GLOBAL -->
+        <footer>
+            <div class="footer-grid">
+            <div class="footer-col">
+                <h4>UDDEA Network</h4>
+                <p style="font-size: 0.85rem; color: var(--color-border);">Unión de Directores Deportivos y Especialistas Asociados.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul>
+                <li><a href="Homev2.html">Home</a></li>
+                <li><a href="Feedv2.html">Feed</a></li>
+                <li><a href="Opportunitiesv2.html">Oportunidades</a></li>
+                <li><a href="Explorev2.html">Explorar</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Soporte</h4>
+                <ul>
+                <li><a href="#">¿Quiénes somos?</a></li>
+                <li><a href="#">Centro de Ayuda</a></li>
+                <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="footer-bottom">
+            &copy; 2026 UDDEA - Todos los derechos reservados. Proyecto U-Lab UAX.
+            </div>
+        </footer>
+
+        <script src="../js/explore.js"></script>
+    </body>
+    
+</html>

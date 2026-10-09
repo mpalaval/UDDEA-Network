@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UDDEA Network - Oportunidades y Vacantes</title>
+        
+        <link rel="stylesheet" href="../assets/css/globalv2.css">
+        <link rel="stylesheet" href="../assets/css/opportunitiesv2.css">
+    </head>
+
+    <body>
+
+        <!-- NAVBAR COMPARTIDA -->
+        <nav class="navbar">
+            <a href="Homev2.html" class="navbar-logo">
+            <img src="../assets/images/UDDEA_Icono.png" alt="UDDEA Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../html/Feedv2.html">Feed</a></li>
+                <li><a href="../html/Opportunitiesv2.html">Oportunidades</a></li>
+                <li><a href="../html/Explorev2.html">Explorar</a></li>
+                <li><a href="../html/Profilev2.html">Mi Perfil</a></li>
+            </ul>
+            <button class="nav-auth-btn" onclick="location.href='Profile.html'">Mi Cuenta</button>
+        </nav>
+
+        <!-- BARRA HORIZONTAL PREVIEW DE USUARIO -->
+        <div class="user-preview-bar">
+            <div>
+            <span class="status-dot"></span> Usuario: <strong>Mateo Palacios</strong> | ELO UDDEA: <strong>1,450 pts</strong>
+            </div>
+            <div>Suscripción: <strong>Plan Básico</strong> | Federación: <strong>RFFM (Madrid)</strong></div>
+        </div>
+
+        <!-- BARRA HORIZONTAL DE FILTROS -->
+        <div class="opportunities-filter-bar">
+            <div class="filter-group">
+            <button class="opt-filter-btn active">Todas</button>
+            <button class="opt-filter-btn">Empleo</button>
+            <button class="opt-filter-btn">Prácticas</button>
+            <button class="opt-filter-btn">Intercambio</button>
+            <button class="opt-filter-btn">Formación</button>
+            <button class="opt-filter-btn">Eventos</button>
+            </div>
+
+            <!-- FILTRO POR CERCANÍA GEOGRÁFICA -->
+            <div class="location-toggle">
+            <input type="checkbox" id="nearFilter" checked>
+            <label for="nearFilter">Filtrar por cercanía (RFFM / Madrid)</label>
+            </div>
+        </div>
+
+        <!-- CONTENEDOR DE OPORTUNIDADES -->
+        <main class="opportunities-container">
+            
+            <div class="opportunities-header">
+            <h2>Bolsa de Trabajo y Desarrollo Profesional</h2>
+            <p>Vacantes, programas de prácticas y cursos certificados en el sector del fútbol.</p>
+            </div>
+
+            <div class="opportunities-grid">
+
+            <!-- VACANTE 1: EMPLEO ESTÁNDAR -->
+            <article class="opportunity-card">
+                <div class="card-top">
+                <div class="card-tags">
+                    <span class="tag-category tag-job">Empleo</span>
+                    <span class="tag-location">Madrid (Cercano)</span>
+                </div>
+                <h3 class="card-title">Analista Táctico Primer Equipo</h3>
+                <div class="card-entity">Club Deportivo Leganés B</div>
+                <p class="card-description">Buscamos analista con experiencia en grabación, corte de vídeo con Nacsport y elaboración de informes de rivales para la categoría 3ª RFEF.</p>
+                </div>
+                <div class="card-footer">
+                <span class="card-date">Publicado hace 2 días</span>
+                <a href="#" class="btn-apply">Inscribirse</a>
+                </div>
+            </article>
+
+            <!-- VACANTE 2: PRÁCTICAS -->
+            <article class="opportunity-card">
+                <div class="card-top">
+                <div class="card-tags">
+                    <span class="tag-category tag-internship">Prácticas</span>
+                    <span class="tag-location">Alcorcón (Cercano)</span>
+                </div>
+                <h3 class="card-title">Scout de Fútbol Base / Cantera</h3>
+                <div class="card-entity">ADA Alcorcón - Departamento de Captación</div>
+                <p class="card-description">Convenio de prácticas académicas para estudiantes o graduados en Gestión Deportiva o CAFYD. Seguimiento de partidos de categoría Cadete y Juvenil.</p>
+                </div>
+                <div class="card-footer">
+                <span class="card-date">Publicado hace 4 días</span>
+                <a href="#" class="btn-apply">Inscribirse</a>
+                </div>
+            </article>
+
+            <!-- VACANTE 3: PREMIUM (REQUIERE SUBSCRIPCIÓN Y ELO MÍNIMO) -->
+            <article class="opportunity-card premium">
+                <div class="card-top">
+                <div class="card-tags">
+                    <span class="badge-premium">Exclusivo Premium</span>
+                    <span class="tag-location">Internacional / Remoto</span>
+                </div>
+                <h3 class="card-title">Coordinador de Metodología de Cantera</h3>
+                <div class="card-entity">Academia Internacional de Fútbol</div>
+                <div class="elo-requirement">Requisito: ELO > 1,600 pts & Suscripción Premium</div>
+                <p class="card-description">Gestión global de la estructura metodológica. Oportunidad de movilidad internacional con contrato directo en club asociado.</p>
+                </div>
+                <div class="card-footer">
+                <span class="card-date">Exclusivo Socios UDDEA</span>
+                <button class="btn-apply-disabled" title="Requiere actualizar suscripción y mayor puntaje de ELO">Acceso Restringido</button>
+                </div>
+            </article>
+
+            <!-- VACANTE 4: FORMACIÓN -->
+            <article class="opportunity-card">
+                <div class="card-top">
+                <div class="card-tags">
+                    <span class="tag-category tag-training">Formación</span>
+                    <span class="tag-location">Online</span>
+                </div>
+                <h3 class="card-title">Jornada de Big Data Aplicado a la Dirección Deportiva</h3>
+                <div class="card-entity">UDDEA Formación & RFFM</div>
+                <p class="card-description">Seminario intensivo sobre métricas avanzadas (xG, xA, mapas de calor) impartido por directores deportivos de LaLiga.</p>
+                </div>
+                <div class="card-footer">
+                <span class="card-date">Inicia en 10 días</span>
+                <a href="#" class="btn-apply">Reservar Plaza</a>
+                </div>
+            </article>
+
+            </div>
+
+        </main>
+
+        <!-- FOOTER GLOBAL -->
+        <footer>
+            <div class="footer-grid">
+            <div class="footer-col">
+                <h4>UDDEA Network</h4>
+                <p style="font-size: 0.85rem; color: var(--color-border);">Unión de Directores Deportivos y Especialistas Asociados.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul>
+                <li><a href="Homev2.html">Home</a></li>
+                <li><a href="Feedv2.html">Feed</a></li>
+                <li><a href="Opportunitiesv2.html">Oportunidades</a></li>
+                <li><a href="Explore.html">Explorar</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Soporte</h4>
+                <ul>
+                <li><a href="#">¿Quiénes somos?</a></li>
+                <li><a href="#">Centro de Ayuda</a></li>
+                <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="footer-bottom">
+            &copy; 2026 UDDEA - Todos los derechos reservados. Proyecto U-Lab UAX.
+            </div>
+        </footer>
+
+        <script src="../js/opportunities.js"></script>
+    </body>
+
+</html>

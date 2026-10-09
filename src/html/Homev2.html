@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>UDDEA Network - Comunidad Digital</title>
+
+        <!--Aquí irán linkados los estilos CSS-->
+        <link rel="stylesheet" href="../assets/css/globalv2.css">
+        <link rel="stylesheet" href="../assets/css/homev2.css">
+        <!--.........-->
+    </head>
+
+    <body>
+        <!-- NAVBAR COMPARTIDA -->
+        <nav class="navbar">
+            <a href="#" class="navbar-logo">
+                <img src="../assets/images/UDDEA_Icono.png" alt="UDDEA Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../html/Feedv2.html">Feed</a></li>
+                <li><a href="../html/Opportunitiesv2.html">Oportunidades</a></li>
+                <li><a href="../html/Explorev2.html">Explorar</a></li>
+                <li><a href="../html/Profilev2.html">Mi Perfil</a></li>
+            </ul>
+            <button class="nav-auth-btn" onclick="document.getElementById('auth-section').scrollIntoView({behavior: 'smooth'})">Iniciar Sesión</button>
+        </nav>
+
+        <!-- BARRA HORIZONTAL DE PREVIEW DE USUARIO -->
+        <div class="user-preview-bar">
+            <div><span class="status-dot"></span> Estado: <strong>Invitado / Sin sesión</strong></div>
+            <div>Accede para personalizar tu feed según tu federación regional</div>
+        </div>
+
+        <!-- HERO SECTION TIPO IONO -->
+        <section class="hero">
+            <h1>La Red de Confianza para Profesionales del Fútbol</h1>
+            <p>Conectamos a directores deportivos, scouts, analistas, entrenadores y coordinadores en un entorno especializado e integrado con el fútbol regional y nacional.</p>
+            <div class="hero-actions">
+                <a href="#auth-section" class="btn-primary">Unirse a la Comunidad</a>
+                <a href="#about" class="btn-secondary">Saber más</a>
+            </div>
+        </section>
+
+        <!-- BANNER VERTICAL / CONTENIDO TIPO IONO -->
+        <section class="vertical-section" id="about">
+            <div class="section-content">
+                <h2>Validación y Confianza Profesional</h2>
+                <p>A diferencia de otras redes generalistas, UDDEA Network valida tu perfil y licencias para proyectar tu carrera en el sector futbolístico de forma real y certificada.</p>
+            </div>
+            <div class="section-image">
+                [ Banner Imagen Grandes Dimensiones ]
+            </div>
+        </section>
+
+        <section class="vertical-section">
+            <div class="section-content">
+                <h2>Conexión con las Federaciones Autonómicas</h2>
+                <p>Vincula tu cuenta con tu federación regional para acceder a oportunidades exclusivas de empleo, prácticas, cursos e intercambios cerca de ti.</p>
+            </div>
+            <div class="section-image">
+                [ Banner Imagen Federaciones y Scouting ]
+            </div>
+        </section>
+
+        <!-- CONTROL DE ACCESO Y ENCUESTA DE REGISTRO -->
+        <section class="auth-card-section" id="auth-section">
+            <div class="auth-card">
+            <h3>Acceso a la Plataforma</h3>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Usuario o Correo Electrónico</label>
+                    <input type="text" id="username" placeholder="ejemplo@uddea.es" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+
+                <!-- ENCUESTA OBLIGATORIA DE VINCULACIÓN REGIONAL -->
+                <div class="form-group">
+                    <label for="federation">Zona Regional / Federación de Fútbol (Onboarding)</label>
+                    <select id="federation" required>
+                        <option value="">Selecciona tu Federación Pertinente...</option>
+                        <option values="castilla-león">Federación de Fútbol de Castilla y León</option>
+                        <option value="madrid">Real Federación de Fútbol de Madrid</option>
+                        <option value="catalana">Federació Catalana de Futbol</option>
+                        <option value="andaluza">Real Federación Andaluza de Fútbol</option>
+                        <option value="valenciana">Federació de Futbol de la Comunitat Valenciana</option>
+                        <option value="otra">Otra / Internacional</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="nav-auth-btn" style="width: 100%; padding: 0.8rem; margin-top: 0.5rem;">Entrar / Registrarse</button>
+
+                <div class="auth-links">
+                    <a href="#">¿Has olvidado tu contraseña?</a>
+                    <a href="#">Crear Cuenta</a>
+                </div>
+            </form>
+
+            <div class="admin-access">
+                <p>¿Eres gestor de la asociación? <a href="#">Acceso Administrador</a></p>
+            </div>
+            </div>
+        </section>
+
+        <!-- FOOTER GLOBAL COMPARTIDO -->
+        <footer>
+            <div class="footer-grid">
+            <div class="footer-col">
+                <h4>UDDEA Network</h4>
+                <p style="font-size: 0.85rem; color: var(--color-border);">Unión de Directores Deportivos y Especialistas Asociados.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="../html/Feedv2.html">Feed</a></li>
+                    <li><a href="../html/Opportunitiesv2.html">Oportunidades</a></li>
+                    <li><a href="../html/Explorev2">Explorar</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Soporte</h4>
+                <ul>
+                    <li><a href="#">¿Quiénes somos?</a></li>
+                    <li><a href="#">Centro de Ayuda</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 UDDEA - Todos los derechos reservados. Proyecto U-Lab UAX.
+            </div>
+        </footer>
+    </body>
+
+    <!-- SCRIPT ESPECÍFICO DE HOME -->
+    <script src="../js/home.js"></script>
+</html>

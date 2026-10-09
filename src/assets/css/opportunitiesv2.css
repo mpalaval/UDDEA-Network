@@ -1,0 +1,234 @@
+/* =========================================================
+   UDDEA NETWORK - OPPORTUNITIES PAGE (v2)
+   ========================================================= */
+
+/* BARRA HORIZONTAL DE FILTROS */
+.opportunities-filter-bar {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.opt-filter-btn {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.opt-filter-btn:hover,
+.opt-filter-btn.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+/* TOGGLE DE FILTRO POR CERCANÍA */
+.location-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-text-main);
+  font-weight: 500;
+  background-color: var(--color-bg-light);
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+}
+
+.location-toggle input[type="checkbox"] {
+  accent-color: var(--color-primary);
+  cursor: pointer;
+}
+
+/* GRID PRINCIPAL DE OPORTUNIDADES */
+.opportunities-container {
+  max-width: 1300px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.opportunities-header {
+  margin-bottom: 1.5rem;
+}
+
+.opportunities-header h2 {
+  color: var(--color-primary);
+  font-size: 1.6rem;
+}
+
+.opportunities-header p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.opportunities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+/* TARJETAS (CARDS) DE VACANTES */
+.opportunity-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.opportunity-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.card-top {
+  margin-bottom: 1rem;
+}
+
+.card-tags {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.tag-category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.tag-job { background-color: #E0F2FE; color: #0369A1; }
+.tag-internship { background-color: #FEF3C7; color: #B45309; }
+.tag-training { background-color: #DCFCE7; color: #15803D; }
+.tag-event { background-color: #F3E8FF; color: #6B21A8; }
+
+.tag-location {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.card-title {
+  font-size: 1.15rem;
+  color: var(--color-text-main);
+  margin-bottom: 0.3rem;
+}
+
+.card-entity {
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.card-description {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  margin-bottom: 1.2rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--color-border);
+  padding-top: 0.8rem;
+}
+
+.card-date {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.btn-apply {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-apply:hover {
+  background-color: var(--color-secondary);
+}
+
+/* ESTILOS PARA TARJETAS PREMIUM / RESTRENGIDAS POR ELO Y SUBSCRIPCIÓN */
+.opportunity-card.premium {
+  border: 1px solid var(--color-warning);
+  background: linear-gradient(180deg, #FFFBEB 0%, var(--color-white) 100%);
+}
+
+.badge-premium {
+  background-color: var(--color-warning);
+  color: var(--color-white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.elo-requirement {
+  font-size: 0.75rem;
+  color: #B45309;
+  font-weight: 600;
+  background-color: #FEF3C7;
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.8rem;
+  display: inline-block;
+}
+
+.btn-apply-disabled {
+  background-color: var(--color-border);
+  color: var(--color-text-muted);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: not-allowed;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .opportunities-filter-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .opportunities-grid {
+    grid-template-columns: 1fr;
+  }
+}

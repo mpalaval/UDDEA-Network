@@ -1,0 +1,176 @@
+/* =========================================================
+   UDDEA NETWORK - GLOBAL CSS
+   ========================================================= */
+
+/* Paleta de Colores Oficial UDDEA */
+:root {
+  /* Paleta Principal */
+  --color-primary: #005F66;      /* Verde principal */
+  --color-secondary: #7CC4C6;    /* Verde secundario */
+  --color-bg-light: #F0F7F7;     /* Fondo suave */
+  --color-white: #FFFFFF;        /* Blanco principal */
+  --color-text-main: #1F2D2F;    /* Texto principal */
+  --color-text-muted: #6B7C7F;   /* Texto secundario */
+
+  /* Paleta Complementaria */
+  --color-bg-alt: #E6EFF0;       /* Fondo alternativo */
+  --color-border: #D9E7E8;       /* Bordes y divisores */
+  --color-subtle: #BFD8DA;       /* Elementos sutiles */
+  --color-success: #10B981;      /* Éxito / Online */
+  --color-warning: #F59E0B;      /* Avisos / Destacados */
+  --color-danger: #EF4444;       /* Errores / Eliminación */
+
+  /* Tipografía y Propiedades */
+  --font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --transition-fast: 0.2s ease;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+}
+
+/* Reset Global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-white);
+  color: var(--color-text-main);
+  line-height: 1.6;
+}
+
+/* ---------------------------------------------------------
+   NAVBAR COMPARTIDA (Global)
+   --------------------------------------------------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.navbar-logo img {
+  height: 36px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.8rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-text-main);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--color-primary);
+}
+
+.nav-auth-btn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: 0.55rem 1.3rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.nav-auth-btn:hover {
+  background-color: var(--color-secondary);
+}
+
+/* ---------------------------------------------------------
+   PREVIEW DE USUARIO (Barra Horizontal Global)
+   --------------------------------------------------------- */
+.user-preview-bar {
+  background-color: var(--color-bg-light);
+  padding: 0.45rem 5%;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-success);
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+/* ---------------------------------------------------------
+   FOOTER GLOBAL
+   --------------------------------------------------------- */
+footer {
+  background-color: var(--color-text-main);
+  color: var(--color-white);
+  padding: 3rem 5% 1.5rem 5%;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-col h4 {
+  margin-bottom: 1rem;
+  color: var(--color-secondary);
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-col a {
+  color: var(--color-border);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color var(--transition-fast);
+}
+
+.footer-col a:hover {
+  color: var(--color-white);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}

@@ -1,0 +1,264 @@
+/* =========================================================
+   UDDEA NETWORK - EXPLORE PAGE (v2)
+   ========================================================= */
+
+.explore-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.explore-header {
+  margin-bottom: 2rem;
+}
+
+.explore-header h2 {
+  color: var(--color-primary);
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.explore-header p {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+}
+
+/* BARRAS HORIZONTALES DINÁMICAS (CAROUSEL / SCROLL) */
+.explore-section {
+  margin-bottom: 2.5rem;
+}
+
+.section-title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.section-title-bar h3 {
+  color: var(--color-primary);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.horizontal-scroll-container {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-behavior: smooth;
+}
+
+/* Ocultar barra de scroll feo pero mantener funcionalidad */
+.horizontal-scroll-container::-webkit-scrollbar {
+  height: 6px;
+}
+.horizontal-scroll-container::-webkit-scrollbar-thumb {
+  background-color: var(--color-subtle);
+  border-radius: 4px;
+}
+
+/* TARJETAS HORIZONTALES DE NOTICIAS */
+.news-card-horizontal {
+  min-width: 320px;
+  max-width: 320px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.news-card-body {
+  padding: 1.2rem;
+}
+
+.news-card-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--color-secondary);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.news-card-title {
+  font-size: 1rem;
+  color: var(--color-text-main);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.news-card-excerpt {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.news-card-footer {
+  padding: 0.8rem 1.2rem;
+  background-color: var(--color-bg-light);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* TARJETAS DE RESULTADOS DE LA JORNADA */
+.match-card {
+  min-width: 260px;
+  max-width: 260px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  text-align: center;
+}
+
+.match-league {
+  font-size: 0.75rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+.match-teams {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.match-score {
+  background-color: var(--color-bg-light);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.match-status {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* TARJETAS DE HÉROES DE LA JORNADA */
+.hero-card {
+  min-width: 240px;
+  max-width: 240px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.hero-avatar-large {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 auto 0.8rem;
+  border: 2px solid var(--color-secondary);
+}
+
+.hero-name {
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+  font-weight: 600;
+}
+
+.hero-role {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.hero-badge {
+  background-color: var(--color-bg-light);
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* ASISTENTE VIRTUAL DE CERTIFICACIONES Y RUTA PROFESIONAL */
+.assistant-banner {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #003B40 100%);
+  color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.assistant-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-secondary);
+}
+
+.assistant-info p {
+  font-size: 0.95rem;
+  color: var(--color-border);
+  max-width: 600px;
+}
+
+.btn-assistant {
+  background-color: var(--color-secondary);
+  color: var(--color-text-main);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color var(--transition-fast);
+}
+
+.btn-assistant:hover {
+  background-color: var(--color-white);
+}
+
+/* BOTÓN CREAR ARTÍCULO */
+.btn-publish-article {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .assistant-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+}

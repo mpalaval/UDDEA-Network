@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UDDEA Network - Feed Principal</title>
+  
+  <!-- Estilos Globales y Específicos de Feed -->
+  <link rel="stylesheet" href="../assets/css/globalv2.css">
+  <link rel="stylesheet" href="../assets/css/feedv2.css">
+</head>
+<body>
+
+  <!-- NAVBAR COMPARTIDA -->
+  <nav class="navbar">
+    <a href="Homev2.html" class="navbar-logo">
+      <img src="../assets/images/UDDEA_Icono.png" alt="UDDEA Logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../html/Feedv2.html">Feed</a></li>
+      <li><a href="../html/Opportunitiesv2.html">Oportunidades</a></li>
+      <li><a href="../html/Explorev2.html">Explorar</a></li>
+      <li><a href="../html/Profilev2.html">Mi Perfil</a></li>
+    </ul>
+    <button class="nav-auth-btn" onclick="location.href='Profile.html'">Mi Cuenta</button>
+  </nav>
+
+  <!-- BARRA HORIZONTAL PREVIEW DE USUARIO (Global) -->
+  <div class="user-preview-bar">
+    <div>
+      <span class="status-dot"></span> Usuario: <strong>Mateo Palacios</strong> (Director Deportivo)
+    </div>
+    <div>Vinculación: <strong>Real Federación de Fútbol de Madrid</strong></div>
+  </div>
+
+  <!-- ESTRUCTURA PRINCIPAL DE TRES COLUMNAS -->
+  <div class="feed-container">
+
+    <!-- COLUMNA IZQUIERDA: PERFIL, ESTADOS Y FILTROS -->
+    <aside class="left-column">
+      
+      <!-- TARJETA RESUMEN DE USUARIO Y ENLACE A PROFILE -->
+      <div class="feed-card user-summary">
+        <div class="user-avatar-large">MP</div>
+        <h3>Mateo Palacios</h3>
+        <p>Analista Táctico & Scout</p>
+        <a href="Profile.html" class="btn-profile-link">Ir a Tu Perfil</a>
+
+        <!-- EDICIÓN DE ESTADO DE USUARIO -->
+        <div class="status-selector">
+          <label for="user-visibility">Disponibilidad</label>
+          <select id="user-visibility" class="status-select">
+            <option value="empleo">Búsqueda de Empleo</option>
+            <option value="practicas">En Búsqueda de Prácticas</option>
+            <option value="formacion">En Formación Continuous</option>
+            <option value="no-disponible">No Disponible</option>
+          </select>
+
+          <label for="user-online">Estado Conexión</label>
+          <select id="user-online" class="status-select">
+            <option value="online">🟢 En línea (Online)</option>
+            <option value="offline">⚪ Desconectado (Offline)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- FILTROS DE PUBLICACIONES -->
+      <div class="feed-card feed-filters">
+        <h4>Filtrar Publicaciones</h4>
+        <button class="filter-btn active" onclick="filterPosts('all')">Todas las publicaciones</button>
+        <button class="filter-btn" onclick="filterPosts('connections')">Solo mis Conexiones</button>
+      </div>
+
+    </aside>
+
+    <!-- COLUMNA CENTRAL: FEED DE PUBLICACIONES Y ANUNCIOS -->
+    <main class="center-column">
+
+      <!-- CREAR NUEVA PUBLICACIÓN -->
+      <div class="feed-card create-post">
+        <textarea rows="3" placeholder="Comparte una reflexión, análisis o novedad con la comunidad de UDDEA..."></textarea>
+        <div class="create-post-actions">
+          <button class="btn-post">Publicar</button>
+        </div>
+      </div>
+
+      <!-- PUBLICACIÓN DE USUARIO 1 -->
+      <article class="feed-card post">
+        <div class="post-header">
+          <div class="post-avatar">RB</div>
+          <div class="post-author">
+            <h5>Richard Barral</h5>
+            <span>Director Deportivo · RFFM</span>
+          </div>
+          <span class="post-badge">Validado</span>
+        </div>
+        <div class="post-content">
+          <p>Comenzamos la nueva planificación del departamento de scouting para el segundo trimestre. Es clave reforzar la captación de talento en ligas regionales. ¿Qué herramientas de análisis de datos estáis utilizando actualmente en vuestros clubes?</p>
+        </div>
+        <div class="post-actions">
+          <button class="btn-action">Conectar</button>
+          <button class="btn-action">Me gusta</button>
+          <button class="btn-action">Comentar</button>
+        </div>
+      </article>
+
+      <!-- BANNER DE ANUNCIO PATROCINADO (ESPECÍFICO DE FÚTBOL) -->
+      <div class="ad-banner">
+        <div class="ad-content">
+          <div class="ad-tag">Patrocinado · Formación Certificada</div>
+          <h5>Curso Especializado en Scouting y Análisis Táctico</h5>
+          <p>Certificación homologada para directores técnicos y analistas.</p>
+        </div>
+        <a href="#" class="btn-ad">Ver Programa</a>
+      </div>
+
+      <!-- PUBLICACIÓN DE USUARIO 2 -->
+      <article class="feed-card post">
+        <div class="post-header">
+          <div class="post-avatar">CS</div>
+          <div class="post-author">
+            <h5>Carlos Santamaría</h5>
+            <span>Coordinador de Cantera</span>
+          </div>
+          <span class="post-badge">En Búsqueda de Prácticas</span>
+        </div>
+        <div class="post-content">
+          <p>Comparto el informe detallado sobre la evolución de las canteras juveniles en la Comunidad de Madrid durante la presente temporada. Podéis consultar los gráficos comparativos adjuntos.</p>
+        </div>
+        <div class="post-actions">
+          <button class="btn-action">Conectar</button>
+          <button class="btn-action">Me gusta</button>
+          <button class="btn-action">Comentar</button>
+        </div>
+      </article>
+
+    </main>
+
+    <!-- COLUMNA DERECHA: PREVIEW DE EXPLORAR Y NOTICIAS -->
+    <aside class="right-column">
+      
+      <!-- PREVIEW DE LA SECCIÓN 'EXPLORAR' -->
+      <div class="feed-card explore-preview">
+        <h4>
+          Medios Affiliados 
+          <a href="Explore.html">Ver Todo →</a>
+        </h4>
+
+        <!-- NOTICIA REGIONAL -->
+        <div class="news-item">
+          <span class="news-category">Regional · RFFM</span>
+          <h5>Resultados de la Jornada en 3ª RFEF</h5>
+          <p>Análisis táctico de los encuentros más determinantes del fin de semana.</p>
+        </div>
+
+        <!-- NOTICIA NACIONAL -->
+        <div class="news-item">
+          <span class="news-category">Nacional · UDDEA News</span>
+          <h5>Nuevas normativas de acreditación para analistas</h5>
+          <p>Resumen de las actualizaciones para la homologación de licencias.</p>
+        </div>
+      </div>
+
+      <!-- SECCIÓN HÉROES DE LA JORNADA -->
+      <div class="feed-card explore-preview">
+        <h4>Héroes de la Jornada</h4>
+        
+        <div class="hero-item">
+          <div class="hero-avatar">JL</div>
+          <div>
+            <strong style="font-size: 0.85rem; color: var(--color-text-main);">Javier López</strong>
+            <p style="font-size: 0.75rem; color: var(--color-text-muted);">Mejor Análisis Semanal</p>
+          </div>
+        </div>
+
+        <div class="hero-item">
+          <div class="hero-avatar">AM</div>
+          <div>
+            <strong style="font-size: 0.85rem; color: var(--color-text-main);">Ana Martínez</strong>
+            <p style="font-size: 0.75rem; color: var(--color-text-muted);">Coordinación Destacada</p>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- FOOTER GLOBAL -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>UDDEA Network</h4>
+        <p style="font-size: 0.85rem; color: var(--color-border);">Unión de Directores Deportivos y Especialistas Asociados.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="Homev2.html">Home</a></li>
+          <li><a href="Feedv2.html">Feed</a></li>
+          <li><a href="Opportunitiesv2.html">Oportunidades</a></li>
+          <li><a href="Explorev2.html">Explorar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Soporte</h4>
+        <ul>
+          <li><a href="#">¿Quiénes somos?</a></li>
+          <li><a href="#">Centro de Ayuda</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 UDDEA - Todos los derechos reservados. Proyecto U-Lab UAX.
+    </div>
+  </footer>
+
+  <!-- SCRIPT ESPECÍFICO DE FEED -->
+  <script src="../js/feed.js"></script>
+</body>
+</html>

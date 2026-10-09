@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UDDEA Network - Mi Perfil / CV Profesional</title>
+  
+  <link rel="stylesheet" href="../assets/css/globalv2.css">
+  <link rel="stylesheet" href="../assets/css/profilev2.css">
+</head>
+<body>
+
+  <!-- NAVBAR COMPARTIDA -->
+  <nav class="navbar">
+    <a href="Homev2.html" class="navbar-logo">
+      <img src="../assets/images/UDDEA_Icono.png" alt="UDDEA Logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="../html/Feedv2.html">Feed</a></li>
+      <li><a href="../html/Opportunitiesv2.html">Oportunidades</a></li>
+      <li><a href="../html/Explorev2.html">Explorar</a></li>
+      <li><a href="../html/Profilev2.html">Mi Perfil</a></li>
+    </ul>
+    <button class="nav-auth-btn" onclick="location.href='Profilev2.html'">Mi Cuenta</button>
+  </nav>
+
+  <!-- BARRA HORIZONTAL PREVIEW DE USUARIO -->
+  <div class="user-preview-bar">
+    <div>
+      <span class="status-dot"></span> Modo Edición CV | Perfil verificado por <strong>Real Federación de Fútbol de Madrid</strong>
+    </div>
+    <div>Visualización pública del CV: <strong>Activa</strong></div>
+  </div>
+
+  <main class="profile-container">
+
+    <!-- COLUMNA PRINCIPAL: HISTORIAL Y CV COMPLETO -->
+    <div class="profile-main-col">
+
+      <!-- CABECERA DEL PERFIL -->
+      <section class="profile-card profile-header-card">
+        <div class="profile-cover"></div>
+        <div class="profile-header-content">
+          <div class="profile-avatar-wrapper">
+            <div class="profile-avatar">MP</div>
+          </div>
+
+          <div class="profile-main-info">
+            <div class="profile-name-row">
+              <div>
+                <h2>Mateo Palacios <span class="verified-badge">Licencia Verificada</span></h2>
+                <p class="profile-headline">Director Deportivo & Analista Táctico especializado en Fútbol Base</p>
+              </div>
+            </div>
+
+            <div class="profile-meta">
+              <span>Madrid, España</span>
+              <span>RFFM (Comunidad de Madrid)</span>
+              <span>mpalaval@myuax.com</span>
+            </div>
+
+            <div class="profile-actions-bar">
+              <button class="btn-edit-profile" onclick="alert('Abriendo editor de datos personales y CV...')">Editar Perfil</button>
+              <button class="btn-share-cv" onclick="alert('Enlace público a tu CV generado para enviar a clubes.')">Compartir CV UDDEA</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXTRACTO / PRESENTACIÓN -->
+      <section class="profile-card">
+        <div class="section-header">
+          <h3>Resumen Profesional</h3>
+        </div>
+        <p style="font-size: 0.95rem; color: var(--color-text-main); line-height: 1.6;">
+          Especialista en dirección deportiva con más de 4 años de experiencia en la coordinación de proyectos de captación de talento regional y análisis de datos tácticos. Centrado en la estructuración de metodologías para canteras y optimización de recursos en clubes de 3ª RFEF y categorías autonómicas.
+        </p>
+      </section>
+
+      <!-- HISTORIAL DE EXPERIENCIA EN CLUBES -->
+      <section class="profile-card">
+        <div class="section-header">
+          <h3>Experiencia en el Sector</h3>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">CDL</div>
+          <div class="timeline-details">
+            <h4>Analista Táctico - Primer Equipo</h4>
+            <div class="entity">CD Leganés B (3ª RFEF)</div>
+            <div class="date">2024 - Presente · 2 años</div>
+            <p>Elaboración de informes pré-partido de rivales, grabación táctica en directo y análisis de rendimiento individual de la plantilla.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">ADA</div>
+          <div class="timeline-details">
+            <h4>Scout de Fútbol Base</h4>
+            <div class="entity">ADA Alcorcón</div>
+            <div class="date">2022 - 2024 · 2 años</div>
+            <p>Seguimiento de jugadores en liga preferente juvenil e infantil en la Comunidad de Madrid. Elaboración de más de 120 informes de captación.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LICENCIAS Y FORMACIÓN -->
+      <section class="profile-card">
+        <div class="section-header">
+          <h3>Licencias & Certificaciones Verificadas</h3>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">RFFM</div>
+          <div class="timeline-details">
+            <h4>Licencia de Director Deportivo de Fútbol</h4>
+            <div class="entity">Real Federación de Fútbol de Madrid</div>
+            <div class="date">Expedido en 2023 · Acreditación Oficial Nº 4892</div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">UAX</div>
+          <div class="timeline-details">
+            <h4>Especialización en Big Data & Gestión Deportiva</h4>
+            <div class="entity">Universidad Alfonso X el Sabio (UAX)</div>
+            <div class="date">2021 - 2025</div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- COLUMNA DERECHA: METRICAS Y REVALORIZACIÓN DE PERFIL (ELO) -->
+    <aside class="profile-sidebar-col">
+
+      <!-- TARJETA DE REVALORIZACIÓN Y PUNTUAJE ELO -->
+      <div class="profile-card elo-card">
+        <h3 style="color: var(--color-primary); font-size: 1.1rem;">Revalorización de Perfil</h3>
+        <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-top: 0.2rem;">Puntuación de Valor Profesional UDDEA</p>
+
+        <div class="elo-score-box">
+          <div class="elo-number">1,450</div>
+          <div class="elo-label">Puntos ELO UDDEA</div>
+        </div>
+
+        <div class="elo-progress-bar">
+          <div class="elo-progress-fill"></div>
+        </div>
+
+        <div class="elo-breakdown">
+          <div class="elo-breakdown-item">
+            <span>Licencias homologadas:</span>
+            <strong>+500 pts</strong>
+          </div>
+          <div class="elo-breakdown-item">
+            <span>Experiencia acreditada:</span>
+            <strong>+450 pts</strong>
+          </div>
+          <div class="elo-breakdown-item">
+            <span>Artículos e Informes:</span>
+            <strong>+300 pts</strong>
+          </div>
+          <div class="elo-breakdown-item">
+            <span>Antigüedad en red:</span>
+            <strong>+200 pts</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- ESTADÍSTICAS DE IMPACTO -->
+      <div class="profile-card">
+        <div class="section-header">
+          <h3>Métricas de Red</h3>
+        </div>
+        <div style="font-size: 0.9rem; color: var(--color-text-main);">
+          <p style="margin-bottom: 0.5rem;"><strong>142</strong> visitas a tu CV este mes</p>
+          <p style="margin-bottom: 0.5rem;"><strong>88</strong> conexiones profesionales</p>
+          <p><strong>12</strong> informes/artículos publicados</p>
+        </div>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <!-- FOOTER GLOBAL -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>UDDEA Network</h4>
+        <p style="font-size: 0.85rem; color: var(--color-border);">Unión de Directores Deportivos y Especialistas Asociados.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="Homev2.html">Home</a></li>
+          <li><a href="Feedv2.html">Feed</a></li>
+          <li><a href="Opportunitiesv2.html">Oportunidades</a></li>
+          <li><a href="Explorev2.html">Explorar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Soporte</h4>
+        <ul>
+          <li><a href="#">¿Quiénes somos?</a></li>
+          <li><a href="#">Centro de Ayuda</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 UDDEA - Todos los derechos reservados. Proyecto U-Lab UAX.
+    </div>
+  </footer>
+
+</body>
+</html>
