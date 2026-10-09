@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }));
 
             // Redirigir al Feed principal
-            window.location.href = 'html/Feedv2.html';
+            window.location.href = 'Feedv2.html';
         });
     }
 });
