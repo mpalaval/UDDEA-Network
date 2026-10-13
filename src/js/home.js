@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+
     // =========================================================
     // CARRUSEL DE LA SECCIÓN "VALIDACIÓN Y CONFIANZA"
     // =========================================================
-
     const carrusel = document.querySelector("#carrusel-confianza");
 
     // Si el carrusel no existe en esta página, no ejecutamos nada
@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // =========================================================
     // MOSTRAR UNA DIAPOSITIVA
     // =========================================================
-
     function mostrarDiapositiva(indice) {
 
         // Quitamos la clase activa de todas las diapositivas
@@ -47,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // =========================================================
     // PASAR A LA SIGUIENTE DIAPOSITIVA
     // =========================================================
-
     function siguienteDiapositiva() {
 
         const siguienteIndice =
@@ -59,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // =========================================================
     // INICIAR ROTACIÓN AUTOMÁTICA
     // =========================================================
-
     function iniciarCarrusel() {
 
         // Evita crear varios intervalos a la vez
@@ -74,7 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // =========================================================
     // DETENER ROTACIÓN AUTOMÁTICA
     // =========================================================
-
     function detenerCarrusel() {
 
         if (intervaloCarrusel !== null) {
@@ -88,7 +84,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // =========================================================
     // NAVEGACIÓN MEDIANTE LOS PUNTOS
     // =========================================================
-
     puntos.forEach((punto, indice) => {
 
         punto.addEventListener("click", () => {
@@ -105,11 +100,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // =========================================================
     // PAUSAR AL PASAR EL RATÓN SOBRE EL CARRUSEL
     // =========================================================
-
     carrusel.addEventListener("mouseenter", () => {
         detenerCarrusel();
     });
-
 
     carrusel.addEventListener("mouseleave", () => {
         iniciarCarrusel();
@@ -118,7 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // =========================================================
     // PAUSAR SI EL USUARIO CAMBIA DE PESTAÑA
     // =========================================================
-
     document.addEventListener("visibilitychange", () => {
 
         if (document.hidden) {
@@ -126,13 +118,11 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             iniciarCarrusel();
         }
-
     });
 
     // =========================================================
     // INICIO DEL CARRUSEL
     // =========================================================
-
     mostrarDiapositiva(0);
 
     iniciarCarrusel();
@@ -140,7 +130,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // =========================================================
     // CONEXIÓN REGIONAL
     // =========================================================
-
     const selectorRegion =
         document.querySelector("#selector-region");
 
@@ -164,7 +153,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Datos simulados del prototipo
-
     const regiones = {
 
         madrid: {
@@ -201,11 +189,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     };
 
-
     // =========================================================
     // ACTUALIZAR INFORMACIÓN DE LA REGIÓN
     // =========================================================
-
     function actualizarRegion() {
 
         const regionSeleccionada =
@@ -238,7 +224,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // =========================================================
     // EVENTO DEL SELECTOR
     // =========================================================
-
     if (selectorRegion) {
 
         selectorRegion.addEventListener(
