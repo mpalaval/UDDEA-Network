@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const TIEMPO_CAMBIO = 5000;
 
-
     // =========================================================
     // MOSTRAR UNA DIAPOSITIVA
     // =========================================================
@@ -45,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
         diapositivaActual = indice;
     }
 
-
     // =========================================================
     // PASAR A LA SIGUIENTE DIAPOSITIVA
     // =========================================================
@@ -57,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         mostrarDiapositiva(siguienteIndice);
     }
-
 
     // =========================================================
     // INICIAR ROTACIÓN AUTOMÁTICA
@@ -74,7 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
     }
 
-
     // =========================================================
     // DETENER ROTACIÓN AUTOMÁTICA
     // =========================================================
@@ -88,7 +84,6 @@ document.addEventListener("DOMContentLoaded", () => {
             intervaloCarrusel = null;
         }
     }
-
 
     // =========================================================
     // NAVEGACIÓN MEDIANTE LOS PUNTOS
@@ -107,7 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-
     // =========================================================
     // PAUSAR AL PASAR EL RATÓN SOBRE EL CARRUSEL
     // =========================================================
@@ -120,7 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
     carrusel.addEventListener("mouseleave", () => {
         iniciarCarrusel();
     });
-
 
     // =========================================================
     // PAUSAR SI EL USUARIO CAMBIA DE PESTAÑA
@@ -135,7 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
     });
-
 
     // =========================================================
     // INICIO DEL CARRUSEL
