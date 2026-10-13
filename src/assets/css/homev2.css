@@ -182,3 +182,261 @@
   font-weight: 600;
   text-decoration: none;
 }
+
+
+/* ==================================================
+   SECCIÓN: VALIDACIÓN Y CONFIANZA
+   ================================================== */
+
+.seccion-confianza {
+    padding: 4rem 5%;
+    background-color: var(--color-white);
+}
+
+.distribucion-confianza {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 3rem;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ==================================================
+   CARRUSEL
+   ================================================== */
+
+.carrusel-banner {
+    position: relative;
+
+    width: 100%;
+    height: 360px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    background-color: var(--color-primary);
+
+    box-shadow: 0 8px 24px rgba(0, 95, 102, 0.10);
+}
+
+
+/* Cada diapositiva ocupa todo el banner */
+
+.carrusel-diapositiva {
+    position: absolute;
+    inset: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.7s ease,
+        visibility 0.7s ease;
+}
+
+
+/* Diapositiva visible */
+
+.carrusel-diapositiva.activa {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+
+/* Imagen */
+
+.carrusel-diapositiva img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+
+    transition: transform 6s ease;
+}
+
+
+/* Ligero zoom mientras está activa */
+
+.carrusel-diapositiva.activa img {
+    transform: scale(1.04);
+}
+
+
+/* Overlay corporativo */
+
+.carrusel-diapositiva::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 95, 102, 0.92) 0%,
+            rgba(0, 95, 102, 0.45) 40%,
+            rgba(0, 95, 102, 0.05) 75%,
+            transparent 100%
+        );
+}
+
+
+/* ==================================================
+   TEXTO DEL BANNER
+   ================================================== */
+
+.leyenda-banner {
+    position: absolute;
+
+    left: 28px;
+    right: 28px;
+    bottom: 26px;
+
+    z-index: 2;
+
+    color: var(--color-white);
+}
+
+.leyenda-banner h4 {
+    margin-bottom: 5px;
+
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.leyenda-banner p {
+    max-width: 500px;
+
+    font-size: 0.9rem;
+    line-height: 1.5;
+
+    color: rgba(255, 255, 255, 0.85);
+}
+
+
+/* ==================================================
+   PUNTOS DEL CARRUSEL
+   ================================================== */
+
+.carrusel-puntos {
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    z-index: 3;
+
+    display: flex;
+    gap: 8px;
+}
+
+.carrusel-puntos .punto {
+    width: 9px;
+    height: 9px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.45);
+
+    cursor: pointer;
+
+    transition:
+        background-color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.carrusel-puntos .punto:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.carrusel-puntos .punto.activo {
+    background-color: var(--color-white);
+    transform: scale(1.3);
+}
+
+
+/* ==================================================
+   BLOQUE DE TEXTO DERECHO
+   ================================================== */
+
+.texto-confianza .antetitulo {
+    display: inline-block;
+
+    margin-bottom: 0.6rem;
+
+    color: var(--color-primary);
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.texto-confianza h2 {
+    margin-bottom: 1rem;
+
+    color: var(--color-primary);
+
+    font-size: 2rem;
+    line-height: 1.25;
+}
+
+.texto-confianza > p {
+    margin-bottom: 1.5rem;
+
+    color: var(--color-text-muted);
+
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+.lista-puntos-clave {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+.lista-puntos-clave li {
+    display: flex;
+    align-items: center;
+
+    gap: 0.75rem;
+
+    color: var(--color-text-main);
+
+    font-size: 0.95rem;
+}
+
+
+/* ==================================================
+   RESPONSIVE
+   ================================================== */
+
+@media (max-width: 850px) {
+
+    .distribucion-confianza {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .carrusel-banner {
+        height: 280px;
+    }
+
+    .texto-confianza h2 {
+        font-size: 1.7rem;
+    }
+}

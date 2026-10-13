@@ -1,29 +1,149 @@
-// src/js/home.js
-document.addEventListener('DOMContentLoaded', () => {
-    const loginForm = document.getElementById('loginForm');
+document.addEventListener("DOMContentLoaded", () => {
 
-    if (loginForm) {
-        loginForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const username = document.getElementById('username').value;
-            const federation = document.getElementById('federation').value;
+    // =========================================================
+    // CARRUSEL DE LA SECCIÓN "VALIDACIÓN Y CONFIANZA"
+    // =========================================================
 
-            if (!federation) {
-                alert('Debes seleccionar tu Federación Regional para vincular la cuenta.');
-                return;
-            }
+    const carrusel = document.querySelector("#carrusel-confianza");
 
-            // Guardar datos de sesión localmente para el prototipo
-            localStorage.setItem('uddea_user', JSON.stringify({
-                name: username.split('@')[0] || 'Usuario UDDEA',
-                email: username,
-                federation: federation,
-                elo: 1450,
-                status: 'empleo'
-            }));
-
-            // Redirigir al Feed principal
-            window.location.href = 'Feedv2.html';
-        });
+    // Si el carrusel no existe en esta página, no ejecutamos nada
+    if (!carrusel) {
+        return;
     }
+
+    const diapositivas = carrusel.querySelectorAll(".carrusel-diapositiva");
+    const puntos = carrusel.querySelectorAll(".punto");
+
+    let diapositivaActual = 0;
+    let intervaloCarrusel = null;
+
+    const TIEMPO_CAMBIO = 5000;
+
+
+    // =========================================================
+    // MOSTRAR UNA DIAPOSITIVA
+    // =========================================================
+
+    function mostrarDiapositiva(indice) {
+
+        // Quitamos la clase activa de todas las diapositivas
+        diapositivas.forEach((diapositiva) => {
+            diapositiva.classList.remove("activa");
+        });
+
+        // Quitamos la clase activa de todos los puntos
+        puntos.forEach((punto) => {
+            punto.classList.remove("activo");
+        });
+
+        // Activamos la diapositiva correspondiente
+        diapositivas[indice].classList.add("activa");
+
+        // Activamos también su punto
+        puntos[indice].classList.add("activo");
+
+        // Guardamos cuál es la diapositiva actual
+        diapositivaActual = indice;
+    }
+
+
+    // =========================================================
+    // PASAR A LA SIGUIENTE DIAPOSITIVA
+    // =========================================================
+
+    function siguienteDiapositiva() {
+
+        const siguienteIndice =
+            (diapositivaActual + 1) % diapositivas.length;
+
+        mostrarDiapositiva(siguienteIndice);
+    }
+
+
+    // =========================================================
+    // INICIAR ROTACIÓN AUTOMÁTICA
+    // =========================================================
+
+    function iniciarCarrusel() {
+
+        // Evita crear varios intervalos a la vez
+        detenerCarrusel();
+
+        intervaloCarrusel = setInterval(
+            siguienteDiapositiva,
+            TIEMPO_CAMBIO
+        );
+    }
+
+
+    // =========================================================
+    // DETENER ROTACIÓN AUTOMÁTICA
+    // =========================================================
+
+    function detenerCarrusel() {
+
+        if (intervaloCarrusel !== null) {
+
+            clearInterval(intervaloCarrusel);
+
+            intervaloCarrusel = null;
+        }
+    }
+
+
+    // =========================================================
+    // NAVEGACIÓN MEDIANTE LOS PUNTOS
+    // =========================================================
+
+    puntos.forEach((punto, indice) => {
+
+        punto.addEventListener("click", () => {
+
+            mostrarDiapositiva(indice);
+
+            // Reiniciamos el temporizador para que
+            // no cambie inmediatamente después del clic
+            iniciarCarrusel();
+        });
+
+    });
+
+
+    // =========================================================
+    // PAUSAR AL PASAR EL RATÓN SOBRE EL CARRUSEL
+    // =========================================================
+
+    carrusel.addEventListener("mouseenter", () => {
+        detenerCarrusel();
+    });
+
+
+    carrusel.addEventListener("mouseleave", () => {
+        iniciarCarrusel();
+    });
+
+
+    // =========================================================
+    // PAUSAR SI EL USUARIO CAMBIA DE PESTAÑA
+    // =========================================================
+
+    document.addEventListener("visibilitychange", () => {
+
+        if (document.hidden) {
+            detenerCarrusel();
+        } else {
+            iniciarCarrusel();
+        }
+
+    });
+
+
+    // =========================================================
+    // INICIO DEL CARRUSEL
+    // =========================================================
+
+    mostrarDiapositiva(0);
+
+    iniciarCarrusel();
+
 });
