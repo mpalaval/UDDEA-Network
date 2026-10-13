@@ -1,7 +1,6 @@
 /* =========================================================
    UDDEA NETWORK - HOME PAGE (00. HOME)
    ========================================================= */
-
 /* HERO BANNER */
 .hero {
   display: flex;
@@ -187,7 +186,6 @@
 /* ==================================================
    PRIMER BANNER
    ================================================== */
-
 .seccion-confianza {
     padding: 4rem 5%;
     background-color: var(--color-white);
@@ -207,7 +205,6 @@
 /* ==================================================
    CARRUSEL
    ================================================== */
-
 .carrusel-banner {
     position: relative;
 
@@ -226,7 +223,6 @@
 
 
 /* Cada diapositiva ocupa todo el banner */
-
 .carrusel-diapositiva {
     position: absolute;
     inset: 0;
@@ -241,7 +237,6 @@
 
 
 /* Diapositiva visible */
-
 .carrusel-diapositiva.activa {
     opacity: 1;
     visibility: visible;
@@ -250,7 +245,6 @@
 
 
 /* Imagen */
-
 .carrusel-diapositiva img {
     width: 100%;
     height: 100%;
@@ -263,14 +257,12 @@
 
 
 /* Ligero zoom mientras está activa */
-
 .carrusel-diapositiva.activa img {
     transform: scale(1.04);
 }
 
 
 /* Overlay corporativo */
-
 .carrusel-diapositiva::after {
     content: "";
 
@@ -291,7 +283,6 @@
 /* ==================================================
    TEXTO DEL BANNER
    ================================================== */
-
 .leyenda-banner {
     position: absolute;
 
@@ -324,7 +315,6 @@
 /* ==================================================
    PUNTOS DEL CARRUSEL
    ================================================== */
-
 .carrusel-puntos {
     position: absolute;
 
@@ -368,7 +358,6 @@
 /* ==================================================
    BLOQUE DE TEXTO DERECHO
    ================================================== */
-
 .texto-confianza .antetitulo {
     display: inline-block;
 
@@ -424,7 +413,6 @@
 /* ==================================================
    RESPONSIVE
    ================================================== */
-
 @media (max-width: 850px) {
 
     .distribucion-confianza {
