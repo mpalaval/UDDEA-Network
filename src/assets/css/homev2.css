@@ -185,7 +185,7 @@
 
 
 /* ==================================================
-   SECCIÓN: VALIDACIÓN Y CONFIANZA
+   PRIMER BANNER
    ================================================== */
 
 .seccion-confianza {
@@ -439,4 +439,307 @@
     .texto-confianza h2 {
         font-size: 1.7rem;
     }
+}
+
+/* ==================================================
+   SEGUNDO BANNER
+   ================================================== */
+
+.seccion-regional {
+    padding: 5rem 5%;
+    background-color: var(--color-bg-light);
+}
+
+.contenedor-regional {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+    gap: 5rem;
+}
+
+
+/* ==================================================
+   BLOQUE IZQUIERDO
+   ================================================== */
+
+.regional-introduccion {
+    max-width: 520px;
+}
+
+.antetitulo-regional {
+    display: inline-block;
+
+    margin-bottom: 0.7rem;
+
+    color: var(--color-primary);
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.regional-introduccion h2 {
+    margin-bottom: 1rem;
+
+    color: var(--color-primary);
+
+    font-size: 2.4rem;
+    line-height: 1.15;
+}
+
+.regional-introduccion > p {
+    margin-bottom: 2rem;
+
+    max-width: 480px;
+
+    color: var(--color-text-muted);
+
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+
+/* ==================================================
+   SELECTOR DE FEDERACIÓN
+   ================================================== */
+
+.selector-regional {
+    max-width: 420px;
+}
+
+.selector-regional label {
+    display: block;
+
+    margin-bottom: 0.5rem;
+
+    color: var(--color-text-main);
+
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.selector-regional select {
+    width: 100%;
+
+    padding: 0.9rem 1rem;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+
+    background-color: var(--color-white);
+
+    color: var(--color-text-main);
+
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+
+    cursor: pointer;
+
+    outline: none;
+
+    transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+.selector-regional select:hover {
+    border-color: var(--color-secondary);
+}
+
+.selector-regional select:focus {
+    border-color: var(--color-primary);
+
+    box-shadow:
+        0 0 0 3px rgba(0, 95, 102, 0.10);
+}
+
+
+/* ==================================================
+   TARJETA DE REGIÓN
+   ================================================== */
+
+.tarjeta-region {
+    position: relative;
+
+    padding: 2.5rem;
+
+    background-color: var(--color-white);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    box-shadow:
+        0 10px 30px rgba(0, 95, 102, 0.08);
+}
+
+.tarjeta-region-etiqueta {
+    display: inline-block;
+
+    margin-bottom: 0.7rem;
+
+    color: var(--color-primary);
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.tarjeta-region h3 {
+    margin-bottom: 0.3rem;
+
+    color: var(--color-primary);
+
+    font-size: 2rem;
+}
+
+.nombre-federacion {
+    min-height: 24px;
+
+    margin-bottom: 2rem;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.9rem;
+}
+
+
+/* ==================================================
+   ESTADÍSTICAS
+   ================================================== */
+
+.estadisticas-region {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-bottom: 2rem;
+
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.estadistica-region {
+    padding: 1.4rem 0.8rem;
+
+    text-align: center;
+}
+
+.estadistica-region:not(:last-child) {
+    border-right: 1px solid var(--color-border);
+}
+
+.estadistica-region strong {
+    display: block;
+
+    margin-bottom: 0.2rem;
+
+    color: var(--color-primary);
+
+    font-size: 1.6rem;
+}
+
+.estadistica-region span {
+    color: var(--color-text-muted);
+
+    font-size: 0.75rem;
+}
+
+
+/* ==================================================
+   BOTÓN
+   ================================================== */
+
+.btn-explorar-region {
+    display: inline-block;
+
+    padding: 0.75rem 1.4rem;
+
+    background-color: var(--color-primary);
+
+    border-radius: var(--radius-sm);
+
+    color: var(--color-white);
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        background-color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.btn-explorar-region:hover {
+    background-color: var(--color-secondary);
+
+    transform: translateY(-1px);
+}
+
+
+/* ==================================================
+   AVISO DATOS SIMULADOS
+   ================================================== */
+
+.aviso-datos {
+    display: block;
+
+    margin-top: 1rem;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.7rem;
+}
+
+
+/* ==================================================
+   RESPONSIVE
+   ================================================== */
+
+@media (max-width: 850px) {
+
+    .seccion-regional {
+        padding: 4rem 5%;
+    }
+
+    .contenedor-regional {
+        grid-template-columns: 1fr;
+
+        gap: 2.5rem;
+    }
+
+    .regional-introduccion {
+        max-width: none;
+    }
+
+    .regional-introduccion h2 {
+        font-size: 2rem;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .tarjeta-region {
+        padding: 1.5rem;
+    }
+
+    .estadisticas-region {
+        grid-template-columns: 1fr;
+    }
+
+    .estadistica-region:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+    }
+
 }

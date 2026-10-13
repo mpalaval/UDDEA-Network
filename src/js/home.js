@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     // =========================================================
     // CARRUSEL DE LA SECCIÓN "VALIDACIÓN Y CONFIANZA"
     // =========================================================
@@ -146,4 +145,114 @@ document.addEventListener("DOMContentLoaded", () => {
 
     iniciarCarrusel();
 
+    // =========================================================
+    // CONEXIÓN REGIONAL
+    // =========================================================
+
+    const selectorRegion =
+        document.querySelector("#selector-region");
+
+    const nombreRegion =
+        document.querySelector("#nombre-region");
+
+    const nombreFederacion =
+        document.querySelector("#nombre-federacion");
+
+    const numeroProfesionales =
+        document.querySelector("#numero-profesionales");
+
+    const numeroClubes =
+        document.querySelector("#numero-clubes");
+
+    const numeroOportunidades =
+        document.querySelector("#numero-oportunidades");
+
+    const botonExplorar =
+        document.querySelector(".btn-explorar-region");
+
+
+    // Datos simulados del prototipo
+
+    const regiones = {
+
+        madrid: {
+            nombre: "Madrid",
+            federacion: "Real Federación de Fútbol de Madrid",
+            profesionales: 126,
+            clubes: 18,
+            oportunidades: 24
+        },
+
+        cataluna: {
+            nombre: "Cataluña",
+            federacion: "Federació Catalana de Futbol",
+            profesionales: 184,
+            clubes: 27,
+            oportunidades: 31
+        },
+
+        andalucia: {
+            nombre: "Andalucía",
+            federacion: "Real Federación Andaluza de Fútbol",
+            profesionales: 151,
+            clubes: 23,
+            oportunidades: 19
+        },
+
+        valencia: {
+            nombre: "Comunidad Valenciana",
+            federacion: "Federació de Futbol de la Comunitat Valenciana",
+            profesionales: 138,
+            clubes: 21,
+            oportunidades: 22
+        }
+
+    };
+
+
+    // =========================================================
+    // ACTUALIZAR INFORMACIÓN DE LA REGIÓN
+    // =========================================================
+
+    function actualizarRegion() {
+
+        const regionSeleccionada =
+            selectorRegion.value;
+
+        const datos =
+            regiones[regionSeleccionada];
+
+
+        nombreRegion.textContent =
+            datos.nombre;
+
+        nombreFederacion.textContent =
+            datos.federacion;
+
+        numeroProfesionales.textContent =
+            datos.profesionales;
+
+        numeroClubes.textContent =
+            datos.clubes;
+
+        numeroOportunidades.textContent =
+            datos.oportunidades;
+
+        botonExplorar.textContent =
+            `Explorar ${datos.nombre} →`;
+    }
+
+
+    // =========================================================
+    // EVENTO DEL SELECTOR
+    // =========================================================
+
+    if (selectorRegion) {
+
+        selectorRegion.addEventListener(
+            "change",
+            actualizarRegion
+        );
+
+    }
 });
