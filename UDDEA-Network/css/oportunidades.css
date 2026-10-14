@@ -1,0 +1,826 @@
+/* =========================================================
+   UDDEA NETWORK v0.3
+   OPORTUNIDADES.CSS
+   ========================================================= */
+
+
+/* =========================================================
+   CONTENEDOR
+   ========================================================= */
+
+.opportunities-page .container,
+.user-bar .container {
+    width: min(91%, 910px);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   BARRA DE USUARIO
+   ========================================================= */
+
+.user-bar {
+    height: 74px;
+
+    background: #ffffff;
+    border-bottom: 1px solid #dce7e7;
+}
+
+.user-bar-grid {
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1.6fr 0.75fr 0.75fr;
+
+    align-items: center;
+    gap: 30px;
+}
+
+
+/* PERFIL */
+
+.user-summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-summary > img {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-summary strong {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #243436;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.user-summary p {
+    margin: 0 0 2px;
+
+    color: #6f7d7e;
+
+    font-size: 8px;
+}
+
+.user-summary a {
+    color: #006d73;
+
+    font-size: 7px;
+    text-decoration: none;
+}
+
+
+/* ESTADO */
+
+.user-status,
+.user-objective {
+    justify-self: end;
+}
+
+.user-bar-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #899596;
+
+    font-size: 6px;
+    letter-spacing: 0.05em;
+}
+
+.user-status > div,
+.user-objective > div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.online-dot {
+    width: 6px;
+    height: 6px;
+
+    background: #008b90;
+
+    border-radius: 50%;
+}
+
+.user-status strong {
+    color: #006d73;
+
+    font-size: 7px;
+    font-weight: 400;
+}
+
+.user-status span {
+    color: #7c898a;
+
+    font-size: 7px;
+}
+
+.user-status button {
+    padding: 0;
+
+    color: #879394;
+    background: transparent;
+
+    border: 0;
+
+    font-size: 7px;
+}
+
+
+/* OBJETIVO */
+
+.user-objective button {
+    padding: 4px 8px;
+
+    color: #006d73;
+    background: #edf6f6;
+
+    border: 0;
+    border-radius: 4px;
+
+    font-size: 6px;
+
+    cursor: pointer;
+}
+
+.user-objective button.active {
+    color: #ffffff;
+    background: #00747a;
+}
+
+
+/* =========================================================
+   PÁGINA
+   ========================================================= */
+
+.opportunities-page {
+    min-height: 900px;
+
+    padding: 27px 0 34px;
+
+    background: #edf7f7;
+}
+
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+
+.opportunities-header {
+    margin-bottom: 18px;
+}
+
+.opportunities-header > p {
+    margin: 0 0 7px;
+
+    color: #00747a;
+
+    font-size: 7px;
+}
+
+.opportunities-header h1 {
+    margin: 0 0 6px;
+
+    color: #203234;
+
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.4px;
+}
+
+.opportunities-header > span {
+    color: #718081;
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   FILTROS
+   ========================================================= */
+
+.opportunities-filters {
+    margin-bottom: 17px;
+    padding: 12px 14px 9px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce7e7;
+    border-radius: 7px;
+}
+
+
+/* FILA PRINCIPAL */
+
+.filters-grid {
+    display: grid;
+    grid-template-columns:
+        1.1fr
+        1.1fr
+        1.1fr
+        1.1fr;
+
+    gap: 11px;
+}
+
+.filters-grid label {
+    display: block;
+}
+
+.filters-grid label > span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #5f6d6e;
+
+    font-size: 7px;
+}
+
+.filters-grid input,
+.filters-grid select {
+    width: 100%;
+    height: 29px;
+
+    padding: 0 10px;
+
+    color: #536263;
+    background: #ffffff;
+
+    border: 1px solid #dbe5e5;
+    border-radius: 5px;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 7px;
+}
+
+.filters-grid input::placeholder {
+    color: #748182;
+}
+
+.filters-grid input:focus,
+.filters-grid select:focus {
+    border-color: #7cc4c6;
+}
+
+
+/* FILA INFERIOR */
+
+.filters-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 8px;
+}
+
+.opportunity-types {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.opportunity-types button {
+    padding: 3px 7px;
+
+    color: #00747a;
+    background: #edf7f7;
+
+    border: 0;
+    border-radius: 3px;
+
+    font-size: 6px;
+
+    cursor: pointer;
+}
+
+.opportunity-types button.active {
+    color: #ffffff;
+    background: #00747a;
+}
+
+.elo-help {
+    padding: 0;
+
+    color: #006d73;
+    background: transparent;
+
+    border: 0;
+
+    font-size: 7px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   TOOLBAR DE RESULTADOS
+   ========================================================= */
+
+.opportunities-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 13px;
+}
+
+.opportunities-toolbar > span {
+    color: #7b898a;
+
+    font-size: 7px;
+}
+
+.opportunities-toolbar button {
+    padding: 0;
+
+    color: #006d73;
+    background: transparent;
+
+    border: 0;
+
+    font-size: 7px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   GRID 3 × 3
+   ========================================================= */
+
+.opportunities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 13px;
+
+    margin-bottom: 17px;
+}
+
+
+/* =========================================================
+   TARJETA
+   ========================================================= */
+
+.opportunity-card {
+    min-width: 0;
+    min-height: 222px;
+
+    padding: 12px 13px 11px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border: 1px solid #dbe6e6;
+    border-radius: 7px;
+
+    box-shadow: 0 1px 2px rgba(0, 70, 75, 0.025);
+}
+
+
+/* PARTE SUPERIOR */
+
+.opportunity-card-top {
+    min-height: 18px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 8px;
+
+    margin-bottom: 7px;
+}
+
+.opportunity-type {
+    display: inline-block;
+
+    padding: 3px 7px;
+
+    color: #ffffff;
+    background: #00747a;
+
+    border-radius: 3px;
+
+    font-size: 6px;
+    line-height: 1;
+}
+
+
+/* GUARDAR */
+
+.save-opportunity {
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    color: #7d898a;
+    background: transparent;
+
+    border: 0;
+
+    font-size: 6px;
+
+    cursor: pointer;
+}
+
+.save-opportunity img {
+    width: 9px;
+    height: 9px;
+
+    object-fit: contain;
+}
+
+
+/* PREMIUM */
+
+.premium-label {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    color: #8a7737;
+
+    font-size: 6px;
+}
+
+.premium-label img {
+    width: 9px;
+    height: 9px;
+
+    object-fit: contain;
+}
+
+
+/* ENTIDAD */
+
+.opportunity-entity {
+    margin: 0 0 7px;
+
+    color: #849091;
+
+    font-size: 6.5px;
+}
+
+
+/* TÍTULO */
+
+.opportunity-card h2 {
+    min-height: 29px;
+
+    margin: 0 0 8px;
+
+    color: #263638;
+
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+
+/* UBICACIÓN */
+
+.opportunity-location {
+    min-height: 22px;
+
+    margin: 0 0 7px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+
+    color: #7c898a;
+
+    font-size: 6.5px;
+    line-height: 1.35;
+}
+
+.opportunity-location img {
+    width: 9px;
+    height: 9px;
+
+    margin-top: 1px;
+
+    flex-shrink: 0;
+
+    object-fit: contain;
+}
+
+
+/* DESCRIPCIÓN */
+
+.opportunity-description {
+    margin: 0 0 12px;
+
+    color: #657374;
+
+    font-size: 7px;
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   METADATOS
+   ========================================================= */
+
+.opportunity-meta {
+    margin-top: auto;
+    padding-top: 8px;
+
+    border-top: 1px solid #e3eaea;
+}
+
+.opportunity-meta span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #8a9697;
+
+    font-size: 6px;
+}
+
+.opportunity-meta strong {
+    display: block;
+
+    color: #00747a;
+
+    font-size: 6px;
+    font-weight: 400;
+}
+
+.opportunity-meta strong.premium-access {
+    color: #a38337;
+}
+
+
+/* =========================================================
+   BOTÓN DE TARJETA
+   ========================================================= */
+
+.opportunity-button {
+    width: 100%;
+    height: 25px;
+
+    margin-top: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+    background: #00747a;
+
+    border: 1px solid #00747a;
+    border-radius: 4px;
+
+    font-size: 7px;
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.opportunity-button:hover {
+    background: #005f66;
+    border-color: #005f66;
+}
+
+.opportunity-button.secondary {
+    color: #006d73;
+    background: #edf6f6;
+
+    border-color: #dce8e8;
+}
+
+.opportunity-button.secondary:hover {
+    background: #e0eeee;
+}
+
+
+/* =========================================================
+   BLOQUE DE CONTEXTO / ELO
+   ========================================================= */
+
+.opportunities-context {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+
+    gap: 10px;
+
+    padding: 15px 16px;
+
+    background: #e4f0f0;
+
+    border-radius: 7px;
+}
+
+.opportunities-context > img {
+    width: 15px;
+    height: 15px;
+
+    margin-top: 1px;
+
+    object-fit: contain;
+}
+
+.opportunities-context h2 {
+    margin: 0 0 6px;
+
+    color: #334344;
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.opportunities-context p {
+    margin: 0 0 8px;
+
+    color: #748182;
+
+    font-size: 6.5px;
+    line-height: 1.5;
+}
+
+.context-actions {
+    display: flex;
+    gap: 6px;
+
+    margin-bottom: 7px;
+}
+
+.context-actions button {
+    padding: 5px 9px;
+
+    color: #006d73;
+    background: #f3f9f9;
+
+    border: 1px solid #d7e6e6;
+    border-radius: 4px;
+
+    font-size: 6px;
+
+    cursor: pointer;
+}
+
+.opportunities-context small {
+    display: block;
+
+    color: #8b9798;
+
+    font-size: 5.5px;
+}
+
+
+/* =========================================================
+   TEXTO DE PROTOTIPO
+   ========================================================= */
+
+.prototype-disclaimer {
+    margin: 12px 0 0;
+
+    color: #919c9d;
+
+    font-size: 5.5px;
+}
+
+
+/* =========================================================
+   INTERACCIONES VISUALES
+   ========================================================= */
+
+.opportunity-card {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.opportunity-card:hover {
+    transform: translateY(-1px);
+
+    border-color: #cbdede;
+
+    box-shadow: 0 4px 12px rgba(0, 80, 85, 0.05);
+}
+
+.save-opportunity:hover,
+.elo-help:hover,
+.opportunities-toolbar button:hover {
+    color: #004f54;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .filters-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .opportunities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .user-bar {
+        height: auto;
+    }
+
+    .user-bar-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        padding: 14px 0;
+    }
+
+    .user-status,
+    .user-objective {
+        justify-self: start;
+    }
+
+
+    .opportunities-page {
+        padding-top: 22px;
+    }
+
+    .opportunities-header h1 {
+        font-size: 21px;
+    }
+
+
+    .filters-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filters-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .opportunity-types {
+        flex-wrap: wrap;
+    }
+
+
+    .opportunities-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 7px;
+    }
+
+
+    .opportunities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .opportunity-card {
+        min-height: auto;
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .opportunities-header h1 {
+        font-size: 19px;
+    }
+
+    .opportunities-context {
+        grid-template-columns: 1fr;
+    }
+
+}

@@ -1,0 +1,719 @@
+/* =========================================================
+   UDDEA NETWORK v0.3
+   GLOBAL.CSS
+   ========================================================= */
+
+
+/* ---------- VARIABLES ---------- */
+
+:root {
+    --primary: #006d73;
+    --primary-dark: #004f54;
+    --secondary: #7cc4c6;
+
+    --background: #eef7f7;
+    --background-soft: #f5f9f9;
+
+    --white: #ffffff;
+
+    --text: #243436;
+    --text-soft: #68797b;
+
+    --border: #d7e3e3;
+
+    --radius: 8px;
+    --radius-large: 12px;
+
+    --container: 940px;
+
+    --font: "Segoe UI", Arial, sans-serif;
+}
+
+
+/* ---------- RESET ---------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
+    color: var(--text);
+    background: var(--white);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* ---------- CONTENEDOR ---------- */
+
+.container {
+    width: min(92%, var(--container));
+    margin: 0 auto;
+}
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+    width: 100%;
+    height: 54px;
+
+    background: #ffffff;
+    border-bottom: 1px solid #dfe8e8;
+}
+
+.navbar-container {
+    width: min(91%, 910px);
+    height: 100%;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ================= MARCA ================= */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+}
+
+.navbar-logo {
+    width: 16px;
+    height: 16px;
+
+    object-fit: contain;
+}
+
+.navbar-brand-text {
+    color: #006d73;
+
+    font-size: 13px;
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+.navbar-brand-text strong {
+    font-weight: 700;
+}
+
+
+/* ================= DERECHA ================= */
+
+.navbar-right {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+/* ================= NAVEGACIÓN ================= */
+
+.navbar-navigation {
+    height: 100%;
+
+    display: flex;
+    align-items: stretch;
+
+    gap: 5px;
+}
+
+.navbar-item {
+    position: relative;
+
+    width: 53px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2px;
+
+    color: #6f7e7f;
+
+    font-size: 7px;
+    line-height: 1;
+
+    text-decoration: none;
+}
+
+.navbar-item img {
+    width: 10px;
+    height: 10px;
+
+    object-fit: contain;
+}
+
+.navbar-item span {
+    white-space: nowrap;
+}
+
+
+/* ACTIVO */
+
+.navbar-item.active {
+    color: #006d73;
+}
+
+.navbar-item.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 8px;
+    right: 8px;
+    bottom: 0;
+
+    height: 1px;
+
+    background: #006d73;
+}
+
+
+/* ================= CAMPANA ================= */
+
+.navbar-notifications {
+    width: 10px;
+    height: 10px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+
+    border: 0;
+
+    cursor: pointer;
+}
+
+.navbar-notifications img {
+    width: 17px;
+    height: 17px;
+
+    object-fit: contain;
+}
+
+
+/* ================= AVATAR ================= */
+
+.navbar-avatar {
+    width: 20px;
+    height: 20px;
+
+    display: block;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+
+.navbar-avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+/* ---------- LOGIN / REGISTRO ---------- */
+
+.navbar-access {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+.navbar-login {
+    padding: 7px 0;
+
+    color: #006d73;
+    background: transparent;
+
+    font-size: 8px;
+    font-weight: 400;
+
+    white-space: nowrap;
+}
+
+.navbar-register {
+    min-width: 83px;
+    height: 28px;
+
+    padding: 0 15px;
+
+    color: #ffffff;
+    background: #006d73;
+
+    border: 0;
+    border-radius: 6px;
+
+    font-size: 8px;
+    font-weight: 400;
+
+    white-space: nowrap;
+}
+
+.navbar-register:hover {
+    background: #00575c;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    height: 104px;
+
+    background: #ffffff;
+}
+
+.footer-container {
+    width: min(91%, 910px);
+    height: 100%;
+
+    margin: 0 auto;
+
+    padding-top: 19px;
+}
+
+
+/* ---------- PARTE SUPERIOR ---------- */
+
+.footer-main {
+    height: 37px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+/* MARCA */
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: #006d73;
+
+    text-decoration: none;
+}
+
+.footer-brand img {
+    width: 27px;
+    height: 27px;
+
+    object-fit: contain;
+}
+
+.footer-brand span {
+    font-size: 12px;
+}
+
+.footer-brand strong {
+    font-weight: 700;
+}
+
+
+/* ENLACES */
+
+.footer-links {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    padding-top: 5px;
+}
+
+.footer-links a {
+    color: #758283;
+
+    font-size: 7px;
+
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #006d73;
+}
+
+
+/* ---------- DIVISOR ---------- */
+
+.footer-divider {
+    width: 100%;
+    height: 1px;
+
+    background: #dce5e5;
+}
+
+
+/* ---------- PARTE INFERIOR ---------- */
+
+.footer-legal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 14px;
+
+    color: #899596;
+
+    font-size: 6.5px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+    .navbar-container,
+    .footer-container {
+        width: 92%;
+    }
+
+    .navbar-navigation {
+        display: none;
+    }
+
+    .navbar-right {
+        gap: 12px;
+    }
+
+    .navbar-access {
+        gap: 10px;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .footer-container {
+        padding-bottom: 18px;
+    }
+
+    .footer-main {
+        height: auto;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding-bottom: 15px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+
+        gap: 12px;
+    }
+
+    .footer-legal {
+        gap: 20px;
+    }
+
+}
+
+/* LOGO */
+
+.logo {
+    justify-self: start;
+}
+
+.logo img {
+    width: 145px;
+    height: auto;
+}
+
+
+/* NAVEGACIÓN CENTRAL */
+
+.nav-links {
+    height: 100%;
+
+    display: flex;
+    align-items: stretch;
+    gap: 5px;
+}
+
+.nav-link {
+    min-width: 58px;
+    padding: 7px 8px 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 2px;
+
+    color: #647476;
+
+    font-size: 9px;
+
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+.nav-link.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+
+/* ACCESO */
+
+.nav-access {
+    justify-self: end;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.nav-access > button:first-child {
+    padding: 8px 4px;
+
+    color: var(--primary);
+    background: transparent;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
+.btn-primary,
+.btn-light,
+.btn-outline,
+.btn-soft {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 34px;
+    padding: 8px 18px;
+
+    border-radius: 6px;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.btn-primary {
+    color: var(--white);
+    background: var(--primary);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.btn-light {
+    color: var(--primary);
+    background: var(--white);
+}
+
+.btn-outline {
+    color: var(--primary);
+
+    background: transparent;
+    border: 1px solid var(--border);
+}
+
+.btn-soft {
+    color: var(--primary);
+
+    background: #edf5f5;
+    border: 1px solid var(--border);
+}
+
+
+/* =========================================================
+   TEXTO COMÚN
+   ========================================================= */
+
+.eyebrow {
+    margin-bottom: 12px;
+
+    color: var(--primary);
+
+    font-size: 9px;
+    font-weight: 500;
+
+    letter-spacing: 0.02em;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.12;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   FORMULARIOS
+   ========================================================= */
+
+form label,
+.register-card label,
+.auth-card label {
+    display: block;
+
+    color: var(--text);
+
+    font-size: 11px;
+}
+
+input,
+select {
+    width: 100%;
+    height: 40px;
+
+    margin-top: 7px;
+    padding: 0 12px;
+
+    color: var(--text);
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: 5px;
+
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(0, 109, 115, 0.08);
+}
+
+.checkbox {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+}
+
+.checkbox input {
+    width: 15px;
+    height: 15px;
+
+    margin: 0;
+
+    accent-color: var(--primary);
+}
+
+
+/* =========================================================
+   RESPONSIVE GLOBAL
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        grid-template-columns: 1fr auto;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-access {
+        gap: 8px;
+    }
+
+    .logo img {
+        width: 125px;
+    }
+
+    .footer-top,
+    .footer-bottom {
+        gap: 20px;
+    }
+
+    .footer-top nav {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 12px;
+    }
+
+}

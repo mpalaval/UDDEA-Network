@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explorar · UDDEA Network</title>
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/explorar.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+         NAVBAR
+         ========================================================= -->
+
+    <header class="navbar">
+
+        <div class="navbar-container">
+
+            <a href="../index.html" class="navbar-brand">
+
+                <img
+                    src="../assets/images/Logo_UDDEA.png"
+                    alt=""
+                    class="navbar-logo"
+                >
+
+                <span class="navbar-brand-text">
+                    <strong>UDDEA</strong> Network
+                </span>
+
+            </a>
+
+
+            <div class="navbar-right">
+
+                <nav class="navbar-navigation">
+
+                    <a href="feed.html" class="navbar-item">
+                        <img
+                            src="../assets/images/NavBar_Personas_Gris.png"
+                            alt=""
+                        >
+                        <span>Feed</span>
+                    </a>
+
+                    <a href="oportunidades.html" class="navbar-item">
+                        <img
+                            src="../assets/images/NavBar_Maletin_gris.png"
+                            alt=""
+                        >
+                        <span>Oportunidades</span>
+                    </a>
+
+                    <a href="explorar.html" class="navbar-item active">
+                        <img
+                            src="../assets/images/NavBar_Brujula_Verde.png"
+                            alt=""
+                        >
+                        <span>Explorar</span>
+                    </a>
+
+                    <a href="perfil.html" class="navbar-item">
+                        <img
+                            src="../assets/images/NavBar_Persona_Gris.png"
+                            alt=""
+                        >
+                        <span>Mi perfil</span>
+                    </a>
+
+                </nav>
+
+
+                <button
+                    type="button"
+                    class="navbar-notifications"
+                    aria-label="Notificaciones"
+                >
+                    <img
+                        src="../assets/images/NavBar_Campana.png"
+                        alt=""
+                    >
+                </button>
+
+
+                <a
+                    href="perfil.html"
+                    class="navbar-avatar"
+                    aria-label="Mi perfil"
+                >
+                    <img
+                        src="../assets/images/Retrato_AlvaroMartin.png"
+                        alt="Álvaro Martín"
+                    >
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         BARRA DE USUARIO
+         ========================================================= -->
+
+    <section class="user-bar">
+
+        <div class="container user-bar-grid">
+
+            <div class="user-summary">
+
+                <img
+                    src="../assets/images/Retrato_AlvaroMartin.png"
+                    alt="Álvaro Martín"
+                >
+
+                <div>
+
+                    <strong>
+                        Álvaro Martín
+                    </strong>
+
+                    <p>
+                        Analista de fútbol · España, Comunidad de Madrid
+                    </p>
+
+                    <a href="perfil.html">
+                        Ver mi perfil → · Perfil de ejemplo
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="user-status">
+
+                <span class="user-bar-label">
+                    ESTADO
+                </span>
+
+                <div>
+                    <span class="online-dot"></span>
+                    <strong>En línea</strong>
+                    <span>·</span>
+                    <button type="button">
+                        Desconectado
+                    </button>
+                </div>
+
+            </div>
+
+
+            <div class="user-objective">
+
+                <span class="user-bar-label">
+                    MI OBJETIVO
+                </span>
+
+                <div>
+
+                    <button type="button">
+                        Prácticas
+                    </button>
+
+                    <button type="button" class="active">
+                        Empleo
+                    </button>
+
+                    <button type="button">
+                        Formación
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         EXPLORAR
+         ========================================================= -->
+
+    <main class="explore-page">
+
+
+        <!-- =====================================================
+             CABECERA EDITORIAL
+             ===================================================== -->
+
+        <section class="explore-intro">
+
+            <div class="container">
+
+                <div class="explore-heading">
+
+                    <div>
+
+                        <span class="explore-eyebrow">
+                            Perspectivas que amplían el juego
+                        </span>
+
+                        <h1>
+                            El fútbol, desde dentro.
+                        </h1>
+
+                    </div>
+
+
+                    <small>
+                        Prototipo · Personas, entidades y contenido de ejemplo.
+                    </small>
+
+                </div>
+
+
+                <!-- CATEGORÍAS -->
+
+                <nav class="explore-tabs">
+
+                    <button
+                        type="button"
+                        class="active"
+                        data-explore-tab="para-ti"
+                    >
+                        Para ti
+                    </button>
+
+                    <button
+                        type="button"
+                        data-explore-tab="madrid"
+                    >
+                        Comunidad de Madrid
+                    </button>
+
+                    <button
+                        type="button"
+                        data-explore-tab="nacional"
+                    >
+                        Nacional
+                    </button>
+
+                    <button
+                        type="button"
+                        data-explore-tab="uddea"
+                    >
+                        Noticias UDDEA
+                    </button>
+
+                    <button
+                        type="button"
+                        data-explore-tab="medios"
+                    >
+                        Medios registrados
+                    </button>
+
+                </nav>
+
+
+                <!-- =================================================
+                     BLOQUE PRINCIPAL DE NOTICIAS
+                     ================================================= -->
+
+                <div class="explore-news-grid">
+
+
+                    <!-- NOTICIA DESTACADA -->
+
+                    <article class="featured-news">
+
+                        <img
+                            src="../assets/images/Explorar_FotografiaMujeres.png"
+                            alt="Equipo femenino de fútbol"
+                        >
+
+
+                        <div class="featured-news-overlay">
+
+                            <span>
+                                Noticias UDDEA · Comunidad de Madrid
+                            </span>
+
+                            <h2>
+                                El futuro del fútbol base se construye
+                                fuera del marcador.
+                            </h2>
+
+                            <p>
+                                Personas, metodología y un propósito común:
+                                acompañar al jugador en cada etapa.
+                            </p>
+
+                            <a href="#">
+                                Redacción UDDEA · 14 oct. 2026 ·
+                                5 min de lectura →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- NOTICIAS SECUNDARIAS -->
+
+                    <div class="secondary-news">
+
+
+                        <article class="news-card">
+
+                            <span>
+                                Nacional · Medio registrado*
+                            </span>
+
+                            <h2>
+                                La dirección deportiva mira a largo plazo
+                            </h2>
+
+                            <p>
+                                Planificación, identidad de club y decisiones
+                                que van más allá de una temporada.
+                            </p>
+
+                            <a href="#">
+                                Área de Juego · Hace 3 h · 6 min →
+                            </a>
+
+                        </article>
+
+
+                        <article class="news-card">
+
+                            <span>
+                                Noticias UDDEA · Comunidad
+                            </span>
+
+                            <h2>
+                                Un espacio para compartir lo que sabemos
+                            </h2>
+
+                            <p>
+                                La conversación profesional también forma
+                                parte del entrenamiento.
+                            </p>
+
+                            <a href="#">
+                                Redacción UDDEA · Hace 5 h · 3 min →
+                            </a>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+                <p class="explore-disclaimer">
+                    *Medios, personas y noticias ficticios para ilustrar
+                    la estructura editorial. No implican alianzas.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             LA JORNADA
+             ===================================================== -->
+
+        <section class="matchday-section">
+
+            <div class="container">
+
+                <header class="explore-section-header">
+
+                    <div>
+
+                        <h2>
+                            La jornada, de un vistazo
+                        </h2>
+
+                        <p>
+                            Comunidad de Madrid · Jornada 6 ·
+                            Resultados de ejemplo
+                        </p>
+
+                    </div>
+
+
+                    <div class="section-arrows">
+
+                        <button
+                            type="button"
+                            aria-label="Resultados anteriores"
+                        >
+                            ‹
+                        </button>
+
+                        <button
+                            type="button"
+                            aria-label="Resultados siguientes"
+                        >
+                            ›
+                        </button>
+
+                    </div>
+
+                </header>
+
+
+                <div class="results-grid">
+
+
+                    <!-- PARTIDO 1 -->
+
+                    <article class="result-card">
+
+                        <div class="result-card-header">
+
+                            <span>
+                                Regional preferente
+                            </span>
+
+                            <span>
+                                Finalizado
+                            </span>
+
+                        </div>
+
+
+                        <div class="result-teams">
+
+                            <strong>
+                                CD Ribera
+                            </strong>
+
+                            <span class="result-score">
+                                2 – 1
+                            </span>
+
+                            <strong>
+                                Unión Sierra
+                            </strong>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PARTIDO 2 -->
+
+                    <article class="result-card">
+
+                        <div class="result-card-header">
+
+                            <span>
+                                Juvenil autonómica
+                            </span>
+
+                            <span>
+                                Finalizado
+                            </span>
+
+                        </div>
+
+
+                        <div class="result-teams">
+
+                            <strong>
+                                Atlético del Sur
+                            </strong>
+
+                            <span class="result-score">
+                                0 – 0
+                            </span>
+
+                            <strong>
+                                Sporting Valle
+                            </strong>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PARTIDO 3 -->
+
+                    <article class="result-card">
+
+                        <div class="result-card-header">
+
+                            <span>
+                                Fútbol femenino regional
+                            </span>
+
+                            <span>
+                                Finalizado
+                            </span>
+
+                        </div>
+
+
+                        <div class="result-teams">
+
+                            <strong>
+                                Racing Norte
+                            </strong>
+
+                            <span class="result-score">
+                                3 – 2
+                            </span>
+
+                            <strong>
+                                CD Encinas
+                            </strong>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             HÉROES DE LA JORNADA
+             ===================================================== -->
+
+        <section class="heroes-section">
+
+            <div class="container">
+
+                <header class="explore-section-header">
+
+                    <div>
+
+                        <h2>
+                            El trabajo que merece ser contado
+                        </h2>
+
+                        <p>
+                            Héroes de la jornada ·
+                            Las personas detrás del resultado
+                        </p>
+
+                    </div>
+
+
+                    <div class="section-arrows">
+
+                        <button
+                            type="button"
+                            aria-label="Historias anteriores"
+                        >
+                            ‹
+                        </button>
+
+                        <button
+                            type="button"
+                            aria-label="Historias siguientes"
+                        >
+                            ›
+                        </button>
+
+                    </div>
+
+                </header>
+
+
+                <div class="heroes-grid">
+
+
+                    <!-- PERFIL 1 -->
+
+                    <article class="hero-card">
+
+                        <img
+                            src="../assets/images/Explorar_PrimerPerfil.png"
+                            alt="Entrenadora del CD Ribera"
+                        >
+
+                        <div class="hero-card-content">
+
+                            <span>
+                                Entrenadora · CD Ribera
+                            </span>
+
+                            <h3>
+                                Confianza para competir, espacio para crecer.
+                            </h3>
+
+                            <a href="#">
+                                Sara Vidal · Conocer su historia →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PERFIL 2 -->
+
+                    <article class="hero-card">
+
+                        <img
+                            src="../assets/images/Explorar_SegundoPerfil.png"
+                            alt="Preparador físico del Racing Norte"
+                        >
+
+                        <div class="hero-card-content">
+
+                            <span>
+                                Preparador físico · Racing Norte
+                            </span>
+
+                            <h3>
+                                Volver al campo también es una victoria.
+                            </h3>
+
+                            <a href="#">
+                                Pablo Ríos · Conocer su historia →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PERFIL 3 -->
+
+                    <article class="hero-card">
+
+                        <img
+                            src="../assets/images/Explorar_TercerPerfil.png"
+                            alt="Coordinadora de cantera del Sporting Valle"
+                        >
+
+                        <div class="hero-card-content">
+
+                            <span>
+                                Coordinadora de cantera · Sporting Valle
+                            </span>
+
+                            <h3>
+                                Una cantera que aprende a jugar en equipo.
+                            </h3>
+
+                            <a href="#">
+                                Nuria León · Conocer su historia →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONOCIMIENTO
+             ===================================================== -->
+
+        <section class="knowledge-section">
+
+            <div class="container">
+
+                <header class="explore-section-header">
+
+                    <div>
+
+                        <h2>
+                            Conocimiento de primera mano
+                        </h2>
+
+                        <p>
+                            Artículos de usuarios certificados ·
+                            Perfiles y certificaciones de ejemplo
+                        </p>
+
+                    </div>
+
+
+                    <a href="#" class="section-link">
+                        Ver todo →
+                    </a>
+
+                </header>
+
+
+                <div class="articles-grid">
+
+
+                    <!-- ARTÍCULO 1 -->
+
+                    <article class="article-card">
+
+                        <div class="article-author">
+
+                            <span class="article-avatar">
+                                MS
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Marta Sánchez
+                                </strong>
+
+                                <span>
+                                    Analista de rendimiento
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <h3>
+                            Del informe al césped:
+                            comunicar para transformar
+                        </h3>
+
+                        <p>
+                            Cómo convertir el análisis de rival en mensajes
+                            útiles para el entrenamiento.
+                        </p>
+
+                        <a href="#">
+                            Análisis táctico · 7 min · Leer artículo →
+                        </a>
+
+                    </article>
+
+
+                    <!-- ARTÍCULO 2 -->
+
+                    <article class="article-card">
+
+                        <div class="article-author">
+
+                            <span class="article-avatar">
+                                JS
+                            </span>
+
+                            <div>
+
+                                <strong>
+                                    Javier Soto
+                                </strong>
+
+                                <span>
+                                    Director deportivo
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <h3>
+                            Construir una identidad deportiva sostenible
+                        </h3>
+
+                        <p>
+                            Preguntas clave para alinear cantera,
+                            primer equipo y proyecto de club.
+                        </p>
+
+                        <a href="#">
+                            Dirección deportiva · 5 min · Leer artículo →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             OPORTUNIDADES RECOMENDADAS
+             ===================================================== -->
+
+        <section class="explore-opportunities">
+
+            <div class="container">
+
+                <header class="explore-section-header">
+
+                    <div>
+
+                        <h2>
+                            De la inspiración a la oportunidad
+                        </h2>
+
+                        <p>
+                            Según tu objetivo: Empleo · Comunidad de Madrid
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="oportunidades.html"
+                        class="section-link"
+                    >
+                        Ver oportunidades →
+                    </a>
+
+                </header>
+
+
+                <div class="explore-opportunities-grid">
+
+
+                    <!-- OPORTUNIDAD 1 -->
+
+                    <article class="explore-opportunity-card">
+
+                        <div class="explore-opportunity-icon">
+                            ♙
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Analista de rendimiento
+                            </strong>
+
+                            <span>
+                                CD Ribera · Madrid · Oferta de ejemplo
+                            </span>
+
+                            <small>
+                                Empleo
+                            </small>
+
+                        </div>
+
+
+                        <a
+                            href="oportunidades.html"
+                            aria-label="Ver oportunidad"
+                        >
+                            →
+                        </a>
+
+                    </article>
+
+
+                    <!-- OPORTUNIDAD 2 -->
+
+                    <article class="explore-opportunity-card">
+
+                        <div class="explore-opportunity-icon">
+                            ♙
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Coordinación de metodología
+                            </strong>
+
+                            <span>
+                                Unión Sierra CF · Madrid · Oferta de ejemplo
+                            </span>
+
+                            <small>
+                                Empleo · Premium
+                            </small>
+
+                        </div>
+
+
+                        <a
+                            href="oportunidades.html"
+                            aria-label="Ver oportunidad"
+                        >
+                            →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ASISTENTE DE CERTIFICACIONES
+             ===================================================== -->
+
+        <section class="assistant-preview-section">
+
+            <div class="container">
+
+                <div class="assistant-preview">
+
+                    <img
+                        src="../assets/images/Explorar_IconoAsistente.png"
+                        alt=""
+                    >
+
+
+                    <div>
+
+                        <span>
+                            Propuesta visual · No funcional
+                        </span>
+
+                        <h2>
+                            Asistente de certificaciones en modo visual
+                        </h2>
+
+                        <p>
+                            Esta propuesta muestra cómo podría verse el
+                            asistente de certificaciones en pantalla.
+                            El lanzador circular púrpura ya está activo,
+                            pero el asistente abierto y la lectura de
+                            artículos se desarrollarán en pasos posteriores.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         BOTÓN FLOTANTE DEL ASISTENTE
+         ========================================================= -->
+
+    <button
+        type="button"
+        class="assistant-launcher"
+        id="assistant-launcher"
+        aria-label="Abrir asistente de certificaciones"
+    >
+        <img
+            src="../assets/images/Explorar_IconoAsistente.png"
+            alt=""
+        >
+    </button>
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-main">
+
+                <a href="../index.html" class="footer-brand">
+
+                    <img
+                        src="../assets/images/Logo_UDDEA.png"
+                        alt=""
+                    >
+
+                    <span>
+                        <strong>UDDEA</strong> Network
+                    </span>
+
+                </a>
+
+
+                <nav class="footer-links">
+
+                    <a href="#">Quiénes somos</a>
+                    <a href="#">Ayuda</a>
+                    <a href="#">Privacidad</a>
+                    <a href="#">Condiciones</a>
+                    <a href="#">Contacto</a>
+
+                </nav>
+
+            </div>
+
+
+            <div class="footer-divider"></div>
+
+
+            <div class="footer-legal">
+
+                <span>
+                    © 2026 UDDEA Network · Unión de Directores Deportivos
+                    y Especialistas Asociados
+                </span>
+
+                <span>
+                    Base visual de prototipo · Contenido de ejemplo
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/explorar.js"></script>
+
+</body>
+
+</html>

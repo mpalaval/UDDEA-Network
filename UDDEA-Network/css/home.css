@@ -1,0 +1,994 @@
+/* =========================================================
+   UDDEA NETWORK v0.3
+   HOME.CSS
+   ========================================================= */
+
+
+/* =========================================================
+   1. HOME
+   ========================================================= */
+
+
+/* ---------- HERO ---------- */
+
+.hero {
+    position: relative;
+
+    height: 290px;
+
+    overflow: hidden;
+
+    color: white;
+    background: var(--primary-dark);
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center 48%;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 65, 68, 0.88) 0%,
+            rgba(0, 65, 68, 0.62) 43%,
+            rgba(0, 65, 68, 0.18) 100%
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(92%, var(--container));
+    height: 100%;
+
+    margin: 0 auto;
+    padding-top: 38px;
+}
+
+.hero .eyebrow {
+    margin-bottom: 13px;
+
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.hero h1 {
+    margin-bottom: 12px;
+
+    color: white;
+
+    font-size: 42px;
+    font-weight: 700;
+
+    letter-spacing: -1px;
+}
+
+.hero-content > p:not(.eyebrow) {
+    width: 390px;
+
+    color: rgba(255, 255, 255, 0.92);
+
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.hero-actions button,
+.hero-actions a {
+    min-height: 28px;
+    padding: 6px 14px;
+
+    font-size: 9px;
+}
+
+.hero-content > small {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 7px;
+}
+
+.image-note {
+    position: absolute;
+    z-index: 2;
+
+    right: max(4%, calc((100% - var(--container)) / 2));
+    bottom: 15px;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-size: 7px;
+}
+
+
+/* ---------- FRANJA UDDEA ---------- */
+
+.intro-strip {
+    padding: 14px 0;
+
+    background: var(--background);
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+
+    align-items: center;
+    gap: 25px;
+}
+
+.intro-grid > strong {
+    color: var(--primary);
+
+    font-size: 8px;
+    line-height: 1.25;
+}
+
+.intro-grid h2 {
+    margin-bottom: 3px;
+
+    font-size: 15px;
+}
+
+.intro-grid p {
+    color: var(--text-soft);
+
+    font-size: 9px;
+}
+
+
+/* ---------- BENEFICIOS ---------- */
+
+.benefits {
+    padding: 38px 0 42px;
+}
+
+.benefits h2 {
+    margin-bottom: 20px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.benefits-grid article {
+    min-height: 90px;
+
+    padding: 15px 17px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+    border-radius: 7px;
+}
+
+.benefits-grid article::before {
+    content: "○";
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--primary);
+
+    font-size: 15px;
+}
+
+.benefits-grid h3 {
+    margin-bottom: 7px;
+
+    font-size: 11px;
+}
+
+.benefits-grid p {
+    color: var(--text-soft);
+
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+
+/* ---------- PROFESIONALES ---------- */
+
+.professionals {
+    padding: 32px 0;
+
+    background: var(--background);
+}
+
+.professionals-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+    gap: 48px;
+}
+
+.professionals-grid > img {
+    width: 100%;
+    height: 185px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+}
+
+.professionals h2 {
+    margin-bottom: 10px;
+
+    font-size: 24px;
+}
+
+.professionals p:not(.eyebrow) {
+    margin-bottom: 12px;
+
+    color: var(--text-soft);
+
+    font-size: 9px;
+    line-height: 1.45;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+
+    margin-bottom: 15px;
+}
+
+.tags span {
+    color: var(--primary);
+
+    font-size: 8px;
+}
+
+.professionals .btn-outline {
+    min-height: 27px;
+    padding: 5px 13px;
+
+    font-size: 8px;
+}
+
+
+/* ---------- PERFIL ---------- */
+
+.profile-section {
+    padding: 36px 0;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+
+    align-items: center;
+    gap: 55px;
+}
+
+.profile-section h2 {
+    margin-bottom: 12px;
+}
+
+.profile-section p:not(.eyebrow) {
+    max-width: 530px;
+
+    margin-bottom: 8px;
+
+    color: var(--text-soft);
+
+    font-size: 9px;
+}
+
+.profile-section .btn-primary {
+    min-height: 27px;
+
+    margin-top: 5px;
+    padding: 5px 13px;
+
+    font-size: 8px;
+}
+
+
+/* TARJETA */
+
+.profile-preview {
+    padding: 20px;
+
+    background: var(--background);
+
+    border-radius: 8px;
+}
+
+.profile-card {
+    padding: 15px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+    border-radius: 6px;
+}
+
+.profile-person {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+.profile-person img {
+    width: 32px;
+    height: 32px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+.profile-person strong {
+    display: block;
+
+    font-size: 10px;
+}
+
+.profile-person p {
+    margin: 0 !important;
+
+    font-size: 8px !important;
+}
+
+.availability {
+    display: inline-block;
+
+    margin: 7px 0;
+
+    padding: 2px 6px;
+
+    color: var(--primary);
+    background: #e8f4f2;
+
+    border-radius: 10px;
+
+    font-size: 7px;
+}
+
+.profile-card h3 {
+    margin: 4px 0;
+
+    font-size: 10px;
+}
+
+.profile-card > p {
+    margin: 3px 0 !important;
+
+    font-size: 8px !important;
+}
+
+.validation {
+    color: var(--primary) !important;
+}
+
+.profile-card small {
+    color: #8b9798;
+
+    font-size: 7px;
+}
+
+
+/* ---------- CTA FINAL ---------- */
+
+.final-cta {
+    padding: 30px 0;
+
+    color: white;
+
+    background: #004f53;
+}
+
+.final-grid {
+    display: grid;
+    grid-template-columns: 1.7fr 0.7fr;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+.final-cta .eyebrow {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.final-cta h2 {
+    margin-bottom: 9px;
+
+    color: white;
+
+    font-size: 25px;
+}
+
+.final-grid > div > p:not(.eyebrow) {
+    margin-bottom: 12px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 9px;
+}
+
+.cta-point {
+    display: flex;
+    flex-direction: column;
+
+    margin: 7px 0;
+}
+
+.cta-point strong {
+    font-size: 8px;
+}
+
+.cta-point span {
+    margin-left: 15px;
+
+    color: rgba(255, 255, 255, 0.68);
+
+    font-size: 7px;
+}
+
+.region-selectors {
+    display: flex;
+    gap: 12px;
+
+    margin: 12px 0;
+}
+
+.region-selectors label {
+    width: 180px;
+
+    color: rgba(255, 255, 255, 0.8);
+
+    font-size: 7px;
+}
+
+.region-selectors select {
+    height: 27px;
+
+    margin-top: 3px;
+
+    font-size: 8px;
+}
+
+
+/* LOGIN PEQUEÑO */
+
+.quick-login {
+    padding: 15px;
+
+    color: var(--text);
+
+    background: white;
+
+    border-radius: 7px;
+}
+
+.quick-login h3 {
+    margin-bottom: 3px;
+
+    font-size: 11px;
+}
+
+.quick-login > p {
+    margin-bottom: 8px;
+
+    color: var(--text-soft);
+
+    font-size: 8px;
+}
+
+.quick-login label {
+    margin-bottom: 6px;
+
+    font-size: 7px;
+}
+
+.quick-login input {
+    height: 25px;
+
+    margin-top: 3px;
+
+    font-size: 8px;
+}
+
+.quick-login form > a {
+    display: block;
+
+    margin: 4px 0;
+
+    color: var(--primary);
+
+    font-size: 7px;
+}
+
+.quick-login .btn-primary {
+    width: 100%;
+    min-height: 25px;
+
+    padding: 4px;
+
+    font-size: 8px;
+}
+
+.quick-login > p {
+    margin-top: 8px;
+}
+
+.quick-login > p button {
+    color: var(--primary);
+    background: transparent;
+
+    font-size: inherit;
+}
+
+.quick-login > a {
+    color: var(--text-soft);
+
+    font-size: 7px;
+}
+
+
+/* =========================================================
+   2. LOGIN
+   ========================================================= */
+
+.auth-view {
+    min-height: 605px;
+
+    padding: 55px 0;
+
+    background: var(--background);
+}
+
+.login-layout {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+
+    gap: 45px;
+}
+
+
+/* IMAGEN */
+
+.login-image {
+    position: relative;
+
+    height: 480px;
+
+    overflow: hidden;
+
+    border-radius: 11px;
+}
+
+.login-image > img,
+.register-image > img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.auth-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 74, 78, 0.10),
+            rgba(0, 68, 72, 0.92)
+        );
+}
+
+.login-image-content {
+    position: absolute;
+    z-index: 2;
+
+    left: 30px;
+    right: 30px;
+    bottom: 35px;
+
+    color: white;
+}
+
+.login-image-content small {
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 8px;
+}
+
+.login-image-content h1 {
+    margin: 18px 0;
+
+    font-size: 34px;
+}
+
+.login-image-content p {
+    max-width: 390px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 11px;
+}
+
+
+/* TARJETA LOGIN */
+
+.auth-card {
+    min-height: 480px;
+
+    padding: 28px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+    border-radius: 11px;
+}
+
+.auth-card > h1 {
+    margin-bottom: 5px;
+
+    font-size: 26px;
+}
+
+.auth-card > p {
+    margin-bottom: 22px;
+
+    color: var(--text-soft);
+
+    font-size: 11px;
+}
+
+.auth-card form label:not(.checkbox) {
+    margin-bottom: 17px;
+}
+
+.auth-card .checkbox {
+    margin: 2px 0 18px;
+}
+
+.auth-card form > a {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: var(--primary);
+
+    font-size: 10px;
+}
+
+.auth-card form .btn-primary {
+    width: 100%;
+}
+
+.auth-card hr {
+    margin: 20px 0;
+
+    border: 0;
+    border-top: 1px solid var(--border);
+}
+
+.auth-card h3 {
+    margin-bottom: 13px;
+
+    font-size: 13px;
+}
+
+.auth-card h3 + p {
+    margin-bottom: 16px;
+
+    font-size: 10px;
+}
+
+.auth-card .btn-soft {
+    width: 100%;
+}
+
+.auth-card > a {
+    display: block;
+
+    margin-top: 17px;
+
+    color: var(--text-soft);
+
+    font-size: 9px;
+}
+
+.auth-card > small {
+    display: block;
+
+    margin-top: 18px;
+
+    color: #8a9697;
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   3. REGISTRO
+   ========================================================= */
+
+.register-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+
+    gap: 35px;
+}
+
+
+/* PANEL IZQUIERDO */
+
+.register-image {
+    position: relative;
+
+    min-height: 700px;
+
+    overflow: hidden;
+
+    border-radius: 11px;
+}
+
+.register-image-content {
+    position: relative;
+    z-index: 2;
+
+    height: 100%;
+
+    padding: 32px 24px;
+
+    color: white;
+}
+
+.register-image-content > small:first-child {
+    color: rgba(255, 255, 255, 0.65);
+
+    font-size: 8px;
+}
+
+.register-image-content h1 {
+    margin: 25px 0;
+
+    font-size: 31px;
+}
+
+.register-image-content > p {
+    margin-bottom: 35px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 10px;
+}
+
+.register-image-content h3 {
+    margin: 20px 0 7px;
+
+    color: var(--secondary);
+
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.register-image-content h3 + p {
+    margin-bottom: 0;
+
+    font-size: 9px;
+}
+
+.register-image-content > small:last-child {
+    display: block;
+
+    margin-top: 22px;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    font-size: 8px;
+}
+
+
+/* FORMULARIO */
+
+.register-card {
+    padding: 27px 22px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+    border-radius: 11px;
+}
+
+.register-card > h1 {
+    margin-bottom: 6px;
+
+    font-size: 25px;
+}
+
+.register-card > p {
+    margin-bottom: 16px;
+
+    color: var(--text-soft);
+
+    font-size: 10px;
+}
+
+.steps {
+    display: flex;
+    gap: 5px;
+
+    margin-bottom: 20px;
+}
+
+.steps span {
+    padding: 5px 8px;
+
+    color: var(--text-soft);
+
+    font-size: 8px;
+
+    border-radius: 3px;
+}
+
+.steps .active {
+    color: white;
+    background: var(--primary);
+}
+
+
+/* FIELDSETS */
+
+.register-card fieldset {
+    margin-bottom: 19px;
+
+    border: 0;
+}
+
+.register-card legend {
+    margin-bottom: 16px;
+
+    color: var(--primary);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.register-card fieldset > label {
+    margin-bottom: 15px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+.register-card small {
+    color: #899596;
+
+    font-size: 8px;
+}
+
+.register-card .checkbox {
+    margin-bottom: 11px;
+}
+
+.register-card form > .btn-primary {
+    width: 100%;
+
+    margin-top: 8px;
+}
+
+.text-button {
+    margin-top: 17px;
+
+    color: var(--primary);
+    background: transparent;
+
+    font-size: 9px;
+}
+
+.register-card > small {
+    display: block;
+
+    margin-top: 17px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+    .hero {
+        height: 420px;
+    }
+
+    .hero-content {
+        padding-top: 65px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-content > p:not(.eyebrow) {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .intro-grid,
+    .benefits-grid,
+    .professionals-grid,
+    .profile-grid,
+    .final-grid,
+    .login-layout,
+    .register-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-grid {
+        gap: 12px;
+    }
+
+    .professionals-grid,
+    .profile-grid,
+    .final-grid {
+        gap: 30px;
+    }
+
+    .benefits-grid {
+        gap: 10px;
+    }
+
+    .login-image {
+        height: 350px;
+    }
+
+    .register-image {
+        min-height: 450px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .region-selectors {
+        flex-direction: column;
+    }
+
+    .region-selectors label {
+        width: 100%;
+    }
+
+}

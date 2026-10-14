@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Feed · UDDEA Network</title>
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/feed.css">
+</head>
+
+<body>
+    <!-- VAVEGACIÓN USUARIO CONECTADO -->
+    <header class="navbar">
+    <div class="navbar-container">
+
+        <!-- MARCA -->
+        <a href="../index.html" class="navbar-brand">
+            <img
+                src="../assets/images/Logo_UDDEA.png"
+                alt=""
+                class="navbar-logo"
+            >
+
+            <span class="navbar-brand-text">
+                <strong>UDDEA</strong> Network
+            </span>
+        </a>
+
+
+        <!-- NAVEGACIÓN USUARIO CONECTADO -->
+        <div class="navbar-right">
+
+            <nav class="navbar-navigation">
+
+                <a href="feed.html" class="navbar-item active">
+                    <img
+                        src="../assets/images/NavBar_Personas_Verde.png"
+                        alt=""
+                    >
+                    <span>Feed</span>
+                </a>
+
+                <a href="oportunidades.html" class="navbar-item">
+                    <img
+                        src="../assets/images/NavBar_Maletin_gris.png"
+                        alt=""
+                    >
+                    <span>Oportunidades</span>
+                </a>
+
+                <a href="explorar.html" class="navbar-item">
+                    <img
+                        src="../assets/images/NavBar_Brujula_gris.png"
+                        alt=""
+                    >
+                    <span>Explorar</span>
+                </a>
+
+                <a href="perfil.html" class="navbar-item">
+                    <img
+                        src="../assets/images/NavBar_Persona_Gris.png"
+                        alt=""
+                    >
+                    <span>Mi perfil</span>
+                </a>
+
+            </nav>
+
+
+            <button
+                type="button"
+                class="navbar-notifications"
+                aria-label="Notificaciones"
+            >
+                <img
+                    src="../assets/images/NavBar_Campana.png"
+                    alt=""
+                >
+            </button>
+
+
+            <a
+                href="perfil.html"
+                class="navbar-avatar"
+                aria-label="Mi perfil"
+            >
+                <img
+                    src="../assets/images/Retrato_AlvaroMartin.png"
+                    alt="Álvaro Martín"
+                >
+            </a>
+
+        </div>
+
+    </div>
+    </header>
+
+
+    <!-- ==================================================
+         BARRA DE USUARIO
+         ================================================== -->
+    <section class="user-bar">
+
+        <div class="container user-bar-grid">
+
+            <div class="user-summary">
+
+                <img
+                    src="../assets/images/Retrato_AlvaroMartin.png"
+                    alt="Álvaro Martín"
+                >
+
+                <div>
+                    <strong>Álvaro Martín</strong>
+
+                    <p>
+                        Analista de fútbol · España, Comunidad de Madrid
+                    </p>
+
+                    <a href="perfil.html">
+                        Ver mi perfil → · Perfil de ejemplo
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="user-status">
+
+                <span class="user-bar-label">ESTADO</span>
+
+                <div>
+                    <span class="online-dot"></span>
+                    <strong>En línea</strong>
+                    <span>·</span>
+                    <button type="button">Desconectado</button>
+                </div>
+
+            </div>
+
+
+            <div class="user-objective">
+
+                <span class="user-bar-label">MI OBJETIVO</span>
+
+                <div>
+                    <button type="button">Prácticas</button>
+                    <button type="button" class="active">Empleo</button>
+                    <button type="button">Formación</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         FEED
+         ================================================== -->
+
+    <main class="feed-page">
+
+        <div class="container">
+
+            <header class="feed-header">
+                <h1>Conversaciones que hacen equipo</h1>
+
+                <span>
+                    Prototipo · Personas, entidades y contenido de ejemplo.
+                </span>
+            </header>
+
+
+            <div class="feed-layout">
+
+                <!-- ======================================
+                     COLUMNA IZQUIERDA
+                     ====================================== -->
+
+                <aside class="feed-left">
+
+
+                    <!-- FILTROS -->
+
+                    <section class="feed-card feed-filters">
+
+                        <h2>Tu feed, a tu medida</h2>
+
+                        <label class="feed-checkbox">
+                            <input type="checkbox">
+                            <span>Solo mis conexiones</span>
+                        </label>
+
+                        <hr>
+
+                        <span class="feed-card-label">Contenido</span>
+
+                        <label class="feed-checkbox">
+                            <input type="checkbox" checked>
+                            <span>Publicaciones</span>
+                        </label>
+
+                        <label class="feed-checkbox">
+                            <input type="checkbox" checked>
+                            <span>Artículos</span>
+                        </label>
+
+                        <label class="feed-checkbox">
+                            <input type="checkbox" checked>
+                            <span>Debates</span>
+                        </label>
+
+                        <hr>
+
+                        <p>Tu zona: Comunidad de Madrid</p>
+
+                        <a href="#">
+                            Editar intereses →
+                        </a>
+
+                    </section>
+
+
+                    <!-- PERSONAS -->
+
+                    <section class="feed-card suggestions">
+
+                        <h2>Amplía tu equipo</h2>
+
+                        <p>Profesionales de tu entorno.</p>
+
+
+                        <article class="suggestion">
+
+                            <span class="initials">LT</span>
+
+                            <div>
+                                <strong>Lucía Torres</strong>
+                                <small>Preparadora física</small>
+
+                                <button type="button">
+                                    Conectar
+                                </button>
+                            </div>
+
+                        </article>
+
+
+                        <article class="suggestion">
+
+                            <span class="initials">JS</span>
+
+                            <div>
+                                <strong>Javier Soto</strong>
+                                <small>Director deportivo</small>
+
+                                <button type="button">
+                                    Conectar
+                                </button>
+                            </div>
+
+                        </article>
+
+
+                        <article class="suggestion">
+
+                            <span class="initials">ER</span>
+
+                            <div>
+                                <strong>Elena Ruiz</strong>
+                                <small>Entrenadora de base</small>
+
+                                <button type="button">
+                                    Conectar
+                                </button>
+                            </div>
+
+                        </article>
+
+
+                        <small class="example-note">
+                            Perfiles de ejemplo
+                        </small>
+
+                    </section>
+
+
+                    <!-- CONFIANZA -->
+                    <section class="feed-card trust-card">
+
+                        <img
+                            src="../assets/images/Feed_Tic_Verde.png"
+                            alt=""
+                        >
+
+                        <h2>La confianza se construye</h2>
+
+                        <p>
+                            Completa tus credenciales para dar contexto
+                            a tu experiencia.
+                        </p>
+
+                        <a href="perfil.html">
+                            Revisar mi perfil →
+                        </a>
+
+                    </section>
+
+                </aside>
+
+
+                <!-- ======================================
+                     COLUMNA CENTRAL
+                     ====================================== -->
+
+                <section class="feed-center">
+
+
+                    <!-- CREAR PUBLICACIÓN -->
+
+                    <section class="feed-card create-post">
+
+                        <div class="create-post-top">
+
+                            <img
+                                src="../assets/images/Retrato_AlvaroMartin.png"
+                                alt="Álvaro Martín"
+                            >
+
+                            <button type="button">
+                                ¿Qué quieres compartir con el mundo del fútbol?
+                            </button>
+
+                        </div>
+
+
+                        <div class="create-post-actions">
+
+                            <div>
+
+                                <button type="button">
+                                    Foto
+                                </button>
+
+                                <button type="button">
+                                    Artículo
+                                </button>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                class="publish-button"
+                            >
+                                Publicar
+                            </button>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- CABECERA PUBLICACIONES -->
+
+                    <div class="feed-sort">
+
+                        <span>
+                            Lo que se mueve en tu red
+                        </span>
+
+                        <button type="button">
+                            Más recientes⌄
+                        </button>
+
+                    </div>
+
+
+                    <!-- PUBLICACIÓN MARTA -->
+
+                    <article class="feed-card publication">
+
+                        <header class="publication-header">
+
+                            <div class="publication-user">
+
+                                <span class="initials">
+                                    MS
+                                </span>
+
+                                <div>
+                                    <strong>Marta Sánchez</strong>
+
+                                    <small>
+                                        Analista de rendimiento · Hace 2 h
+                                    </small>
+                                </div>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                class="connect-button"
+                            >
+                                Conectar
+                            </button>
+
+                        </header>
+
+
+                        <span class="publication-category">
+                            Análisis y metodología
+                        </span>
+
+
+                        <p class="publication-text">
+                            El análisis empieza mucho antes del vídeo.
+                            Esta semana trabajamos la ocupación de espacios
+                            con el equipo juvenil: menos datos, mejores
+                            preguntas y tareas que conectan con el juego.
+                        </p>
+
+
+                        <img
+                            src="../assets/images/Feed_EntrenamientoPublicacion.png"
+                            alt="Sesión de entrenamiento de fútbol"
+                            class="publication-image"
+                        >
+
+
+                        <p class="publication-question">
+                            ¿Cómo trasladáis las conclusiones del análisis
+                            al entrenamiento?
+                        </p>
+
+
+                        <p class="publication-stats">
+                            24 personas interesadas · 6 comentarios
+                        </p>
+
+
+                        <div class="publication-actions">
+
+                            <button type="button">
+                                <img
+                                    src="../assets/images/Feed_ReaccionLike.png"
+                                    alt=""
+                                >
+                                Me interesa
+                            </button>
+
+                            <button type="button">
+                                <img
+                                    src="../assets/images/Feed_ReaccionComentario.png"
+                                    alt=""
+                                >
+                                Comentar
+                            </button>
+
+                            <button type="button">
+                                <img
+                                    src="../assets/images/Feed_ReaccionCompartir.png"
+                                    alt=""
+                                >
+                                Compartir
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ANUNCIO -->
+
+                    <article class="feed-card sponsored-post">
+
+                        <div>
+
+                            <span>
+                                Patrocinada · Ejemplo
+                            </span>
+
+                            <h3>
+                                El material también entrena contigo.
+                            </h3>
+
+                            <p>
+                                Campo Pro · Material para sesiones de fútbol base.
+                                Conos, petos y equipamiento de entrenamiento.
+                            </p>
+
+                            <a href="#">
+                                Descubrir material →
+                            </a>
+
+                        </div>
+
+
+                        <img
+                            src="../assets/images/Feed_FotografiaAnuncio.png"
+                            alt="Material de entrenamiento"
+                        >
+
+                    </article>
+
+
+                    <!-- PUBLICACIÓN DIEGO -->
+
+                    <article class="feed-card publication">
+
+                        <header class="publication-header">
+
+                            <div class="publication-user">
+
+                                <span class="initials">
+                                    DN
+                                </span>
+
+                                <div>
+                                    <strong>Diego Navarro</strong>
+
+                                    <small>
+                                        Coordinador de cantera · Hace 4 h
+                                    </small>
+                                </div>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                class="connect-button"
+                            >
+                                Conectar
+                            </button>
+
+                        </header>
+
+
+                        <h3 class="publication-title">
+                            ¿Qué define un buen entorno de desarrollo?
+                        </h3>
+
+
+                        <p class="publication-text">
+                            Más allá del resultado del domingo, nos interesa
+                            cómo acompañamos al jugador. Abrimos conversación
+                            sobre comunicación con familias, coordinación
+                            entre categorías y seguimiento individual.
+                        </p>
+
+
+                        <div class="publication-tags">
+                            <span>Fútbol base</span>
+                            <span>Gestión deportiva</span>
+                        </div>
+
+
+                        <p class="publication-stats">
+                            18 personas interesadas · 9 comentarios
+                        </p>
+
+
+                        <div class="publication-actions">
+
+                            <button type="button">
+                                <img
+                                    src="../assets/images/Feed_ReaccionLike.png"
+                                    alt=""
+                                >
+                                Me interesa
+                            </button>
+
+                            <button type="button">
+                                <img
+                                    src="../assets/images/Feed_ReaccionComentario.png"
+                                    alt=""
+                                >
+                                Comentar
+                            </button>
+
+                            <button type="button">
+                                <img
+                                    src="../assets/images/Feed_ReaccionCompartir.png"
+                                    alt=""
+                                >
+                                Compartir
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <button
+                        type="button"
+                        class="load-more"
+                    >
+                        Ver más publicaciones
+                    </button>
+
+                </section>
+
+
+                <!-- ======================================
+                     COLUMNA DERECHA
+                     ====================================== -->
+
+                <aside class="feed-right">
+
+
+                    <!-- EN EL RADAR -->
+
+                    <section class="feed-card radar">
+
+                        <h2>En el radar</h2>
+
+
+                        <img
+                            src="../assets/images/Feed_ImagenEstadio.png"
+                            alt="Estadio de fútbol"
+                            class="radar-image"
+                        >
+
+
+                        <article class="radar-article">
+
+                            <span>
+                                Madrid · Actualidad regional
+                            </span>
+
+                            <h3>
+                                La cantera, un espacio para formar personas
+                            </h3>
+
+                            <p>
+                                Redacción UDDEA · Lectura de 4 min
+                            </p>
+
+                        </article>
+
+
+                        <hr>
+
+
+                        <article class="radar-article">
+
+                            <span>
+                                Nacional · Medio registrado*
+                            </span>
+
+                            <h3>
+                                Nuevas miradas sobre la dirección deportiva
+                            </h3>
+
+                            <p>
+                                Área de Juego · Lectura de 6 min
+                            </p>
+
+                        </article>
+
+
+                        <a href="explorar.html">
+                            Ir a Explorar →
+                        </a>
+
+
+                        <small>
+                            *Medio y noticias de ejemplo.
+                        </small>
+
+                    </section>
+
+
+                    <!-- HÉROES -->
+
+                    <section class="feed-card heroes">
+
+                        <span class="feed-card-label">
+                            Héroes de la jornada
+                        </span>
+
+
+                        <div class="hero-person">
+
+                            <span class="initials">
+                                SV
+                            </span>
+
+                            <div>
+                                <strong>Sara Vidal</strong>
+                                <small>
+                                    Entrenadora · Fútbol femenino
+                                </small>
+                            </div>
+
+                        </div>
+
+
+                        <p>
+                            Un equipo que crece desde la confianza.
+                            Conoce el trabajo detrás de la jornada.
+                        </p>
+
+
+                        <hr>
+
+
+                        <h3>
+                            CD Ribera 2 – 1 Unión Sierra
+                        </h3>
+
+                        <p>
+                            Jornada 6 · Resultado de ejemplo
+                        </p>
+
+
+                        <a href="#">
+                            Ver destacados →
+                        </a>
+
+                    </section>
+
+
+                    <!-- NORMAS -->
+
+                    <section class="community-rules">
+
+                        <img
+                            src="../assets/images/MiPerfil_Escudo.png"
+                            alt=""
+                        >
+
+                        <p>
+                            Comparte conocimiento, cita tus fuentes y cuida
+                            la conversación. El respeto también forma parte
+                            del juego.
+                        </p>
+
+                        <a href="#">
+                            Normas de la comunidad →
+                        </a>
+
+                    </section>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==================================================
+         FOOTER
+         ================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-main">
+
+                <a href="../index.html" class="footer-brand">
+
+                    <img
+                        src="../assets/images/Logo_UDDEA.png"
+                        alt=""
+                    >
+
+                    <span>
+                        <strong>UDDEA</strong> Network
+                    </span>
+
+                </a>
+
+
+                <nav class="footer-links">
+                    <a href="#">Quiénes somos</a>
+                    <a href="#">Ayuda</a>
+                    <a href="#">Privacidad</a>
+                    <a href="#">Condiciones</a>
+                    <a href="#">Contacto</a>
+                </nav>
+
+            </div>
+
+
+            <div class="footer-divider"></div>
+
+
+            <div class="footer-legal">
+
+                <span>
+                    © 2026 UDDEA Network · Unión de Directores Deportivos
+                    y Especialistas Asociados
+                </span>
+
+                <span>
+                    Base visual de prototipo · Contenido de ejemplo
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/feed.js"></script>
+
+</body>
+
+</html>

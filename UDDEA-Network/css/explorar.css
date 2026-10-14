@@ -1,0 +1,1229 @@
+/* =========================================================
+   UDDEA NETWORK v0.3
+   EXPLORAR.CSS
+   ========================================================= */
+
+
+/* =========================================================
+   CONTENEDOR
+   ========================================================= */
+
+.explore-page .container,
+.user-bar .container {
+    width: min(91%, 910px);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   BARRA DE USUARIO
+   ========================================================= */
+
+.user-bar {
+    height: 74px;
+
+    background: #ffffff;
+    border-bottom: 1px solid #dce7e7;
+}
+
+.user-bar-grid {
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1.6fr 0.75fr 0.75fr;
+
+    align-items: center;
+    gap: 30px;
+}
+
+
+/* PERFIL RESUMIDO */
+
+.user-summary {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-summary > img {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-summary strong {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #243436;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.user-summary p {
+    margin: 0 0 2px;
+
+    color: #6f7d7e;
+
+    font-size: 8px;
+}
+
+.user-summary a {
+    color: #006d73;
+
+    font-size: 7px;
+    text-decoration: none;
+}
+
+
+/* ESTADO */
+
+.user-status,
+.user-objective {
+    justify-self: end;
+}
+
+.user-bar-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #899596;
+
+    font-size: 6px;
+    letter-spacing: 0.05em;
+}
+
+.user-status > div,
+.user-objective > div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.online-dot {
+    width: 6px;
+    height: 6px;
+
+    flex-shrink: 0;
+
+    background: #008b90;
+
+    border-radius: 50%;
+}
+
+.user-status strong {
+    color: #006d73;
+
+    font-size: 7px;
+    font-weight: 400;
+}
+
+.user-status span {
+    color: #7c898a;
+
+    font-size: 7px;
+}
+
+.user-status button {
+    padding: 0;
+
+    color: #879394;
+    background: transparent;
+
+    border: 0;
+
+    font-family: inherit;
+    font-size: 7px;
+
+    cursor: pointer;
+}
+
+
+/* OBJETIVO */
+
+.user-objective button {
+    padding: 4px 8px;
+
+    color: #006d73;
+    background: #edf6f6;
+
+    border: 0;
+    border-radius: 4px;
+
+    font-family: inherit;
+    font-size: 6px;
+
+    cursor: pointer;
+}
+
+.user-objective button.active {
+    color: #ffffff;
+    background: #00747a;
+}
+
+
+/* =========================================================
+   GENERAL
+   ========================================================= */
+
+.explore-page {
+    color: #263638;
+    background: #ffffff;
+}
+
+.explore-page a {
+    color: #00747a;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   CABECERA EDITORIAL
+   ========================================================= */
+
+.explore-intro {
+    padding: 27px 0 22px;
+
+    background: #edf7f7;
+}
+
+.explore-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 14px;
+}
+
+.explore-eyebrow {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #00747a;
+
+    font-size: 7px;
+}
+
+.explore-heading h1 {
+    margin: 0;
+
+    color: #223334;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.1;
+
+    letter-spacing: -0.4px;
+}
+
+.explore-heading small {
+    padding-bottom: 3px;
+
+    color: #929d9e;
+
+    font-size: 5.5px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PESTAÑAS
+   ========================================================= */
+
+.explore-tabs {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 15px;
+}
+
+.explore-tabs button {
+    padding: 5px 9px;
+
+    color: #607071;
+    background: transparent;
+
+    border: 0;
+    border-radius: 4px;
+
+    font-family: inherit;
+    font-size: 6.5px;
+
+    cursor: pointer;
+}
+
+.explore-tabs button.active {
+    color: #ffffff;
+    background: #00747a;
+}
+
+.explore-tabs button:hover:not(.active) {
+    color: #006d73;
+    background: #e3f0f0;
+}
+
+
+/* =========================================================
+   BLOQUE DE NOTICIAS
+   ========================================================= */
+
+.explore-news-grid {
+    display: grid;
+    grid-template-columns: 1.95fr 1fr;
+
+    gap: 17px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   NOTICIA PRINCIPAL
+   ========================================================= */
+
+.featured-news {
+    position: relative;
+
+    min-height: 250px;
+
+    overflow: hidden;
+
+    background: #164f52;
+
+    border-radius: 8px;
+}
+
+.featured-news > img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* OSCURECIDO DE LA IMAGEN */
+
+.featured-news::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 40, 43, 0.05) 20%,
+            rgba(0, 42, 45, 0.30) 55%,
+            rgba(0, 40, 43, 0.88) 100%
+        );
+}
+
+
+/* TEXTO SOBRE LA FOTO */
+
+.featured-news-overlay {
+    position: absolute;
+
+    left: 22px;
+    right: 22px;
+    bottom: 18px;
+
+    z-index: 2;
+
+    color: #ffffff;
+}
+
+.featured-news-overlay > span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: rgba(255, 255, 255, 0.76);
+
+    font-size: 6px;
+}
+
+.featured-news-overlay h2 {
+    max-width: 390px;
+
+    margin: 0 0 8px;
+
+    color: #ffffff;
+
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.08;
+}
+
+.featured-news-overlay p {
+    margin: 0 0 9px;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 7px;
+    line-height: 1.4;
+}
+
+.featured-news-overlay a {
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 6px;
+}
+
+
+/* =========================================================
+   NOTICIAS SECUNDARIAS
+   ========================================================= */
+
+.secondary-news {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+    gap: 12px;
+}
+
+.news-card {
+    padding: 16px 17px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce7e7;
+    border-radius: 7px;
+}
+
+.news-card > span {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #00747a;
+
+    font-size: 6px;
+}
+
+.news-card h2 {
+    margin: 0 0 8px;
+
+    color: #263738;
+
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.news-card p {
+    margin: 0 0 10px;
+
+    color: #738182;
+
+    font-size: 6.5px;
+    line-height: 1.45;
+}
+
+.news-card a {
+    font-size: 6px;
+}
+
+
+/* =========================================================
+   DISCLAIMER
+   ========================================================= */
+
+.explore-disclaimer {
+    margin: 12px 0 0;
+
+    color: #8d999a;
+
+    font-size: 5.5px;
+}
+
+
+/* =========================================================
+   SECCIONES
+   ========================================================= */
+
+.matchday-section,
+.heroes-section,
+.knowledge-section,
+.explore-opportunities,
+.assistant-preview-section {
+    padding: 21px 0;
+}
+
+
+/* FONDOS */
+
+.matchday-section {
+    background: #e6f1f1;
+}
+
+.heroes-section {
+    background: #edf7f7;
+}
+
+.knowledge-section {
+    background: #ffffff;
+}
+
+.explore-opportunities {
+    background: #edf7f7;
+}
+
+.assistant-preview-section {
+    padding-top: 0;
+
+    background: #edf7f7;
+}
+
+
+/* =========================================================
+   CABECERA DE SECCIONES
+   ========================================================= */
+
+.explore-section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 12px;
+}
+
+.explore-section-header h2 {
+    margin: 0 0 3px;
+
+    color: #2a3b3c;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.explore-section-header p {
+    margin: 0;
+
+    color: #899596;
+
+    font-size: 6.5px;
+}
+
+.section-link {
+    flex-shrink: 0;
+
+    color: #00747a;
+
+    font-size: 6.5px;
+}
+
+
+/* =========================================================
+   FLECHAS
+   ========================================================= */
+
+.section-arrows {
+    display: flex;
+
+    gap: 5px;
+}
+
+.section-arrows button {
+    width: 21px;
+    height: 21px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #00747a;
+    background: transparent;
+
+    border: 0;
+    border-radius: 50%;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.section-arrows button:hover {
+    background: #dcecec;
+}
+
+
+/* =========================================================
+   RESULTADOS
+   ========================================================= */
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 14px;
+}
+
+.result-card {
+    min-width: 0;
+
+    padding: 12px 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce7e7;
+    border-radius: 7px;
+}
+
+.result-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 8px;
+
+    margin-bottom: 13px;
+}
+
+.result-card-header span {
+    color: #748384;
+
+    font-size: 5.5px;
+}
+
+.result-card-header span:first-child {
+    color: #00747a;
+}
+
+.result-teams {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.result-teams strong {
+    color: #374748;
+
+    font-size: 7px;
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+.result-teams strong:last-child {
+    text-align: right;
+}
+
+.result-score {
+    color: #00747a;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   HÉROES DE LA JORNADA
+   ========================================================= */
+
+.heroes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 14px;
+}
+
+.hero-card {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #dce7e7;
+    border-radius: 7px;
+}
+
+.hero-card > img {
+    width: 100%;
+    height: 125px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.hero-card-content {
+    padding: 10px 12px 12px;
+}
+
+.hero-card-content > span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #829091;
+
+    font-size: 5.5px;
+}
+
+.hero-card-content h3 {
+    min-height: 26px;
+
+    margin: 0 0 8px;
+
+    color: #334445;
+
+    font-size: 8px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.hero-card-content a {
+    color: #00747a;
+
+    font-size: 6px;
+}
+
+
+/* =========================================================
+   ARTÍCULOS
+   ========================================================= */
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+.article-card {
+    padding: 14px 16px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce7e7;
+    border-radius: 7px;
+}
+
+.article-author {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 10px;
+}
+
+.article-avatar {
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    color: #00747a;
+    background: #edf7f7;
+
+    border-radius: 50%;
+
+    font-size: 6px;
+    font-weight: 600;
+}
+
+.article-author strong {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #344445;
+
+    font-size: 7px;
+}
+
+.article-author div > span {
+    display: block;
+
+    color: #899596;
+
+    font-size: 5.5px;
+}
+
+.article-card h3 {
+    margin: 0 0 6px;
+
+    color: #293a3b;
+
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.article-card p {
+    margin: 0 0 8px;
+
+    color: #758384;
+
+    font-size: 6.5px;
+    line-height: 1.45;
+}
+
+.article-card > a {
+    font-size: 6px;
+}
+
+
+/* =========================================================
+   OPORTUNIDADES
+   ========================================================= */
+
+.explore-opportunities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+.explore-opportunity-card {
+    min-height: 64px;
+
+    padding: 12px 14px;
+
+    display: grid;
+    grid-template-columns: 28px 1fr auto;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce7e7;
+    border-radius: 7px;
+}
+
+.explore-opportunity-icon {
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #00747a;
+    background: #edf7f7;
+
+    border-radius: 4px;
+
+    font-size: 12px;
+}
+
+.explore-opportunity-card strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #344445;
+
+    font-size: 7px;
+}
+
+.explore-opportunity-card span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #879394;
+
+    font-size: 5.5px;
+}
+
+.explore-opportunity-card small {
+    display: inline-block;
+
+    padding: 2px 5px;
+
+    color: #ffffff;
+    background: #00747a;
+
+    border-radius: 2px;
+
+    font-size: 5px;
+}
+
+.explore-opportunity-card > a {
+    color: #00747a;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   PROPUESTA DEL ASISTENTE
+   ========================================================= */
+
+.assistant-preview {
+    display: grid;
+    grid-template-columns: 27px 1fr;
+
+    gap: 10px;
+
+    padding: 13px 15px;
+
+    background: #e2eeee;
+
+    border-radius: 7px;
+}
+
+.assistant-preview > img {
+    width: 22px;
+    height: 22px;
+
+    margin-top: 2px;
+
+    object-fit: contain;
+}
+
+.assistant-preview span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #8065b3;
+
+    font-size: 5.5px;
+}
+
+.assistant-preview h2 {
+    margin: 0 0 5px;
+
+    color: #334445;
+
+    font-size: 8px;
+    font-weight: 600;
+}
+
+.assistant-preview p {
+    margin: 0;
+
+    color: #778586;
+
+    font-size: 6px;
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   BOTÓN FLOTANTE DEL ASISTENTE
+   ========================================================= */
+
+.assistant-launcher {
+    position: fixed;
+
+    right: 26px;
+    bottom: 25px;
+
+    z-index: 50;
+
+    width: 48px;
+    height: 48px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6e39e8,
+            #a537ef
+        );
+
+    border: 0;
+    border-radius: 50%;
+
+    box-shadow:
+        0 5px 18px rgba(87, 40, 160, 0.28);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.assistant-launcher img {
+    width: 23px;
+    height: 23px;
+
+    object-fit: contain;
+}
+
+.assistant-launcher:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 22px rgba(87, 40, 160, 0.36);
+}
+
+
+/* =========================================================
+   INTERACCIONES
+   ========================================================= */
+
+.news-card,
+.result-card,
+.hero-card,
+.article-card,
+.explore-opportunity-card {
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.news-card:hover,
+.result-card:hover,
+.hero-card:hover,
+.article-card:hover,
+.explore-opportunity-card:hover {
+    transform: translateY(-1px);
+
+    border-color: #cbdede;
+
+    box-shadow:
+        0 4px 12px rgba(0, 80, 85, 0.05);
+}
+
+.featured-news {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.featured-news:hover {
+    box-shadow:
+        0 6px 18px rgba(0, 70, 75, 0.10);
+}
+
+.featured-news a:hover,
+.news-card a:hover,
+.hero-card a:hover,
+.article-card a:hover,
+.section-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .explore-news-grid {
+        grid-template-columns: 1.6fr 1fr;
+    }
+
+    .result-teams {
+        gap: 6px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* BARRA DE USUARIO */
+
+    .user-bar {
+        height: auto;
+    }
+
+    .user-bar-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        padding: 14px 0;
+    }
+
+    .user-status,
+    .user-objective {
+        justify-self: start;
+    }
+
+
+    /* CABECERA */
+
+    .explore-heading {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .explore-heading h1 {
+        font-size: 22px;
+    }
+
+    .explore-heading small {
+        white-space: normal;
+    }
+
+
+    /* TABS */
+
+    .explore-tabs {
+        overflow-x: auto;
+
+        padding-bottom: 3px;
+    }
+
+    .explore-tabs button {
+        flex-shrink: 0;
+    }
+
+
+    /* NOTICIAS */
+
+    .explore-news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-news {
+        min-height: 280px;
+    }
+
+    .secondary-news {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+
+    /* RESULTADOS */
+
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* HÉROES */
+
+    .heroes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* ARTÍCULOS */
+
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* OPORTUNIDADES */
+
+    .explore-opportunities-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .explore-intro {
+        padding-top: 20px;
+    }
+
+
+    /* NOTICIA PRINCIPAL */
+
+    .featured-news {
+        min-height: 255px;
+    }
+
+    .featured-news-overlay {
+        left: 16px;
+        right: 16px;
+        bottom: 15px;
+    }
+
+    .featured-news-overlay h2 {
+        font-size: 16px;
+    }
+
+
+    /* SECUNDARIAS */
+
+    .secondary-news {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* HÉROES */
+
+    .heroes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-card > img {
+        height: 170px;
+    }
+
+
+    /* CABECERAS */
+
+    .explore-section-header {
+        align-items: flex-start;
+    }
+
+
+    /* ASISTENTE */
+
+    .assistant-launcher {
+        right: 16px;
+        bottom: 16px;
+
+        width: 44px;
+        height: 44px;
+    }
+
+}

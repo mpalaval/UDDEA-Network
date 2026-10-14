@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Oportunidades · UDDEA Network</title>
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/oportunidades.css">
+</head>
+
+<body>
+
+    <!-- ==================================================
+         NAVBAR
+         ================================================== -->
+
+    <header class="navbar">
+        <div class="navbar-container">
+
+            <a href="../index.html" class="navbar-brand">
+                <img
+                    src="../assets/images/Logo_UDDEA.png"
+                    alt=""
+                    class="navbar-logo"
+                >
+
+                <span class="navbar-brand-text">
+                    <strong>UDDEA</strong> Network
+                </span>
+            </a>
+
+
+            <div class="navbar-right">
+
+                <nav class="navbar-navigation">
+
+                    <a href="feed.html" class="navbar-item">
+                        <img src="../assets/images/NavBar_Personas_Gris.png" alt="">
+                        <span>Feed</span>
+                    </a>
+
+                    <a href="oportunidades.html" class="navbar-item active">
+                        <img src="../assets/images/NavBar_Maletin_Verde.png" alt="">
+                        <span>Oportunidades</span>
+                    </a>
+
+                    <a href="explorar.html" class="navbar-item">
+                        <img src="../assets/images/NavBar_Brujula_gris.png" alt="">
+                        <span>Explorar</span>
+                    </a>
+
+                    <a href="perfil.html" class="navbar-item">
+                        <img src="../assets/images/NavBar_Persona_Gris.png" alt="">
+                        <span>Mi perfil</span>
+                    </a>
+
+                </nav>
+
+
+                <button
+                    type="button"
+                    class="navbar-notifications"
+                    aria-label="Notificaciones"
+                >
+                    <img
+                        src="../assets/images/NavBar_Campana.png"
+                        alt=""
+                    >
+                </button>
+
+
+                <a
+                    href="perfil.html"
+                    class="navbar-avatar"
+                    aria-label="Mi perfil"
+                >
+                    <img
+                        src="../assets/images/Retrato_AlvaroMartin.png"
+                        alt="Álvaro Martín"
+                    >
+                </a>
+
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- ==================================================
+         BARRA DE USUARIO
+         ================================================== -->
+
+    <section class="user-bar">
+
+        <div class="container user-bar-grid">
+
+            <div class="user-summary">
+
+                <img
+                    src="../assets/images/Retrato_AlvaroMartin.png"
+                    alt="Álvaro Martín"
+                >
+
+                <div>
+                    <strong>Álvaro Martín</strong>
+
+                    <p>
+                        Analista de fútbol · España, Comunidad de Madrid
+                    </p>
+
+                    <a href="perfil.html">
+                        Ver mi perfil → · Perfil de ejemplo
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="user-status">
+
+                <span class="user-bar-label">ESTADO</span>
+
+                <div>
+                    <span class="online-dot"></span>
+                    <strong>En línea</strong>
+                    <span>·</span>
+                    <button type="button">Desconectado</button>
+                </div>
+
+            </div>
+
+
+            <div class="user-objective">
+
+                <span class="user-bar-label">MI OBJETIVO</span>
+
+                <div>
+                    <button type="button">Prácticas</button>
+                    <button type="button" class="active">Empleo</button>
+                    <button type="button">Formación</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         OPORTUNIDADES
+         ================================================== -->
+
+    <main class="opportunities-page">
+
+        <div class="container">
+
+
+            <!-- CABECERA -->
+
+            <header class="opportunities-header">
+
+                <p>Un nuevo paso en tu carrera</p>
+
+                <h1>El siguiente equipo puede estar aquí.</h1>
+
+                <span>
+                    Tu perfil de UDDEA es tu CV en el mundo del fútbol.
+                </span>
+
+            </header>
+
+
+            <!-- ==================================================
+                 FILTROS
+                 ================================================== -->
+
+            <section class="opportunities-filters">
+
+                <div class="filters-grid">
+
+
+                    <label>
+                        <span>Búsqueda</span>
+
+                        <input
+                            type="search"
+                            placeholder="Cargo, entidad o palabra clave"
+                        >
+                    </label>
+
+
+                    <label>
+                        <span>Tipo de oportunidad</span>
+
+                        <select>
+                            <option>Todos los tipos</option>
+                            <option>Empleo</option>
+                            <option>Prácticas</option>
+                            <option>Intercambio</option>
+                            <option>Formación</option>
+                            <option>Eventos</option>
+                        </select>
+                    </label>
+
+
+                    <label>
+                        <span>Experiencia</span>
+
+                        <select>
+                            <option>Cualquier experiencia</option>
+                            <option>Inicial</option>
+                            <option>Intermedia</option>
+                            <option>Avanzada</option>
+                        </select>
+                    </label>
+
+
+                    <label>
+                        <span>Cercanía</span>
+
+                        <select>
+                            <option>Cercanía activa · 50 km</option>
+                            <option>25 km</option>
+                            <option>100 km</option>
+                            <option>Sin límite</option>
+                        </select>
+                    </label>
+
+                </div>
+
+
+                <div class="filters-bottom">
+
+                    <nav class="opportunity-types">
+                        <button class="active">Todas</button>
+                        <button>Empleo</button>
+                        <button>Prácticas</button>
+                        <button>Intercambio</button>
+                        <button>Formación</button>
+                        <button>Eventos</button>
+                    </nav>
+
+
+                    <button
+                        type="button"
+                        class="elo-help"
+                    >
+                        ¿Qué es el ELO?
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================================================
+                 RESULTADOS / ORDEN
+                 ================================================== -->
+
+            <div class="opportunities-toolbar">
+
+                <span>
+                    9 oportunidades de ejemplo · Prioridad a tu entorno
+                </span>
+
+                <button type="button">
+                    Ordenar: afinidad propuesta ▾
+                </button>
+
+            </div>
+
+
+            <!-- ==================================================
+                 GRID DE OPORTUNIDADES
+                 ================================================== -->
+
+            <section class="opportunities-grid">
+
+
+                <!-- 1 · EMPLEO -->
+
+                <article class="opportunity-card">
+
+                    <div class="opportunity-card-top">
+
+                        <span class="opportunity-type">
+                            Empleo
+                        </span>
+
+                        <button
+                            class="save-opportunity"
+                            aria-label="Guardar oportunidad"
+                        >
+                            <img
+                                src="../assets/images/Oportunidades_Guardado_GrisOscuro.png"
+                                alt=""
+                            >
+                            Guardar
+                        </button>
+
+                    </div>
+
+
+                    <p class="opportunity-entity">
+                        CD Ribera · Primer equipo
+                    </p>
+
+                    <h2>Analista de rendimiento</h2>
+
+
+                    <p class="opportunity-location">
+
+                        <img
+                            src="../assets/images/Oportunidades_PuntoMapa_Verde.png"
+                            alt=""
+                        >
+
+                        Madrid · 12 km · Jornada completa · Presencial
+
+                    </p>
+
+
+                    <p class="opportunity-description">
+                        Prepara informes de rival y acompaña al cuerpo
+                        técnico en el análisis del juego.
+                    </p>
+
+
+                    <div class="opportunity-meta">
+                        <span>Publicada hace 2 días · Ejemplo</span>
+
+                        <strong>
+                            Acceso ELO · Criterios en definición
+                        </strong>
+                    </div>
+
+
+                    <a href="#" class="opportunity-button">
+                        Ver oportunidad
+                    </a>
+
+                </article>
+
+
+                <!-- 2 · PRÁCTICAS -->
+
+                <article class="opportunity-card">
+
+                    <div class="opportunity-card-top">
+
+                        <span class="opportunity-type">
+                            Prácticas
+                        </span>
+
+                        <button class="save-opportunity">
+                            <img
+                                src="../assets/images/Oportunidades_Guardado_GrisOscuro.png"
+                                alt=""
+                            >
+                            Guardar
+                        </button>
+
+                    </div>
+
+
+                    <p class="opportunity-entity">
+                        Academia Fútbol Norte
+                    </p>
+
+                    <h2>Asistente de análisis en cantera</h2>
+
+
+                    <p class="opportunity-location">
+
+                        <img
+                            src="../assets/images/Oportunidades_PuntoMapa_Verde.png"
+                            alt=""
+                        >
+
+                        Alcobendas · 18 km · Prácticas · Media jornada
+
+                    </p>
+
+
+                    <p class="opportunity-description">
+                        Aprende junto al equipo de metodología y participa
+                        en el seguimiento de categorías juveniles.
+                    </p>
+
+
+                    <div class="opportunity-meta">
+                        <span>Publicada hace 1 día · Ejemplo</span>
+
+                        <strong>
+                            Acceso ELO · Criterios en definición
+                        </strong>
+                    </div>
+
+
+                    <a href="#" class="opportunity-button">
+                        Ver oportunidad
+                    </a>
+
+                </article>
+
+
+                <!-- 3 · PREMIUM -->
+
+                <article class="opportunity-card">
+
+                    <div class="opportunity-card-top">
+
+                        <span class="opportunity-type">
+                            Empleo
+                        </span>
+
+                        <span class="premium-label">
+
+                            <img
+                                src="../assets/images/Oportunidades_Cerradura_Verde.png"
+                                alt=""
+                            >
+
+                            Premium
+
+                        </span>
+
+                    </div>
+
+
+                    <p class="opportunity-entity">
+                        Unión Sierra CF
+                    </p>
+
+                    <h2>Coordinación de metodología</h2>
+
+
+                    <p class="opportunity-location">
+
+                        <img
+                            src="../assets/images/Oportunidades_PuntoMapa_Verde.png"
+                            alt=""
+                        >
+
+                        Comunidad de Madrid · 34 km · Jornada completa · Híbrido
+
+                    </p>
+
+
+                    <p class="opportunity-description">
+                        Conecta el modelo de juego, la formación de
+                        entrenadores y el desarrollo del futbolista.
+                    </p>
+
+
+                    <div class="opportunity-meta">
+                        <span>Publicada hace 3 días · Ejemplo</span>
+
+                        <strong class="premium-access">
+                            Premium · Requisitos y acceso ELO por revisar
+                        </strong>
+                    </div>
+
+
+                    <a href="#" class="opportunity-button secondary">
+                        Consultar requisitos
+                    </a>
+
+                </article>
+
+
+                <!-- 4 · INTERCAMBIO -->
+
+                <article class="opportunity-card">
+
+                    <div class="opportunity-card-top">
+
+                        <span class="opportunity-type">
+                            Intercambio
+                        </span>
+
+                        <button class="save-opportunity">
+                            <img
+                                src="../assets/images/Oportunidades_Guardado_GrisOscuro.png"
+                                alt=""
+                            >
+                            Guardar
+                        </button>
+
+                    </div>
+
+
+                    <p class="opportunity-entity">
+                        Proyecto Cantera Abierta
+                    </p>
+
+                    <h2>Estancia con un cuerpo técnico</h2>
+
+
+                    <p class="opportunity-location">
+
+                        <img
+                            src="../assets/images/Oportunidades_PuntoMapa_Verde.png"
+                            alt=""
+                        >
+
+                        Getafe · 16 km · Dos semanas · Presencial
+
+                    </p>
+
+
+                    <p class="opportunity-description">
+                        Observación de entrenamientos y sesiones de trabajo
+                        compartidas con profesionales del fútbol base.
+                    </p>
+
+
+                    <div class="opportunity-meta">
+                        <span>Inscripción hasta el 30 oct. · Ejemplo</span>
+
+                        <strong>
+                            Acceso ELO · Criterios en definición
+                        </strong>
+                    </div>
+
+
+                    <a href="#" class="opportunity-button">
+                        Ver oportunidad
+                    </a>
+
+                </article>
+
+
+                <!-- 5 · FORMACIÓN PREMIUM -->
+
+                <article class="opportunity-card">
+
+                    <div class="opportunity-card-top">
+
+                        <span class="opportunity-type">
+                            Formación
+                        </span>
+
+                        <span class="premium-label">
+
+                            <img
+                                src="../assets/images/Oportunidades_Cerradura_Verde.png"
+                                alt=""
+                            >
+
+                            Premium
+
+                        </span>
+
+                    </div>
+
+
+                    <p class="opportunity-entity">
+                        Aula Fútbol · Curso
+                    </p>
+
+                    <h2>Análisis táctico aplicado al fútbol</h2>
+
+
+                    <p class="opportunity-location">
+
+                        <img
+                            src="../assets/images/Oportunidades_PuntoMapa_Verde.png"
+                            alt=""
+                        >
+
+                        España · En línea · 24 horas · Formación continua
+
+                    </p>
+
+
+                    <p class="opportunity-description">
+                        Del vídeo a la tarea: lectura del juego,
+                        elaboración de informes y comunicación con el staff.
+                    </p>
+
+
+                    <div class="opportunity-meta">
+                        <span>Inicio: 9 nov. 2026 · Ejemplo</span>
+
+                        <strong class="premium-access">
+                            Premium · Requisitos y acceso ELO por revisar
+                        </strong>
+                    </div>
+
+
+                    <a href="#" class="opportunity-button secondary">
+                        Consultar requisitos
+                    </a>
+
+                </article>
+
+
+                <!-- 6 · EVENTO -->
+
+                <article class="opportunity-card">
+
+                    <div class="opportunity-card-top">
+
+                        <span class="opportunity-type">
+                            Eventos
+                        </span>
+
+                        <button class="save-opportunity">
+                            <img
+                                src="../assets/images/Oportunidades_Guardado_GrisOscuro.png"
+                                alt=""
+                            >
+                            Guardar
+                        </button>
+
+                    </div>
+
+
+                    <p class="opportunity-entity">
+                        Foro de Fútbol Madrid
+                    </p>
+
+                    <h2>Encuentro de dirección deportiva</h2>
+
+
+                    <p class="opportunity-location">
+
+                        <img
+                            src="../assets/images/Oportunidades_PuntoMapa_Verde.png"
+                            alt=""
+                        >
+
+                        Madrid · 8 km · 21 nov. · Presencial
+
+                    </p>
+
+
+                    <p class="opportunity-description">
+                        Una jornada para compartir retos de cantera,
+                        gestión de talento y desarrollo profesional.
+                    </p>
+
+
+                    <div class="opportunity-meta">
+                        <span>Inscripción abierta · Ejemplo</span>
+
+                        <strong>
+                            Acceso ELO · Criterios en definición
+                        </strong>
+                    </div>
+
+
+                    <a href="#" class="opportunity-button">
+                        Ver oportunidad
+                    </a>
+
+                </article>
+
+
+                <!-- 7 · PRÁCTICAS -->
+
+                <article class="opportunity-card">
+
+                    <div class="opportunity-card-top">
+
+                        <span class="opportunity-type">
+                            Prácticas
+                        </span>
+
+                        <button class="save-opportunity">
+                            <img
+                                src="../assets/images/Oportunidades_Guardado_GrisOscuro.png"
+                                alt=""
+                            >
+                            Guardar
+                        </button>
+
+                    </div>
+
+
+                    <p class="opportunity-entity">
+                        Sporting Norte · Cantera
+                    </p>
+
+                    <h2>Observación y scouting junior</h2>
+
+
+                    <p class="opportunity-location">
+
+                        <img
+                            src="../assets/images/Oportunidades_PuntoMapa_Verde.png"
+                            alt=""
+                        >
+
+                        Vallecas · 14 km · Tres meses · Tardes
+
+                    </p>
+
+
+                    <p class="opportunity-description">
+                        Seguimiento de jugadores con acompañamiento
+                        de un analista sénior.
+                    </p>
+
+
+                    <div class="opportunity-meta">
+                        <span>Inscripción abierta · Ejemplo</span>
+
+                        <strong>
+                            Acceso ELO · Criterios en definición
+                        </strong>
+                    </div>
+
+
+                    <a href="#" class="opportunity-button">
+                        Ver oportunidad
+                    </a>
+
+                </article>
+
+
+                <!-- 8 · FORMACIÓN -->
+
+                <article class="opportunity-card">
+
+                    <div class="opportunity-card-top">
+
+                        <span class="opportunity-type">
+                            Formación
+                        </span>
+
+                        <button class="save-opportunity">
+                            <img
+                                src="../assets/images/Oportunidades_Guardado_GrisOscuro.png"
+                                alt=""
+                            >
+                            Guardar
+                        </button>
+
+                    </div>
+
+
+                    <p class="opportunity-entity">
+                        Campus Entrena
+                    </p>
+
+                    <h2>Clínic de comunicación con el staff</h2>
+
+
+                    <p class="opportunity-location">
+
+                        <img
+                            src="../assets/images/Oportunidades_PuntoMapa_Verde.png"
+                            alt=""
+                        >
+
+                        Madrid · Híbrido · 8 horas · Nivel intermedio
+
+                    </p>
+
+
+                    <p class="opportunity-description">
+                        Convierte tus observaciones en mensajes claros
+                        y tareas útiles.
+                    </p>
+
+
+                    <div class="opportunity-meta">
+                        <span>Inscripción abierta · Ejemplo</span>
+
+                        <strong>
+                            Acceso ELO · Criterios en definición
+                        </strong>
+                    </div>
+
+
+                    <a href="#" class="opportunity-button">
+                        Ver oportunidad
+                    </a>
+
+                </article>
+
+
+                <!-- 9 · INTERCAMBIO -->
+
+                <article class="opportunity-card">
+
+                    <div class="opportunity-card-top">
+
+                        <span class="opportunity-type">
+                            Intercambio
+                        </span>
+
+                        <button class="save-opportunity">
+                            <img
+                                src="../assets/images/Oportunidades_Guardado_GrisOscuro.png"
+                                alt=""
+                            >
+                            Guardar
+                        </button>
+
+                    </div>
+
+
+                    <p class="opportunity-entity">
+                        Laboratorio del Juego
+                    </p>
+
+                    <h2>Intercambio de análisis de rival</h2>
+
+
+                    <p class="opportunity-location">
+
+                        <img
+                            src="../assets/images/Oportunidades_PuntoMapa_Verde.png"
+                            alt=""
+                        >
+
+                        España · En línea · Cuatro sesiones · Noviembre
+
+                    </p>
+
+
+                    <p class="opportunity-description">
+                        Contrasta informes y comparte metodología
+                        con otros analistas.
+                    </p>
+
+
+                    <div class="opportunity-meta">
+                        <span>Inscripción abierta · Ejemplo</span>
+
+                        <strong>
+                            Acceso ELO · Criterios en definición
+                        </strong>
+                    </div>
+
+
+                    <a href="#" class="opportunity-button">
+                        Ver oportunidad
+                    </a>
+
+                </article>
+
+            </section>
+
+
+            <!-- ==================================================
+                 CONTEXTO / ELO
+                 ================================================== -->
+
+            <section class="opportunities-context">
+
+                <img
+                    src="../assets/images/Oportunidades_Cerradura_Verde.png"
+                    alt=""
+                >
+
+                <div>
+
+                    <h2>Más contexto antes de acceder</h2>
+
+                    <p>
+                        Consulta los requisitos de cada entidad antes de
+                        presentar tu candidatura. El ELO orientará la afinidad
+                        a partir del perfil, la formación acreditada y la
+                        trayectoria; no garantiza contratación.
+                    </p>
+
+
+                    <div class="context-actions">
+
+                        <button type="button">
+                            Qué es el ELO
+                        </button>
+
+                        <button type="button">
+                            Leer artículos
+                        </button>
+
+                    </div>
+
+
+                    <small>
+                        Modelo conceptual pendiente de validación · Sin fórmula,
+                        puntuación ni umbrales definidos. La suscripción no
+                        incrementa el ELO.
+                    </small>
+
+                </div>
+
+            </section>
+
+
+            <p class="prototype-disclaimer">
+                Prototipo · Personas, entidades y contenido de ejemplo.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==================================================
+         FOOTER
+         ================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-main">
+
+                <a href="../index.html" class="footer-brand">
+
+                    <img
+                        src="../assets/images/Logo_UDDEA.png"
+                        alt=""
+                    >
+
+                    <span>
+                        <strong>UDDEA</strong> Network
+                    </span>
+
+                </a>
+
+
+                <nav class="footer-links">
+                    <a href="#">Quiénes somos</a>
+                    <a href="#">Ayuda</a>
+                    <a href="#">Privacidad</a>
+                    <a href="#">Condiciones</a>
+                    <a href="#">Contacto</a>
+                </nav>
+
+            </div>
+
+
+            <div class="footer-divider"></div>
+
+
+            <div class="footer-legal">
+
+                <span>
+                    © 2026 UDDEA Network · Unión de Directores Deportivos
+                    y Especialistas Asociados
+                </span>
+
+                <span>
+                    Prototipo estático · Contenido de ejemplo
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="../js/oportunidades.js"></script>
+
+</body>
+
+</html>
