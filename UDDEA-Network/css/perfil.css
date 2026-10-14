@@ -1208,3 +1208,610 @@
     }
 
 }
+
+/* =========================================================
+   MODALES DE PERFIL
+   ========================================================= */
+
+
+/* ---------- FONDO DEL MODAL ---------- */
+
+.profile-modal-overlay {
+    position: fixed;
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background: rgba(20, 40, 42, 0.38);
+
+    overflow-y: auto;
+}
+
+
+/* ---------- VENTANA ---------- */
+
+.profile-modal {
+    width: min(760px, 95%);
+    max-height: 90vh;
+
+    padding: 24px 28px;
+
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    border: 1px solid #d9e7e8;
+    border-radius: 10px;
+
+    box-shadow:
+        0 12px 35px rgba(0, 70, 75, 0.18);
+}
+
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+
+.profile-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-bottom: 16px;
+
+    border-bottom: 1px solid #dfe9e9;
+}
+
+.profile-modal-header h2 {
+    margin: 0 0 5px;
+
+    color: #263839;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.profile-modal-header p {
+    margin: 0;
+
+    color: #748283;
+
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.profile-modal-close {
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    padding: 0;
+
+    color: #718081;
+    background: transparent;
+
+    border: 0;
+
+    font-size: 22px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.profile-modal-close:hover {
+    color: #005f66;
+}
+
+
+/* =========================================================
+   PESTAÑAS
+   ========================================================= */
+
+.profile-modal-tabs {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin: 17px 0;
+}
+
+.profile-modal-tabs button {
+    padding: 7px 11px;
+
+    color: #667778;
+    background: transparent;
+
+    border: 0;
+    border-radius: 4px;
+
+    font-family: inherit;
+    font-size: 8px;
+
+    cursor: pointer;
+}
+
+.profile-modal-tabs button.active {
+    color: #ffffff;
+    background: #00747a;
+}
+
+
+/* =========================================================
+   FORMULARIOS
+   ========================================================= */
+
+.modal-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+
+    margin-bottom: 14px;
+}
+
+.modal-form-grid label,
+.modal-full-field {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.modal-full-field {
+    margin-bottom: 14px;
+}
+
+.modal-form-grid label > span,
+.modal-full-field > span {
+    color: #526263;
+
+    font-size: 8px;
+    font-weight: 500;
+}
+
+.profile-modal input,
+.profile-modal select,
+.profile-modal textarea {
+    width: 100%;
+
+    padding: 9px 10px;
+
+    color: #344445;
+    background: #ffffff;
+
+    border: 1px solid #d5e3e4;
+    border-radius: 5px;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 8px;
+}
+
+.profile-modal textarea {
+    resize: vertical;
+
+    line-height: 1.5;
+}
+
+.profile-modal input:focus,
+.profile-modal select:focus,
+.profile-modal textarea:focus {
+    border-color: #00747a;
+
+    box-shadow:
+        0 0 0 2px rgba(0, 116, 122, 0.08);
+}
+
+
+/* =========================================================
+   BLOQUES INTERNOS
+   ========================================================= */
+
+.modal-profile-block {
+    margin-top: 18px;
+    padding-top: 15px;
+
+    border-top: 1px solid #e1eaea;
+}
+
+.modal-profile-block h3 {
+    margin: 0 0 10px;
+
+    color: #304142;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.modal-profile-block p {
+    margin: 5px 0;
+
+    color: #697879;
+
+    font-size: 7.5px;
+    line-height: 1.45;
+}
+
+
+/* ---------- FILAS ---------- */
+
+.modal-profile-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 9px 0;
+
+    border-bottom: 1px solid #edf1f1;
+}
+
+.modal-profile-row strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #344445;
+
+    font-size: 8px;
+}
+
+.modal-profile-row span {
+    display: block;
+
+    color: #7b898a;
+
+    font-size: 7px;
+}
+
+.modal-profile-row button {
+    flex-shrink: 0;
+
+    color: #00747a;
+    background: transparent;
+
+    border: 0;
+
+    font-family: inherit;
+    font-size: 7px;
+
+    cursor: pointer;
+}
+
+.modal-profile-block small {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #879495;
+
+    font-size: 6.5px;
+}
+
+
+/* =========================================================
+   CHECKBOXES
+   ========================================================= */
+
+.modal-checkbox {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 8px;
+
+    margin: 8px 0;
+
+    color: #627172;
+
+    font-size: 7.5px;
+    line-height: 1.4;
+
+    cursor: pointer;
+}
+
+.modal-checkbox input {
+    width: 13px;
+    height: 13px;
+
+    flex-shrink: 0;
+
+    margin-top: 1px;
+
+    accent-color: #00747a;
+}
+
+
+/* =========================================================
+   VALIDACIONES
+   ========================================================= */
+
+.validation-list {
+    margin-top: 10px;
+}
+
+.validation-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 15px 2px;
+
+    border-bottom: 1px solid #e1eaea;
+}
+
+.validation-row h3 {
+    margin: 0 0 4px;
+
+    color: #314243;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.validation-row p {
+    margin: 0 0 5px;
+
+    color: #718081;
+
+    font-size: 7.5px;
+}
+
+.validation-row > div > span {
+    display: inline-block;
+
+    padding: 3px 6px;
+
+    border-radius: 3px;
+
+    font-size: 6px;
+}
+
+.validation-ok {
+    color: #00747a;
+    background: #e9f5f5;
+}
+
+.validation-pending {
+    color: #758384;
+    background: #f0f3f3;
+}
+
+.validation-row > button {
+    flex-shrink: 0;
+
+    padding: 7px 10px;
+
+    color: #00747a;
+    background: #edf7f7;
+
+    border: 1px solid #d4e5e5;
+    border-radius: 4px;
+
+    font-family: inherit;
+    font-size: 7px;
+
+    cursor: pointer;
+}
+
+.validation-row > button:hover {
+    background: #e2f0f0;
+}
+
+
+/* ---------- EXPLICACIÓN ---------- */
+
+.validation-info {
+    margin-top: 18px;
+    padding: 14px;
+
+    background: #edf7f7;
+
+    border-radius: 6px;
+}
+
+.validation-info h3 {
+    margin: 0 0 6px;
+
+    color: #314243;
+
+    font-size: 9px;
+}
+
+.validation-info p {
+    margin: 0 0 7px;
+
+    color: #687778;
+
+    font-size: 7px;
+    line-height: 1.5;
+}
+
+.validation-info small {
+    color: #899596;
+
+    font-size: 6px;
+}
+
+
+/* =========================================================
+   DOCUMENTACIÓN
+   ========================================================= */
+
+.document-dropzone {
+    min-height: 110px;
+
+    margin: 18px 0 12px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    color: #00747a;
+    background: #f3f9f9;
+
+    border: 1px dashed #a9cecf;
+    border-radius: 7px;
+
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.document-dropzone strong {
+    font-size: 9px;
+    font-weight: 500;
+}
+
+.document-dropzone span {
+    color: #839192;
+
+    font-size: 6.5px;
+}
+
+.document-dropzone input {
+    display: none;
+}
+
+.document-dropzone:hover {
+    background: #ebf5f5;
+
+    border-color: #00747a;
+}
+
+
+/* ---------- ARCHIVO SELECCIONADO ---------- */
+
+.document-preview {
+    padding: 10px 12px;
+
+    background: #edf7f7;
+
+    border: 1px solid #d6e7e7;
+    border-radius: 5px;
+}
+
+.document-preview strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #334445;
+
+    font-size: 8px;
+}
+
+.document-preview span {
+    color: #7d898a;
+
+    font-size: 6.5px;
+}
+
+.modal-notice {
+    margin: 15px 0 0;
+
+    color: #829091;
+
+    font-size: 6.5px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   ACCIONES DEL MODAL
+   ========================================================= */
+
+.profile-modal-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 8px;
+
+    margin-top: 20px;
+    padding-top: 15px;
+
+    border-top: 1px solid #e1eaea;
+}
+
+.profile-modal-actions button {
+    padding: 8px 14px;
+
+    border-radius: 4px;
+
+    font-family: inherit;
+    font-size: 7.5px;
+
+    cursor: pointer;
+}
+
+.modal-secondary-button {
+    color: #657576;
+    background: #ffffff;
+
+    border: 1px solid #d4e1e2;
+}
+
+.modal-primary-button {
+    color: #ffffff;
+    background: #00747a;
+
+    border: 1px solid #00747a;
+}
+
+.modal-primary-button:hover {
+    background: #005f66;
+}
+
+
+/* =========================================================
+   RESPONSIVE MODALES
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+    .profile-modal-overlay {
+        padding: 15px;
+    }
+
+    .profile-modal {
+        width: 100%;
+
+        padding: 20px;
+    }
+
+    .modal-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-modal-tabs {
+        overflow-x: auto;
+    }
+
+    .profile-modal-tabs button {
+        flex-shrink: 0;
+    }
+
+    .validation-row {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
